@@ -1,0 +1,62 @@
+import { motion } from 'framer-motion';
+
+const shadowVariants = {
+    sm: 'shadow-[3px_3px_0_0_rgba(0,0,0,1)]',
+    md: 'shadow-[4px_4px_0_0_rgba(0,0,0,1)]',
+    lg: 'shadow-[6px_6px_0_0_rgba(0,0,0,1)]',
+    xl: 'shadow-[8px_8px_0_0_rgba(0,0,0,1)]',
+};
+
+const borderWidth = {
+    thin: 'border-[2px]',
+    normal: 'border-[3px]',
+    thick: 'border-[4px]',
+    heavy: 'border-[8px]',
+};
+
+export const BrutalistCard = ({
+    children,
+    className = '',
+    shadow = 'md',
+    border = 'normal',
+    hoverable = false,
+    animate = false,
+    animationProps = {},
+    onClick,
+    as = 'div',
+}) => {
+    const baseClasses = `border-black ${borderWidth[border]} ${shadowVariants[shadow]} ${hoverable ? 'hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all' : ''} ${onClick ? 'cursor-pointer' : ''} ${className}`;
+
+    const Component = animate ? motion.div : as;
+
+    const motionProps = animate
+        ? {
+            initial: { opacity: 0, y: 20 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true },
+            ...animationProps,
+        }
+        : {};
+
+    return (
+        <Component className={baseClasses} onClick={onClick} {...motionProps}>
+            {children}
+        </Component>
+    );
+};
+
+export const BrutalistBadge = ({ children, color = 'bg-moast-teal', rotate = '[-1deg]', className = '' }) => (
+    <div className={`${color} px-8 py-3 border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-sans font-black uppercase text-sm md:text-base text-black w-fit rotate-${rotate} hover:rotate-0 transition-transform duration-300 ${className}`}>
+        {children}
+    </div>
+);
+
+export const BrutalistButton = ({ children, className = '', onClick, ariaLabel }) => (
+    <button
+        onClick={onClick}
+        aria-label={ariaLabel}
+        className={`bg-black text-white font-sans font-bold uppercase px-6 py-3 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all ${className}`}
+    >
+        {children}
+    </button>
+);
