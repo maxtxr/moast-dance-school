@@ -12,7 +12,7 @@ Um website neo-brutalista para a **MOAST Dance School** — construído com Reac
 
 A MOAST é uma escola de dança sediada em Portugal, que oferece aulas de Hip-Hop e Breaking a Contemporâneo, Kizomba e programas de formação especializados. Este website serve como a casa digital da escola, disponibilizando:
 
-- Um **catálogo de aulas** completo com pré-visualizações de vídeo em loop.
+- Um **catálogo de aulas** completo com pré-visualizações de vídeo em loop e código de cores por categoria.
 - Um **horário semanal** interativo filtrável por estúdio (Estúdio 1, Estúdio 2, Grémio).
 - Uma **montra de merch** que combina uma galeria polaroid horizontal com um trailer de vídeo integrado e uma tabela de preços.
 - Um **hub de inscrições** com links para Google Forms para aulas experimentais e matrículas.
@@ -60,7 +60,7 @@ Cada decisão visual reforça o ethos brutalista:
 
 - **Tipografia** — Títulos usam **TAN Buster** (carregado via `@font-face`), uma typeface display serif robusta. Corpo de texto usa **Futura**, aplicado através da configuração de font-family do Tailwind.
 - **Bordas pretas grossas** (`border-[3px]`) em cartões, botões, secções e contentores de media.
-- **Sombras duras** — `shadow-[4px_4px_0_0_#000]` e `shadow-[8px_8px_0_0_#000]` criam uma sensação física de "carimbo". Definidas como `shadow-brutalist` e `shadow-brutalist-lg` na config do Tailwind.
+- **Sombras duras** — `shadow-[4px_4px_0_0_#000]` e `shadow-[8px_8px_0_0_#000]` criam uma sensação física de "carimbo". Disponíveis como classes utilitárias `shadow-brutalist` e `shadow-brutalist-lg` no `index.css`, e como tokens `brutalist` / `brutalist-lg` na config do Tailwind.
 - **Badges rodadas** (`rotate-[-2deg]`) que introduzem imperfeição deliberada.
 - **Sobreposições de textura de ruído** — Aplicadas via um filtro SVG `feTurbulence` como `background-image`, camadas por toda a UI em secções hero, cartões e cabeçalhos de página.
 - **Tipografia maiúscula e negra** em quase todo o texto visível.
@@ -77,6 +77,7 @@ Cada decisão visual reforça o ethos brutalista:
 | `moast-light-pink` | `#FEBFD4` |
 | `moast-dark-pink` | `#ff2a6d` |
 | `moast-teal` | `#70ECDF` |
+| `moast-purple` | `#7c3aed` |
 | `moast-black` | `#111111` |
 
 Cores, sombras, fontes e o padrão de ruído estão definidos em `tailwind.config.js` sob `theme.extend`, disponíveis como classes utilitárias em todo o projeto.
@@ -146,6 +147,7 @@ moast-dance-school/
     │   └── pdfs/                 # PDFs de regulamento e calendário
     ├── components/
     │   ├── LandingPage.jsx       # Home — Hero + AulasHoje + About
+    │   ├── Moast.jsx             # /moast — placeholder legado (não usado)
     │   ├── MoastPage.jsx         # /moast — manifesto, pilares, vídeo
     │   ├── Classes.jsx           # /aulas — catálogo completo
     │   ├── Teachers.jsx          # /professores — perfis

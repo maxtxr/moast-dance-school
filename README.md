@@ -12,7 +12,7 @@ A neo-brutalist website for **MOAST Dance School** — built with React 19, Vite
 
 MOAST is a dance school based in Portugal, offering classes from Hip-Hop and Breaking to Contemporary, Kizomba, and specialised training programmes. This website serves as the school's digital home, providing:
 
-- A full **class catalogue** with looping video previews and category filters.
+- A full **class catalogue** with looping video previews and category colour coding.
 - An interactive **weekly schedule** filterable by studio (Estúdio 1, Estúdio 2, Grémio).
 - A **merch showcase** combining a horizontal polaroid gallery with an integrated video trailer and a pricing table.
 - A **registration hub** linking to external Google Forms for trial classes and enrolment.
@@ -60,7 +60,7 @@ Every visual decision reinforces the brutalist ethos:
 
 - **Typography** — Display headings use **TAN Buster** (loaded via `@font-face`), a chunky serif typeface. Body copy uses **Futura**, applied through the Tailwind font-family configuration.
 - **Thick black borders** (`border-[3px]`) on cards, buttons, sections, and media containers.
-- **Hard offset shadows** — `shadow-[4px_4px_0_0_#000]` and `shadow-[8px_8px_0_0_#000]` create a "stamped" physical feel. Defined as `shadow-brutalist` and `shadow-brutalist-lg` in the Tailwind config.
+- **Hard offset shadows** — `shadow-[4px_4px_0_0_#000]` and `shadow-[8px_8px_0_0_#000]` create a "stamped" physical feel. Available as utility classes `shadow-brutalist` and `shadow-brutalist-lg` in `index.css`, and as tokens `brutalist` / `brutalist-lg` in the Tailwind config.
 - **Rotated badges** (`rotate-[-2deg]`) that introduce deliberate imperfection.
 - **Noise texture overlays** — Applied via an SVG `feTurbulence` filter as a `background-image`, layered throughout the UI on hero sections, cards, and page headers.
 - **Uppercase, bold typography** across almost all visible text.
@@ -77,6 +77,7 @@ Every visual decision reinforces the brutalist ethos:
 | `moast-light-pink` | `#FEBFD4` |
 | `moast-dark-pink` | `#ff2a6d` |
 | `moast-teal` | `#70ECDF` |
+| `moast-purple` | `#7c3aed` |
 | `moast-black` | `#111111` |
 
 Colours, shadows, fonts, and the noise pattern are all defined in `tailwind.config.js` under `theme.extend`, making them available as utility classes throughout the project.
@@ -146,6 +147,7 @@ moast-dance-school/
     │   └── pdfs/                 # Season rules & calendar PDFs
     ├── components/
     │   ├── LandingPage.jsx       # Home — Hero + ClassesToday + About
+    │   ├── Moast.jsx             # /moast — legacy placeholder (unused)
     │   ├── MoastPage.jsx         # /moast — manifesto, pillars, video
     │   ├── Classes.jsx           # /aulas — full class catalogue
     │   ├── Teachers.jsx          # /professores — teacher profiles
