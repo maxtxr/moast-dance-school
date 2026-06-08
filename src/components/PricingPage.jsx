@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import PageHero from './PageHero';
 import Navbar from './Navbar';
@@ -42,7 +42,7 @@ const PricingPage = () => (
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="overflow-x-auto pb-2 mb-14 scrollbar-thin">
                     <div className="flex gap-4 w-max px-1 py-1">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -58,6 +58,7 @@ const PricingPage = () => (
                                         muted
                                         playsInline
                                         className="absolute inset-0 w-full h-full object-cover"
+                                        aria-label="MOAST Merch collection trailer"
                                     >
                                         <source src={merchTrailerVideo} type="video/mp4" />
                                     </video>
@@ -68,11 +69,11 @@ const PricingPage = () => (
                                     </span>
                                 </div>
                             </div>
-                        </motion.div>
+                        </m.div>
 
-                        {merchPhotos.map((photo, index) => (
-                            <motion.div
-                                key={`merch-photo-${index}`}
+                        {merchPhotos.map((photo) => (
+                            <m.div
+                                key={photo.alt}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -95,12 +96,12 @@ const PricingPage = () => (
                                         </span>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                 </div>
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -120,8 +121,8 @@ const PricingPage = () => (
                                 </h2>
                             </div>
 
-                            {merchItems.map((item, index) => (
-                                <div key={`merch-${index}`} className="contents group">
+                            {merchItems.map((item) => (
+                                <div key={item.name} className="contents group">
                                     <div className="bg-white border-[3px] border-black flex flex-col items-center justify-center py-5 md:py-6 px-4 md:px-8 text-center text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all">
                                         <span className="font-sans font-black text-lg md:text-xl uppercase leading-tight">
                                             {item.name}
@@ -141,7 +142,7 @@ const PricingPage = () => (
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
 

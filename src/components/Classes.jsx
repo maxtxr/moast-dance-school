@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import graffitiOverlay from '../assets/images/graffiti-overlay.png';
 
@@ -73,7 +73,7 @@ const Classes = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16 lg:gap-y-24 items-stretch pr-8 md:pr-16 lg:pr-24">
                         {allClasses.map((danceClass, index) => (
-                            <motion.div
+                            <m.div
                                 key={danceClass.id || index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ const Classes = () => {
                                         aria-label={`${danceClass.title} class demonstration`}
                                     />
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                 </div>

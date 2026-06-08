@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import Navbar from './Navbar';
 import PageHero from './PageHero';
@@ -21,7 +21,7 @@ const Teachers = () => {
       <section className="w-full bg-moast-off-white px-4 pb-24 md:pb-32 pt-16 flex-grow">
         <div className="max-w-[1232px] mx-auto flex flex-col gap-16 md:gap-20">
           {teachersData.map((teacher, index) => (
-            <motion.div
+            <m.div
               key={teacher.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Teachers = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </section>

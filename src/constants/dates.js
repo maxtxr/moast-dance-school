@@ -9,7 +9,7 @@ export const getFormattedDate = () => {
 
 export const getTodayDay = () => DAYS[new Date().getDay()];
 
-export const formatDayToPlural = (day) => {
+const formatDayToPlural = (day) => {
   const dayMap = {
     'Segunda': 'SEGUNDAS',
     'Terça': 'TERÇAS',
@@ -23,6 +23,6 @@ export const formatDayToPlural = (day) => {
 
 export const formatDaysList = (days) => {
   const dayOrder = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-  const sortedDays = [...days].sort((a, b) => dayOrder.indexOf(a) - dayOrder.indexOf(b));
+  const sortedDays = days.toSorted((a, b) => dayOrder.indexOf(a) - dayOrder.indexOf(b));
   return sortedDays.map(formatDayToPlural).join(' / ');
 };

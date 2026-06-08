@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Navbar from './Navbar';
 import PageHero from './PageHero';
 import Footer from './Footer';
@@ -51,16 +51,16 @@ const RegistrationPage = () => (
 
         <section className="w-full bg-moast-off-white px-4 pb-20 md:pb-28 pt-10 md:pt-16 overflow-hidden flex-grow">
             <div className="max-w-7xl mx-auto">
-                <motion.div
+                <m.div
                     className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
                     variants={containerVariants}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    {cards.map((card, index) => (
-                        <motion.a
-                            key={index}
+                    {cards.map((card) => (
+                        <m.a
+                            key={card.href}
                             href={card.href}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -96,9 +96,9 @@ const RegistrationPage = () => (
                                     />
                                 </svg>
                             </div>
-                        </motion.a>
+                        </m.a>
                     ))}
-                </motion.div>
+                </m.div>
             </div>
         </section>
 

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { LazyMotion, domAnimation, AnimatePresence, m } from 'framer-motion';
 
 import LandingPage from './components/LandingPage';
 import SchedulePage from './components/SchedulePage';
@@ -22,26 +22,28 @@ const AnimatedRoutes = () => {
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div
-                key={location.pathname}
-                variants={pageVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-            >
-                <Routes location={location}>
-                    <Route path="/" element={<LandingPage />} />
-                    <Route path="/moast" element={<MoastPage />} />
-                    <Route path="/aulas" element={<Classes />} />
-                    <Route path="/professores" element={<Teachers />} />
-                    <Route path="/horarios" element={<SchedulePage />} />
-                    <Route path="/precario" element={<PricingPage />} />
-                    <Route path="/contactos" element={<ContactPage />} />
-                    <Route path="/404" element={<NotFoundPage />} />
-                    <Route path="/inscricoes" element={<RegistrationPage />} />
-                    <Route path="*" element={<Navigate to="/404" replace />} />
-                </Routes>
-            </motion.div>
+            <LazyMotion features={domAnimation}>
+                <m.div
+                    key={location.pathname}
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                >
+                    <Routes location={location}>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/moast" element={<MoastPage />} />
+                        <Route path="/aulas" element={<Classes />} />
+                        <Route path="/professores" element={<Teachers />} />
+                        <Route path="/horarios" element={<SchedulePage />} />
+                        <Route path="/precario" element={<PricingPage />} />
+                        <Route path="/contactos" element={<ContactPage />} />
+                        <Route path="/404" element={<NotFoundPage />} />
+                        <Route path="/inscricoes" element={<RegistrationPage />} />
+                        <Route path="*" element={<Navigate to="/404" replace />} />
+                    </Routes>
+                </m.div>
+            </LazyMotion>
         </AnimatePresence>
     );
 };

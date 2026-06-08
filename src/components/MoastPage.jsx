@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import PageHero from './PageHero';
 import Navbar from './Navbar';
@@ -53,7 +53,7 @@ const MoastPage = () => {
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start relative z-10">
 
                     {/* LEFT COLUMN — Storytelling */}
-                    <motion.div
+                    <m.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="show"
@@ -62,7 +62,7 @@ const MoastPage = () => {
                     >
 
                         {/* Manifesto */}
-                        <motion.div variants={staggerItem} className="space-y-6">
+                        <m.div variants={staggerItem} className="space-y-6">
                             <h2 className="font-serif text-[3.5rem] md:text-7xl lg:text-[85px] xl:text-[95px] font-black uppercase text-black leading-[0.85] tracking-[-0.03em] flex flex-col py-2">
                                 {['MAIS QUE', 'DANÇA...', 'UMA', 'FAMÍLIA'].map((line, i) => (
                                     <span key={i} className="whitespace-nowrap block">
@@ -74,10 +74,10 @@ const MoastPage = () => {
                             <p className="font-sans font-bold text-lg md:text-xl text-black leading-relaxed max-w-lg">
                                 Na MOAST, a dança é mais do que movimento... é identidade, expressão e comunidade. Cada passo conta uma história, cada aula é uma celebração.
                             </p>
-                        </motion.div>
+                        </m.div>
 
                         {/* Pillars */}
-                        <motion.div variants={staggerItem} className="grid grid-cols-2 gap-4 md:gap-5">
+                        <m.div variants={staggerItem} className="grid grid-cols-2 gap-4 md:gap-5">
                             {pillars.map((p) => (
                                 <div
                                     key={p.label}
@@ -89,10 +89,10 @@ const MoastPage = () => {
                                     </span>
                                 </div>
                             ))}
-                        </motion.div>
+                        </m.div>
 
                         {/* O Nosso Método */}
-                        <motion.div
+                        <m.div
                             variants={staggerItem}
                             className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-10 md:p-12 relative overflow-hidden"
                         >
@@ -121,12 +121,12 @@ const MoastPage = () => {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </m.div>
 
-                    </motion.div>
+                    </m.div>
 
                     {/* RIGHT COLUMN — Visuals */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: '-100px' }}
@@ -147,6 +147,7 @@ const MoastPage = () => {
                                 loop
                                 muted
                                 playsInline
+                                aria-label="MOAST Dance School promotional video"
                             />
                             <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity" />
                         </div>
@@ -157,7 +158,7 @@ const MoastPage = () => {
                                 ✦ A NOSSA ESCOLA!! ✦
                             </span>
                         </div>
-                    </motion.div>
+                    </m.div>
 
                 </div>
             </section>

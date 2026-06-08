@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import moastLogo from '../assets/images/logo/moast-logo.png';
 
 import { NAVIGATION_LINKS } from '../constants/navigation';
-import { BrutalistButton } from './BrutalistCard';
+import BrutalistButton from './BrutalistButton';
 
 const navLinkClasses = 'font-sans font-bold uppercase nav-link-underline';
 
@@ -40,7 +40,7 @@ const Navbar = () => {
     const closeMobileMenu = () => setMobileMenuOpen(false);
 
     return (
-        <motion.nav
+        <m.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             className="sticky top-0 z-50 bg-moast-off-white border-b-4 border-black relative"
@@ -59,6 +59,7 @@ const Navbar = () => {
                 </div>
 
                 <button
+                    type="button"
                     className="md:hidden bg-black text-white font-sans font-bold uppercase px-4 py-2 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-label="Toggle mobile menu"
@@ -75,32 +76,33 @@ const Navbar = () => {
 
             <AnimatePresence>
                 {mobileMenuOpen && (
-                    <motion.div
+                    <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="md:hidden absolute top-full left-0 right-0 bg-moast-off-white border-b-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] z-40 overflow-hidden"
                     >
-                        <motion.div
+                        <m.div
                             initial="hidden"
                             animate="visible"
                             className="flex flex-col p-6 gap-4"
                         >
                             <NavigationLinks mobile onLinkClick={closeMobileMenu} />
-                            <motion.button
+                            <m.button
+                                type="button"
                                 variants={mobileLinkVariants}
                                 custom={NAVIGATION_LINKS.length}
                                 className="bg-black text-white font-sans font-bold uppercase px-6 py-3 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-left"
                                 onClick={closeMobileMenu}
                             >
                                 JUNTA-TE!
-                            </motion.button>
-                        </motion.div>
-                    </motion.div>
+                            </m.button>
+                        </m.div>
+                    </m.div>
                 )}
             </AnimatePresence>
-        </motion.nav>
+        </m.nav>
     );
 };
 

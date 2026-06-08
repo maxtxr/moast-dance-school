@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import PageHero from './PageHero';
 import Navbar from './Navbar';
@@ -77,6 +77,7 @@ const MapEmbed = ({ src, title }) => (
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            sandbox=""
         />
     </div>
 );
@@ -94,7 +95,7 @@ const ContactPage = () => (
         <section className="relative px-4 pb-24 md:pb-32 pt-16 md:pt-24 flex-grow overflow-hidden">
             <div className="absolute inset-0 bg-noise opacity-20 mix-blend-overlay pointer-events-none z-0" />
 
-            <motion.div
+            <m.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -105,7 +106,7 @@ const ContactPage = () => (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
 
                     {/* Contacts Card */}
-                    <motion.div
+                    <m.div
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col justify-center"
                     >
@@ -119,9 +120,9 @@ const ContactPage = () => (
                                     TELEFONE
                                 </p>
                                 <div className="flex flex-col gap-3">
-                                    {CONTACTS.phones.map((phone, index) => (
+                                    {CONTACTS.phones.map((phone) => (
                                         <a
-                                            key={index}
+                                            key={phone}
                                             href={`tel:${phone.replace(/\s+/g, '')}`} 
                                             className="font-sans text-2xl md:text-3xl font-black text-black hover:text-moast-pink transition-colors duration-200 underline decoration-[3px] underline-offset-[6px] w-fit"
                                         >
@@ -143,10 +144,10 @@ const ContactPage = () => (
                                 </a>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Socials Card */}
-                    <motion.div
+                    <m.div
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col"
                     >
@@ -172,14 +173,14 @@ const ContactPage = () => (
                                 </a>
                             ))}
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 {/* BOTTOM ROW: Maps */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                    {LOCATIONS.map((location, index) => (
-                        <motion.div
-                            key={index}
+                    {LOCATIONS.map((location) => (
+                        <m.div
+                            key={location.title}
                             variants={cardVariants}
                             className="flex flex-col gap-6"
                         >
@@ -198,10 +199,10 @@ const ContactPage = () => (
 
                             {/* Map Box */}
                             <MapEmbed src={location.mapSrc} title={`Mapa - ${location.title}`} />
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
-            </motion.div>
+            </m.div>
         </section>
 
         <Footer />

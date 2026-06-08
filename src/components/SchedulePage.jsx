@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import PageHero from './PageHero';
@@ -24,7 +24,7 @@ const formatTimeSlot = (t) => t.toLowerCase();
 
 const ClassCard = ({ cls }) => (
     <Link to={`/aulas#${cls.id}`} className="block h-full">
-        <motion.div
+        <m.div
             layout
             whileHover={{ scale: 1.05, zIndex: 30, x: -2, y: -2 }}
             className={`${getCategoryColor(cls.category)} border-[3px] border-black p-4 cursor-pointer shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-all flex flex-col justify-center items-center text-center h-full min-h-[120px]`}
@@ -38,7 +38,7 @@ const ClassCard = ({ cls }) => (
             <p className="font-sans font-bold text-[10px] uppercase text-white/80 mt-1">
                 {cls.level}
             </p>
-        </motion.div>
+        </m.div>
     </Link>
 );
 
@@ -99,6 +99,7 @@ const SchedulePage = () => {
                     <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-20">
                         {STUDIOS.map((studio) => (
                             <button
+                                type="button"
                                 key={studio}
                                 onClick={() => setActiveStudio(studio)}
                                 className={`font-serif font-black uppercase text-xl md:text-3xl px-8 py-3 border-[3px] border-black transition-all duration-200 ${activeStudio === studio
@@ -112,7 +113,7 @@ const SchedulePage = () => {
                     </div>
 
                     <AnimatePresence mode="wait">
-                        <motion.div
+                        <m.div
                             key={activeStudio}
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -186,7 +187,7 @@ const SchedulePage = () => {
                                     ))
                                 )}
                             </div>
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
                 </div>
             </section>

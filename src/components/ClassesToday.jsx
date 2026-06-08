@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 import { classes, getCategoryColor } from '../data/classes';
 import { ClockIcon, UserIcon } from './Icons';
@@ -26,7 +26,7 @@ const ClassesToday = () => {
     const goToPage = (index) => setActivePage(index);
 
     return (
-        <motion.section
+        <m.section
             id="aulas"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const ClassesToday = () => {
                     <AnimatePresence mode="wait">
 
                         {visibleClasses.map((danceClass, index) => (
-                            <motion.div
+                            <m.div
                                 key={`${activePage}-${danceClass.id || index}`}
                                 initial={{ opacity: 0, x: 30 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -127,7 +127,7 @@ const ClassesToday = () => {
                                         aria-label={`${danceClass.title} class demonstration`}
                                     />
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </AnimatePresence>
                 </div>
@@ -135,6 +135,7 @@ const ClassesToday = () => {
                 {totalPages > 1 && (
                     <div className="flex justify-center items-center gap-4 mt-16 pl-0 lg:pl-24">
                         <button
+                            type="button"
                             onClick={prevPage}
                             className="bg-white border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] w-10 h-10 flex items-center justify-center hover:translate-x-[-2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
                             aria-label="Página anterior"
@@ -147,6 +148,7 @@ const ClassesToday = () => {
                         <div className="flex gap-2 mx-2">
                             {Array.from({ length: totalPages }).map((_, idx) => (
                                 <button
+                                    type="button"
                                     key={idx}
                                     onClick={() => goToPage(idx)}
                                     aria-label={`Ir para a página ${idx + 1}`}
@@ -156,6 +158,7 @@ const ClassesToday = () => {
                         </div>
 
                         <button
+                            type="button"
                             onClick={nextPage}
                             className="bg-white border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] w-10 h-10 flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
                             aria-label="Próxima página"
@@ -167,7 +170,7 @@ const ClassesToday = () => {
                     </div>
                 )}
             </div>
-        </motion.section>
+        </m.section>
     );
 };
 

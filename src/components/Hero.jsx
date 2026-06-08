@@ -3,7 +3,7 @@ import graffitiOverlay from '../assets/images/graffiti-overlay.png';
 import whiteLetters from '../assets/images/logo/white_letters.png';
 import whiteNeg from '../assets/images/logo/mds_neg.png';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const gridPatternStyle = {
     backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
@@ -28,7 +28,7 @@ const Hero = () => (
         />
 
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center relative z-10">
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -36,19 +36,19 @@ const Hero = () => (
                 className="flex flex-col"
             >
                 <div className="relative w-36 h-36 md:w-44 md:h-44 mb-10 bg-moast-dark-magenta rounded-full flex items-center justify-center">
-                    <motion.img
+                    <m.img
                         src={whiteLetters}
                         alt="Selo MOAST"
                         animate={{ rotate: 360 }}
                         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
                         className="absolute inset-0 w-full h-full object-contain drop-shadow-sm"
                     >
-                    </motion.img>
+                    </m.img>
                 </div>
 
                 <h1 className="font-serif text-7xl md:text-9xl lg:text-[7rem] font-black uppercase text-black leading-[0.85] tracking-tighter">
                     {['MOAST', 'DANCE', 'SCHOOL'].map((word, i) => (
-                        <motion.span
+                        <m.span
                             key={word}
                             initial={{ opacity: 0, y: 60, rotate: i === 1 ? -3 : 3 }}
                             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
@@ -57,7 +57,7 @@ const Hero = () => (
                             className="block"
                         >
                             {word}
-                        </motion.span>
+                        </m.span>
                     ))}
                 </h1>
 
@@ -68,16 +68,16 @@ const Hero = () => (
                 </p>
 
                 <a href="/inscricoes">
-                    <motion.button
+                    <m.button
                         whileHover={{ x: 2, y: 2, boxShadow: '2px 2px 0 0 rgba(0,0,0,1)' }}
                         className="bg-black text-white font-sans font-black uppercase px-10 py-5 border-[3px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:bg-gray-900 transition-all mt-10 w-fit text-lg"
                     >
                         BORA DANÇAR?
-                    </motion.button>
+                    </m.button>
                 </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -93,7 +93,7 @@ const Hero = () => (
                     muted
                     playsInline
                 />
-            </motion.div>
+            </m.div>
         </div >
     </section >
 );

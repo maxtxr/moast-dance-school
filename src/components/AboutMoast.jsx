@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import motionImg from '../assets/images/mds/motion.jpg';
 import artImg from '../assets/images/mds/art.jpg';
@@ -14,7 +14,7 @@ const moastImages = [
 
 const AboutMoast = () => {
   return (
-    <motion.section
+    <m.section
       id="moast"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ const AboutMoast = () => {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-0 mt-auto">
           {moastImages.map((img) => (
-            <motion.div
+            <m.div
               key={img.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -46,11 +46,11 @@ const AboutMoast = () => {
                 alt={img.alt}
                 className="w-full h-auto object-cover block"
               />
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 };
 

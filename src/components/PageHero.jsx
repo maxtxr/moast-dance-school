@@ -1,6 +1,6 @@
 import whiteNeg from '../assets/images/logo/mds_neg.png';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const gridPatternStyle = {
     backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
@@ -30,7 +30,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
         />  
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -43,10 +43,10 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
                 </h1>
 
                 <div className="w-24 h-1 bg-black/20 mx-auto mt-10"></div>
-            </motion.div>
+            </m.div>
 
             {badgeText && (
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -54,7 +54,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
                     className="bg-moast-teal px-8 py-3 border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-sans font-black uppercase text-sm md:text-base text-black w-fit mt-8 rotate-[-1deg] hover:rotate-[0deg] transition-transform duration-300"
                 >
                     {badgeText}
-                </motion.div>
+                </m.div>
             )}
         </div>
 

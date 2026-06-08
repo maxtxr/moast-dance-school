@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Regulamento from '../assets/pdfs/regulamento2526.pdf';
 import Calendario from '../assets/pdfs/calendario2526.pdf';
 import { SEASON_YEARS } from '../constants/navigation';
 
 const Footer = () => {
     return (
-        <motion.footer
+        <m.footer
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
@@ -52,7 +52,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-        </motion.footer>
+        </m.footer>
     );
 };
 
