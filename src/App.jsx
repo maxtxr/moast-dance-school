@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LazyMotion, domAnimation, AnimatePresence, m } from 'framer-motion';
 
 import LandingPage from './components/LandingPage';
@@ -50,11 +50,11 @@ const AnimatedRoutes = () => {
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="w-full min-h-screen bg-moast-off-white">
                 <AnimatedRoutes />
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
