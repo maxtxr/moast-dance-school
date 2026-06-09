@@ -67,11 +67,11 @@ const Navbar = () => {
                     {mobileMenuOpen ? 'FECHAR' : 'MENU'}
                 </button>
 
-                <a href="/inscricoes">
-                    <BrutalistButton className="hidden md:block" ariaLabel="Join MOAST Dance School">
+                <Link to="/inscricoes" className="hidden md:block">
+                    <BrutalistButton ariaLabel="Join MOAST Dance School">
                         JUNTA-TE!
                     </BrutalistButton>
-                </a>
+                </Link>
             </div>
 
             <AnimatePresence>
@@ -89,15 +89,15 @@ const Navbar = () => {
                             className="flex flex-col p-6 gap-4"
                         >
                             <NavigationLinks mobile onLinkClick={closeMobileMenu} />
-                            <m.button
-                                type="button"
+                            <Link
+                                to="/inscricoes"
+                                onClick={closeMobileMenu}
+                                className="bg-black text-white font-sans font-bold uppercase px-6 py-3 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-left block"
                                 variants={mobileLinkVariants}
                                 custom={NAVIGATION_LINKS.length}
-                                className="bg-black text-white font-sans font-bold uppercase px-6 py-3 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-left"
-                                onClick={closeMobileMenu}
                             >
                                 JUNTA-TE!
-                            </m.button>
+                            </Link>
                         </m.div>
                     </m.div>
                 )}

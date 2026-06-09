@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { m, AnimatePresence } from 'framer-motion';
 
 import { classes, getCategoryColor } from '../data/classes';
 import { ClockIcon, UserIcon } from './Icons';
 import { getTodayDay, getFormattedDate } from '../constants/dates';
-import { BrutalistCard } from './BrutalistCard';
 
 import graffitiOverlay from '../assets/images/graffiti-overlay.png';
 
@@ -66,12 +66,12 @@ const ClassesToday = () => {
                             {getFormattedDate()}
                         </p>
 
-                        <a
-                            href="/horarios"
+                        <Link
+                            to="/horarios"
                             className="bg-white border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] font-sans font-bold uppercase px-6 py-3.5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all whitespace-nowrap text-sm"
                         >
                             VER HORÁRIO COMPLETO
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

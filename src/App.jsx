@@ -38,8 +38,8 @@ const AnimatedRoutes = () => {
                         <Route path="/horarios" element={<SchedulePage />} />
                         <Route path="/precario" element={<PricingPage />} />
                         <Route path="/contactos" element={<ContactPage />} />
-                        <Route path="/404" element={<NotFoundPage />} />
                         <Route path="/inscricoes" element={<RegistrationPage />} />
+                        <Route path="/404" element={<NotFoundPage />} />
                         <Route path="*" element={<Navigate to="/404" replace />} />
                     </Routes>
                 </m.div>

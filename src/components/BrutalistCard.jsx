@@ -47,9 +47,5 @@ export const BrutalistCard = ({
     );
 };
 
-const BrutalistBadge = ({ children, color = 'bg-moast-teal', rotate = '[-1deg]', className = '' }) => (
-    <div className={`${color} px-8 py-3 border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-sans font-black uppercase text-sm md:text-base text-black w-fit rotate-${rotate} hover:rotate-0 transition-transform duration-300 ${className}`}>
-        {children}
-    </div>
-);
+
 

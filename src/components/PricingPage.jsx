@@ -71,7 +71,7 @@ const PricingPage = () => (
                             </div>
                         </m.div>
 
-                        {merchPhotos.map((photo) => (
+                        {merchPhotos.map((photo, index) => (
                             <m.div
                                 key={photo.alt}
                                 initial={{ opacity: 0, y: 20 }}

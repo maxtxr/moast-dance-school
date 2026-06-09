@@ -4,6 +4,7 @@ import whiteLetters from '../assets/images/logo/white_letters.png';
 import whiteNeg from '../assets/images/logo/mds_neg.png';
 
 import { m } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const gridPatternStyle = {
     backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
@@ -67,14 +68,14 @@ const Hero = () => (
                     A escola de dança onde o movimento encontra a arte. Vem descobrir o teu estilo.
                 </p>
 
-                <a href="/inscricoes">
+                <Link to="/inscricoes">
                     <m.button
                         whileHover={{ x: 2, y: 2, boxShadow: '2px 2px 0 0 rgba(0,0,0,1)' }}
                         className="bg-black text-white font-sans font-black uppercase px-10 py-5 border-[3px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:bg-gray-900 transition-all mt-10 w-fit text-lg"
                     >
                         BORA DANÇAR?
                     </m.button>
-                </a>
+                </Link>
             </m.div>
 
             <m.div

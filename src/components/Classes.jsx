@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 
 import graffitiOverlay from '../assets/images/graffiti-overlay.png';
@@ -62,12 +63,12 @@ const Classes = () => {
                         </div>
 
                         <div className="flex flex-col items-start lg:items-end gap-3 mt-4 lg:mt-0">
-                            <a
-                                href="/horarios"
+                            <Link
+                                to="/horarios"
                                 className="bg-white border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] font-sans font-bold uppercase px-6 py-3.5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all whitespace-nowrap text-sm"
                             >
                                 VER HORÁRIOS DA ÉPOCA
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

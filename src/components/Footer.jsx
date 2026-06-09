@@ -1,4 +1,5 @@
 import { m } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Regulamento from '../assets/pdfs/regulamento2526.pdf';
 import Calendario from '../assets/pdfs/calendario2526.pdf';
 import { SEASON_YEARS } from '../constants/navigation';
@@ -37,12 +38,12 @@ const Footer = () => {
                     >
                         CALENDÁRIO
                     </a>
-                    <a
-                        href="/contactos"
+                    <Link
+                        to="/contactos"
                         className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-pink transition-colors"
                     >
                         CONTACTOS
-                    </a>
+                    </Link>
                 </div>
 
                 {/* COPYRIGHT */}
