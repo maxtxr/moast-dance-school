@@ -47,7 +47,7 @@ const Hero = () => (
                     </m.img>
                 </div>
 
-                <h1 className="font-serif text-7xl md:text-9xl lg:text-[7rem] font-black uppercase text-black leading-[0.85] tracking-tighter">
+                <h1 className="font-serif text-6xl md:text-9xl lg:text-[7rem] font-black uppercase text-black leading-[0.85] tracking-tighter">
                     {['MOAST', 'DANCE', 'SCHOOL'].map((word, i) => (
                         <m.span
                             key={word}
@@ -64,14 +64,14 @@ const Hero = () => (
 
                 <div className="w-32 h-1.5 bg-black mt-8 mb-6"></div>
 
-                <p className="font-sans text-lg md:text-xl text-black/90 max-w-lg leading-relaxed">
+                <p className="font-sans text-base md:text-xl text-black/90 max-w-lg leading-relaxed">
                     A escola de dança onde o movimento encontra a arte. Vem descobrir o teu estilo.
                 </p>
 
                 <Link to="/inscricoes">
                     <m.button
                         whileHover={{ x: 2, y: 2, boxShadow: '2px 2px 0 0 rgba(0,0,0,1)' }}
-                        className="bg-black text-white font-sans font-black uppercase px-10 py-5 border-[3px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:bg-gray-900 transition-all mt-10 w-fit text-lg"
+                        className="bg-black text-white font-sans font-black uppercase px-8 py-4 md:px-10 md:py-5 border-[3px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:bg-gray-900 transition-all mt-8 md:mt-10 w-fit text-base md:text-lg"
                     >
                         BORA DANÇAR?
                     </m.button>
@@ -83,7 +83,7 @@ const Hero = () => (
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative border-[10px] md:border-[14px] border-white shadow-[8px_8px_0_0_rgba(0,0,0,1),_12px_12px_0_0_rgba(92,184,178,1)] rotate-[2.5deg] overflow-hidden h-[60vh] md:h-[70vh] lg:h-[80vh] hover:rotate-[0deg] transition-transform duration-500"
+                className="relative border-[10px] md:border-[14px] border-white shadow-[8px_8px_0_0_rgba(0,0,0,1),_12px_12px_0_0_rgba(92,184,178,1)] rotate-[2.5deg] overflow-hidden h-[40vh] md:h-[70vh] lg:h-[80vh] hover:rotate-[0deg] transition-transform duration-500 w-full max-w-lg lg:max-w-none mx-auto"
             >
                 <video
                     src={moastVideo}

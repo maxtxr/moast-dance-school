@@ -77,7 +77,7 @@ const MapEmbed = ({ src, title }) => (
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            sandbox=""
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
         />
     </div>
 );
@@ -110,7 +110,7 @@ const ContactPage = () => (
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col justify-center"
                     >
-                        <h2 className="font-serif text-4xl md:text-5xl font-black uppercase mb-10 tracking-tight leading-none text-black">
+                        <h2 className="font-serif text-3xl md:text-5xl font-black uppercase mb-10 tracking-tight leading-none text-black">
                             CONTACTOS
                         </h2>
 
@@ -124,7 +124,7 @@ const ContactPage = () => (
                                         <a
                                             key={phone}
                                             href={`tel:${phone.replace(/\s+/g, '')}`} 
-                                            className="font-sans text-2xl md:text-3xl font-black text-black hover:text-moast-pink transition-colors duration-200 underline decoration-[3px] underline-offset-[6px] w-fit"
+                                            className="font-sans text-xl md:text-3xl font-black text-black hover:text-moast-pink transition-colors duration-200 underline decoration-[3px] underline-offset-[6px] w-fit"
                                         >
                                             {phone}
                                         </a>
@@ -138,7 +138,7 @@ const ContactPage = () => (
                                 </p>
                                 <a
                                     href={`mailto:${CONTACTS.email}`}
-                                    className="font-sans text-2xl md:text-2xl font-black text-black hover:text-moast-pink transition-colors duration-200 underline decoration-[3px] underline-offset-[6px] break-all"
+                                    className="font-sans text-xl md:text-2xl font-black text-black hover:text-moast-pink transition-colors duration-200 underline decoration-[3px] underline-offset-[6px] break-all"
                                 >
                                     {CONTACTS.email}
                                 </a>
@@ -151,7 +151,7 @@ const ContactPage = () => (
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col"
                     >
-                        <h2 className="font-serif text-4xl md:text-5xl font-black uppercase mb-10 tracking-tight leading-none text-black">
+                        <h2 className="font-serif text-3xl md:text-5xl font-black uppercase mb-10 tracking-tight leading-none text-black">
                             SEGUE-NOS
                         </h2>
 
@@ -167,7 +167,7 @@ const ContactPage = () => (
                                     <span className="shrink-0 text-black">
                                         {social.icon}
                                     </span>
-                                    <span className="font-sans text-2xl md:text-3xl font-black tracking-tight text-black">
+                                    <span className="font-sans text-xl md:text-3xl font-black tracking-tight text-black">
                                         {social.name}
                                     </span>
                                 </a>
@@ -186,7 +186,7 @@ const ContactPage = () => (
                         >
                             {/* Location Info Box */}
                             <div className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8">
-                                <h3 className="font-serif text-3xl md:text-3xl font-black uppercase tracking-tight text-black leading-none mb-2">
+                                <h3 className="font-serif text-2xl md:text-3xl font-black uppercase tracking-tight text-black leading-none mb-2">
                                     {location.title}
                                 </h3>
                                 <p className="font-sans text-lg md:text-xl font-bold uppercase tracking-wider text-moast-magenta mb-6">

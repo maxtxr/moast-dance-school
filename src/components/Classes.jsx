@@ -43,17 +43,17 @@ const Classes = () => {
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
                         <div className="flex flex-col">
                             <div className="flex items-center">
-                                <h1 className="font-serif text-6xl md:text-8xl font-black uppercase tracking-tight text-black">
+                                <h1 className="font-serif text-4xl md:text-8xl font-black uppercase tracking-tight text-black">
                                     AULAS
                                 </h1>
-                                <div className="bg-moast-magenta px-6 py-2 md:py-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-2deg] ml-4 md:ml-6 mt-2">
-                                    <span className="font-serif text-4xl md:text-6xl font-black uppercase text-white leading-none">
+                                <div className="bg-moast-magenta px-4 py-1 md:px-6 md:py-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-2deg] ml-3 md:ml-6 mt-1 md:mt-2">
+                                    <span className="font-serif text-2xl md:text-6xl font-black uppercase text-white leading-none">
                                         TODAS
                                     </span>
                                 </div>
                             </div>
 
-                            <p className="font-sans text-lg md:text-xl font-medium mt-6 text-black max-w-2xl">
+                            <p className="font-sans text-base md:text-xl font-medium mt-6 text-black max-w-2xl">
                                 Explora o nosso catálogo completo. De fundações a coreografia, encontra o estilo que mais combina contigo e vem fazer uma{' '}
                                 <span className="border-b-[3px] border-moast-magenta text-moast-magenta font-bold pb-0.5">
                                     aula experimental
@@ -72,7 +72,7 @@ const Classes = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16 lg:gap-y-24 items-stretch pr-8 md:pr-16 lg:pr-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16 lg:gap-y-24 items-stretch pr-0 md:pr-16 lg:pr-24">
                         {allClasses.map((danceClass, index) => (
                             <m.div
                                 key={danceClass.id || index}
@@ -86,11 +86,11 @@ const Classes = () => {
                                     {danceClass.level}
                                 </div>
 
-                                <h3 className="font-serif text-4xl md:text-5xl font-black uppercase mt-6 text-white z-10 w-[65%] lg:w-[70%] drop-shadow-md leading-tight">
+                                <h3 className="font-serif text-3xl md:text-5xl font-black uppercase mt-6 text-white z-10 w-full md:w-[70%] drop-shadow-md leading-tight">
                                     {danceClass.title}
                                 </h3>
 
-                                <p className="font-sans text-sm font-medium text-white/90 mt-3 z-10 w-[65%] lg:w-[70%] leading-relaxed">
+                                <p className="font-sans text-sm font-medium text-white/90 mt-3 z-10 w-full md:w-[70%] leading-relaxed">
                                     {danceClass.description || 'Descrição do estilo'}
                                 </p>
 
@@ -105,7 +105,7 @@ const Classes = () => {
                                 </div>
 
                                 <div
-                                    className="absolute -right-8 md:-right-16 top-1/2 -translate-y-1/2 border-[8px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-36 md:w-48 aspect-[3/4] bg-white z-20"
+                                    className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 border-[8px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-28 md:w-48 aspect-[3/4] bg-white z-20"
                                     style={{ transform: 'translateY(-50%) rotate(4deg)' }}
                                 >
                                     <video

@@ -102,7 +102,7 @@ const SchedulePage = () => {
                                 type="button"
                                 key={studio}
                                 onClick={() => setActiveStudio(studio)}
-                                className={`font-serif font-black uppercase text-xl md:text-3xl px-8 py-3 border-[3px] border-black transition-all duration-200 ${activeStudio === studio
+                                className={`font-serif font-black uppercase text-lg md:text-3xl px-6 md:px-8 py-3 border-[3px] border-black transition-all duration-200 ${activeStudio === studio
                                     ? 'bg-black text-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] rotate-[-2deg]'
                                     : 'bg-white text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]'
                                     }`}
@@ -162,7 +162,7 @@ const SchedulePage = () => {
                                 ) : (
                                     Object.entries(mobileGrouped).map(([day, dayClasses]) => (
                                         <div key={day}>
-                                            <h3 className="font-serif font-black uppercase text-3xl bg-black text-white py-2 px-6 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mb-6 inline-block rotate-[-2deg]">
+                                            <h3 className="font-serif font-black uppercase text-2xl bg-black text-white py-2 px-6 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mb-6 inline-block rotate-[-2deg]">
                                                 {day}
                                             </h3>
                                             <div className="flex flex-col gap-5">
@@ -171,7 +171,7 @@ const SchedulePage = () => {
                                                         <div className={`${getCategoryColor(cls.category)} border-[3px] border-black p-5 shadow-[4px_4px_0_0_rgba(0,0,0,1)]`}>
                                                             <div className="flex justify-between items-start gap-4">
                                                                 <div>
-                                                                    <p className="font-sans font-black text-2xl uppercase text-white drop-shadow-sm leading-tight">{cls.title}</p>
+                                                                    <p className="font-sans font-black text-xl md:text-2xl uppercase text-white drop-shadow-sm leading-tight">{cls.title}</p>
                                                                     <p className="font-sans font-bold text-sm uppercase text-white/90 mt-1">{cls.teacher}</p>
                                                                     <p className="font-sans font-bold text-xs uppercase text-white/80 mt-1">{cls.level}</p>
                                                                 </div>

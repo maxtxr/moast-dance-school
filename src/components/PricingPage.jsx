@@ -110,13 +110,13 @@ const PricingPage = () => (
                         <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay pointer-events-none z-0" />
 
                         <div className="relative z-10 grid grid-cols-[2fr_1fr] md:grid-cols-[5fr_2fr] gap-3 md:gap-4">
-                            <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                                <h2 className="font-serif text-2xl md:text-3xl font-black text-white uppercase drop-shadow-sm">
+                            <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                                <h2 className="font-serif text-xl md:text-3xl font-black text-white uppercase drop-shadow-sm">
                                     MERCH
                                 </h2>
                             </div>
-                            <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                                <h2 className="font-serif text-2xl md:text-3xl font-black text-white uppercase drop-shadow-sm">
+                            <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                                <h2 className="font-serif text-xl md:text-3xl font-black text-white uppercase drop-shadow-sm">
                                     VALOR
                                 </h2>
                             </div>
@@ -134,8 +134,8 @@ const PricingPage = () => (
                                         )}
                                     </div>
 
-                                    <div className="bg-white border-[3px] border-black flex items-center justify-center py-5 md:py-6 px-4 md:px-8 text-center text-moast-magenta shadow-[4px_4px_0_0_rgba(0,0,0,1)] group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all">
-                                        <span className="font-serif font-black text-2xl md:text-3xl">
+                                    <div className="bg-white border-[3px] border-black flex items-center justify-center py-4 md:py-6 px-3 md:px-8 text-center text-moast-magenta shadow-[4px_4px_0_0_rgba(0,0,0,1)] group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all">
+                                        <span className="font-serif font-black text-xl md:text-3xl">
                                             {item.price}
                                         </span>
                                     </div>

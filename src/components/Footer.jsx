@@ -13,7 +13,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="w-full bg-moast-black"
         >
-            <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col xl:flex-row items-center justify-between gap-6">
+            <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="font-serif font-bold text-xl">
                     <span className="text-moast-magenta">MOAST </span>
                     <span className="text-moast-pink">DANCE </span>

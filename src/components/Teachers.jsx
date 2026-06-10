@@ -33,7 +33,7 @@ const Teachers = () => {
                 <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay" />
               </div>
 
-              <div className={`relative z-10 w-full h-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 md:py-0 ${teacher.imgPos === 'right' ? 'md:flex-row-reverse' : ''}`}>
+              <div className={`relative z-10 w-full h-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 md:py-0 ${teacher.imgPos === 'right' ? 'md:flex-row-reverse' : ''}`}>
                 <div className={`w-full md:w-[45%] h-[300px] md:h-full flex justify-center items-center relative ${teacher.imgPos === 'left' ? 'md:justify-start' : 'md:justify-end'}`}>
                   <img
                     src={teacher.imgSrc}

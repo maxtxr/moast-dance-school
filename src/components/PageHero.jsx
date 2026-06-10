@@ -8,7 +8,7 @@ const gridPatternStyle = {
 };
 
 const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 'text-black', overlayImage }) => (
-    <section className={`w-full ${bgColor} relative py-40 md:py-56 pb-52 md:pb-72 overflow-hidden flex items-center justify-center`}>
+    <section className={`w-full ${bgColor} relative py-24 md:py-56 pb-32 md:pb-72 overflow-hidden flex items-center justify-center`}>
         <div className="absolute inset-0 bg-noise opacity-20 pointer-events-none z-0" />
 
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" style={gridPatternStyle} />
@@ -38,7 +38,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
             >
                 <div className="w-24 h-1 bg-black/20 mx-auto mb-11"></div>
 
-                <h1 className={`font-serif text-7xl md:text-9xl lg:text-[7rem] font-black uppercase ${textColor} leading-none tracking-tighter`}>
+                <h1 className={`font-serif text-4xl md:text-9xl lg:text-[7rem] font-black uppercase ${textColor} leading-none tracking-tighter`}>
                     {title}
                 </h1>
 

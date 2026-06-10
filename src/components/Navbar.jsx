@@ -46,7 +46,7 @@ const Navbar = () => {
             className="sticky top-0 z-50 bg-moast-off-white border-b-4 border-black relative"
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <Link to="/" className="w-20 h-20 rounded-full overflow-hidden">
+                <Link to="/" className="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden">
                     <img
                         src={moastLogo}
                         alt="MOAST Dance School Logo"
