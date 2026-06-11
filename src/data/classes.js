@@ -1,27 +1,27 @@
-import artStyle from '../assets/classes/comercial.mp4'; // TODO 
+import artStyle from '../assets/classes/artstyle.mp4';
 import kizomba from '../assets/classes/kizomba.mp4';
 import house from '../assets/classes/house.mp4';
 import hipHopI from '../assets/classes/hiphopI.mp4';
 import hipHopII from '../assets/classes/hiphopII.mp4';
 import hipHopKids from '../assets/classes/hiphopkids.mp4';
 import motion from '../assets/classes/motion.mp4';
-import afroHouse from '../assets/classes/motion.mp4'; // TODO
+import afroHouse from '../assets/classes/afrohouse.mp4';
 import taste from '../assets/classes/taste.mp4';
 import contemporaneo from '../assets/classes/contemporaneo.mp4';
 import gremio from '../assets/classes/motion.mp4'; // TODO
 import barraChao from '../assets/classes/barrachao.mp4';
-import breakingI from '../assets/classes/motion.mp4'; // TODO
-import breakingII from '../assets/classes/motion.mp4'; // TODO
+import breakingI from '../assets/classes/breakingII.mp4'; // TODO
+import breakingII from '../assets/classes/breakingII.mp4';
 import latinasI from '../assets/classes/latinasI.mp4';
 import latinasII from '../assets/classes/latinasII.mp4';
-import hipHopBabies from '../assets/classes/latinasII.mp4'; // TODO
+import hipHopBabies from '../assets/classes/hiphopkids.mp4'; // TODO
 import choreographyI from '../assets/classes/choreographyI.mp4';
 import choreographyII from '../assets/classes/choreographyII.mp4';
 import artStyleTaste from '../assets/classes/ast.mp4';
 import fusion from '../assets/classes/fusion.mp4';
 import comercial from '../assets/classes/comercial.mp4';
 import special from '../assets/classes/specialclass1.mp4';
-import competicao from '../assets/classes/comercial.mp4'; // TODO
+import competicao from '../assets/classes/ast.mp4'; // TODO
 
 export const getCategoryColor = (category) => {
     switch (category) {
