@@ -89,10 +89,10 @@ const Classes = () => {
                                 <h3 className="font-serif text-3xl md:text-5xl font-black uppercase mt-6 text-white z-10 w-full md:w-[70%] drop-shadow-md leading-tight">
                                     {danceClass.title}
                                 </h3>
-
+{/* 
                                 <p className="font-sans text-sm font-medium text-white/90 mt-3 z-10 w-full md:w-[70%] leading-relaxed">
                                     {danceClass.description || 'Descrição do estilo'}
-                                </p>
+                                </p> */}
 
                                 <div className="flex gap-3 mt-auto pt-10 flex-wrap z-10">
                                     <div className="bg-white px-4 py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-xs uppercase flex items-center h-10">
