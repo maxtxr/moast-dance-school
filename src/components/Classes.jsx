@@ -86,11 +86,11 @@ const Classes = () => {
                                     {danceClass.level}
                                 </div>
 
-                                <h3 className="font-serif text-3xl md:text-5xl font-black uppercase mt-6 text-white z-10 w-full md:w-[70%] drop-shadow-md leading-tight">
+                                <h3 className="font-serif text-2xl md:text-3xl font-black uppercase mt-6 text-white z-10 w-full md:w-[60%] drop-shadow-md leading-tight">
                                     {danceClass.title}
                                 </h3>
-{/* 
-                                <p className="font-sans text-sm font-medium text-white/90 mt-3 z-10 w-full md:w-[70%] leading-relaxed">
+
+                                {/* <p className="font-sans text-sm font-medium text-white/90 mt-3 z-10 w-full md:w-[70%] leading-relaxed">
                                     {danceClass.description || 'Descrição do estilo'}
                                 </p> */}
 
