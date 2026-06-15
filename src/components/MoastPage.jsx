@@ -63,14 +63,16 @@ const MoastPage = () => {
 
                         {/* Manifesto */}
                         <m.div variants={staggerItem} className="space-y-6">
-                            <h2 className="font-serif text-[2.5rem] md:text-7xl lg:text-[85px] xl:text-[95px] font-black uppercase text-black leading-[0.85] tracking-[-0.03em] flex flex-col py-2">
+                            <h2 className="font-serif text-[2.5rem] md:text-7xl lg:text-[85px] xl:text-[95px] font-black uppercase text-black leading-[0.85] tracking-[-0.03em] flex flex-col pt-1 pb-3">
                                 {['MAIS QUE', 'DANÇA...', 'UMA', 'FAMÍLIA'].map((line, i) => (
                                     <span key={i} className="whitespace-nowrap block">
                                         {line}
                                     </span>
                                 ))}
                             </h2>
+
                             <div className="w-24 h-1.5 bg-black" />
+
                             <p className="font-sans font-bold text-base md:text-xl text-black leading-relaxed max-w-lg">
                                 Na MOAST, a dança é mais do que movimento... é identidade, expressão e comunidade. Cada passo conta uma história, cada aula é uma celebração.
                             </p>
@@ -99,7 +101,7 @@ const MoastPage = () => {
                             <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
 
                             <div className="bg-black px-5 py-2.5 w-fit mb-12 -ml-2 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] relative z-10">
-                                <span className="font-serif text-lg md:text-3xl font-black uppercase text-moast-teal leading-none">
+                                <span className="font-serif text-lg md:text-3xl font-black uppercase text-moast-teal leading-[0.85] pt-1">
                                     O NOSSO MÉTODO
                                 </span>
                             </div>
@@ -110,10 +112,12 @@ const MoastPage = () => {
                                         <span className="font-serif text-2xl md:text-4xl font-black text-moast-magenta leading-none min-w-[40px] md:min-w-[50px] pt-1">
                                             {m.step}
                                         </span>
+
                                         <div className="flex-1 space-y-2">
-                                            <h4 className="font-serif text-lg md:text-2xl font-black uppercase text-black leading-none group-hover:underline">
+                                            <h4 className="font-serif text-lg md:text-2xl font-black uppercase text-black leading-[0.85] pt-0.5 group-hover:underline">
                                                 {m.title}
                                             </h4>
+
                                             <p className="font-sans font-medium text-base md:text-lg text-black/80 max-w-[90%]">
                                                 {m.desc}
                                             </p>

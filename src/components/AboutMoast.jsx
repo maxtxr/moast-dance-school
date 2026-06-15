@@ -25,8 +25,8 @@ const AboutMoast = () => {
 
       <div className="w-full relative flex flex-col items-center h-full">
         <div className="mb-16 z-10">
-          <div className="bg-moast-black px-8 py-3 shadow-[6px_6px_0_0_#CF8DBB]">
-            <span className="font-serif text-4xl md:text-6xl font-black uppercase text-moast-teal tracking-widest">
+          <div className="bg-moast-black px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 shadow-[6px_6px_0_0_#CF8DBB]">
+            <span className="font-serif text-4xl md:text-6xl font-black uppercase text-moast-teal tracking-widest leading-[0.85] pt-1 md:pt-1.5">
               MOAST?
             </span>
           </div>

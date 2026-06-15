@@ -43,21 +43,27 @@ const Classes = () => {
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
                         <div className="flex flex-col">
                             <div className="flex items-center">
-                                <h1 className="font-serif text-4xl md:text-8xl font-black uppercase tracking-tight text-black">
+                                <h1 className="font-serif text-4xl md:text-8xl font-black uppercase leading-[0.85] tracking-tight text-black">
                                     AULAS
                                 </h1>
-                                <div className="bg-moast-magenta px-4 py-1 md:px-6 md:py-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-2deg] ml-3 md:ml-6 mt-1 md:mt-2">
-                                    <span className="font-serif text-2xl md:text-6xl font-black uppercase text-white leading-none">
+
+                                <div className="bg-moast-pink px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
+                                    <span className="font-serif text-2xl md:text-6xl font-black uppercase text-white leading-[0.85] pt-1 md:pt-1.5">
                                         TODAS
                                     </span>
                                 </div>
                             </div>
 
                             <p className="font-sans text-base md:text-xl font-medium mt-6 text-black max-w-2xl">
-                                Explora o nosso catálogo completo. De fundações a coreografia, encontra o estilo que mais combina contigo e vem fazer uma{' '}
-                                <span className="border-b-[3px] border-moast-magenta text-moast-magenta font-bold pb-0.5">
+                                Explora o nosso catálogo completo. De formação a coreografia, encontra o estilo que mais combina contigo e vem fazer uma{' '}
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpDb6w92iLZdmTs_ziQUpN15GgePl0cuaxlYDa12mRQlzTaA/viewform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border-b-[3px] border-moast-magenta text-moast-magenta font-bold pb-0.5 hover:opacity-80 transition-opacity"
+                                >
                                     aula experimental
-                                </span>{' '}
+                                </a>{' '}
                                 :)
                             </p>
                         </div>
@@ -65,7 +71,7 @@ const Classes = () => {
                         <div className="flex flex-col items-start lg:items-end gap-3 mt-4 lg:mt-0">
                             <Link
                                 to="/horarios"
-                                className="bg-white border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] font-sans font-bold uppercase px-6 py-3.5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all whitespace-nowrap text-sm"
+                                className="bg-moast-magenta border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-white font-sans font-bold uppercase px-6 py-3.5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all whitespace-nowrap text-sm"
                             >
                                 VER HORÁRIOS DA ÉPOCA
                             </Link>
@@ -86,7 +92,7 @@ const Classes = () => {
                                     {danceClass.level}
                                 </div>
 
-                                <h3 className="font-serif text-2xl md:text-3xl font-black uppercase mt-6 text-white z-10 w-full md:w-[60%] drop-shadow-md leading-tight">
+                                <h3 className="font-serif text-2xl md:text-3xl font-black uppercase mt-6 text-white z-10 w-full md:w-[60%] drop-shadow-md leading-[0.9]">
                                     {danceClass.title}
                                 </h3>
 

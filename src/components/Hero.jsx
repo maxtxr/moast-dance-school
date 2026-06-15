@@ -73,7 +73,7 @@ const Hero = () => (
                         whileHover={{ x: 2, y: 2, boxShadow: '2px 2px 0 0 rgba(0,0,0,1)' }}
                         className="bg-black text-white font-sans font-black uppercase px-8 py-4 md:px-10 md:py-5 border-[3px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:bg-gray-900 transition-all mt-8 md:mt-10 w-fit text-base md:text-lg"
                     >
-                        BORA DANÇAR?
+                        JUNTA-TE!
                     </m.button>
                 </Link>
             </m.div>

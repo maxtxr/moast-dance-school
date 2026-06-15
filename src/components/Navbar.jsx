@@ -60,18 +60,16 @@ const Navbar = () => {
 
                 <button
                     type="button"
-                    className="md:hidden bg-black text-white font-sans font-bold uppercase px-4 py-2 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
+                    className="md:hidden bg-black text-white font-sans font-bold uppercase px-4 py-2 border-[4px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-label="Toggle mobile menu"
                 >
                     {mobileMenuOpen ? 'FECHAR' : 'MENU'}
                 </button>
 
-                <Link to="/inscricoes" className="hidden md:block">
-                    <BrutalistButton ariaLabel="Join MOAST Dance School">
-                        JUNTA-TE!
-                    </BrutalistButton>
-                </Link>
+                <BrutalistButton to="/inscricoes" ariaLabel="Join MOAST Dance School" className="hidden md:block">
+                    JUNTA-TE!
+                </BrutalistButton>
             </div>
 
             <AnimatePresence>
@@ -89,15 +87,15 @@ const Navbar = () => {
                             className="flex flex-col p-6 gap-4"
                         >
                             <NavigationLinks mobile onLinkClick={closeMobileMenu} />
-                            <Link
+                            <BrutalistButton
                                 to="/inscricoes"
                                 onClick={closeMobileMenu}
-                                className="bg-black text-white font-sans font-bold uppercase px-6 py-3 border-[4px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-left block"
+                                className="text-left block w-full"
                                 variants={mobileLinkVariants}
                                 custom={NAVIGATION_LINKS.length}
                             >
                                 JUNTA-TE!
-                            </Link>
+                            </BrutalistButton>
                         </m.div>
                     </m.div>
                 )}

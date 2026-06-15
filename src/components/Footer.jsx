@@ -1,7 +1,9 @@
 import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
 import Regulamento from '../assets/pdfs/regulamento2526.pdf';
 import Calendario from '../assets/pdfs/calendario2526.pdf';
+
 import { SEASON_YEARS } from '../constants/navigation';
 
 const Footer = () => {

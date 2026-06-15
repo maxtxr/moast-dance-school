@@ -1,5 +1,16 @@
+import { useEffect } from 'react';
 import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LazyMotion, domAnimation, AnimatePresence, m } from 'framer-motion';
+
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+};
 
 import LandingPage from './components/LandingPage';
 import SchedulePage from './components/SchedulePage';
@@ -51,6 +62,7 @@ const AnimatedRoutes = () => {
 function App() {
     return (
         <HashRouter>
+            <ScrollToTop />
             <div className="w-full min-h-screen bg-moast-off-white">
                 <AnimatedRoutes />
             </div>
