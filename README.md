@@ -1,72 +1,57 @@
-# MOAST Dance School
+# 🏫 MOAST Dance School
+
+> **Motion of Art, Style & Taste** 🔥
 
 [**English**](README.md) | [**Português**](README.pt.md)
 
-> **Motion of Art, Style & Taste**
+A bold, neo-brutalist website for **MOAST Dance School** — a Portuguese dance academy offering everything from Hip-Hop and Breaking to Contemporary, Kizomba, and specialised training programmes. Built with **React 19**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
 
-A neo-brutalist website for **MOAST Dance School** — built with React 19, Vite, Tailwind CSS, and Framer Motion. The UI is rendered in **European Portuguese** for its users, while the codebase follows clean **English** naming conventions.
-
----
-
-## About
-
-MOAST is a dance school based in Portugal, offering classes from Hip-Hop and Breaking to Contemporary, Kizomba, and specialised training programmes. This website serves as the school's digital home, providing:
-
-- A full **class catalogue** with looping video previews and category colour coding.
-- An interactive **weekly schedule** filterable by studio (Estúdio 1, Estúdio 2, Grémio).
-- A **merch showcase** combining a horizontal polaroid gallery with an integrated video trailer and a pricing table.
-- A **registration hub** linking to external Google Forms for trial classes and enrolment.
-- A **school manifesto** page detailing the MOAST philosophy (Motion, Art, Style, Taste).
-- A **contact page** with Google Maps embeds for both locations and social media links.
-- A **"Today's Classes"** section on the landing page that dynamically shows the current day's schedule.
-
-The design leans fully into the **neo-brutalist** aesthetic: bold TAN Buster typography, thick black borders, hard offset shadows, noise textures, and a vibrant palette of magenta, teal, and pink.
+The UI speaks **European Portuguese** (`pt-PT`) to its users; the codebase stays clean with **English** naming conventions for developer accessibility.
 
 ---
 
-## Features
+## ✨ Features
 
-- **Responsive Class Schedule** — Full-week grid layout on desktop, grouped by day on mobile. Switch between studios (Estúdio 1, Estúdio 2, Grémio) with animated tab transitions.
-- **Class Catalogue** — All classes displayed with category colour codes, level badges, teacher info, days of the week, and looping background videos with hover effects.
-- **Today's Classes** — A dynamic homepage section that filters the current weekday's classes, with paginated navigation.
-- **Teachers Section** — Individual teacher profiles with cutout images, nickname badges, colour-coded class tags, and biographical text.
-- **Merch & Pricing** — Horizontal-scroll polaroid photo gallery (with an embedded auto-play video trailer), followed by a two-column pricing table with brutalist lift animations.
-- **Registration Hub** — Three action cards linking to Google Forms for trial classes and enrolments at both locations.
-- **Moast Page** — A full-screen school philosophy page featuring a manifesto, four pillar cards (Motion, Art, Style, Taste), a numbered method section ("O Nosso Método"), and a large polaroid-style video showcase with hover rotation.
-- **Contact Page** — Phone, email, social links (Instagram & Facebook with inline SVGs), and two locations displayed with address info boxes and embedded Google Maps (grayscale, brutalist-bordered).
-- **Animated Page Transitions** — Route-level enter/exit animations via Framer Motion and `AnimatePresence`.
-- **404 Page** — A custom not-found page that stays true to the brutalist language.
-- **Mobile Menu** — Animated slide-down navigation overlay for small screens.
+| Feature | Description |
+| --- | --- |
+| **🕺 Class Catalogue** | Full catalogue with looping video previews, category colour coding, and level badges |
+| **📅 Weekly Schedule** | Interactive grid filterable by studio (Estúdio 1, Estúdio 2, Grémio) with animated tab transitions |
+| **🔮 Today's Classes** | Dynamic homepage section showing the current day's schedule with pagination |
+| **👩‍🏫 Teacher Profiles** | Individual cards with cutout images, nickname badges, colour-coded class tags, and bios |
+| **🛍️ Merch & Pricing** | Horizontal-scroll polaroid gallery with embedded auto-play trailer + pricing table |
+| **📝 Registration Hub** | Google Form CTAs for trial classes and enrolment at both locations |
+| **📖 School Manifesto** | Full-screen philosophy page with pillar cards, method section, and polaroid video showcase |
+| **📍 Contact & Maps** | Phone, email, socials (Instagram/Facebook), and grayscale Google Maps embeds |
+| **🌀 Page Transitions** | Route-level enter/exit animations via Framer Motion `AnimatePresence` |
+| **📱 Mobile Menu** | Animated slide-down navigation overlay for small screens |
+| **🚫 Custom 404** | A not-found page that stays true to the brutalist language |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Technology | Purpose |
 | --- | --- |
-| [React 19](https://react.dev/) | UI library |
-| [Vite](https://vite.dev/) | Build tool and dev server |
-| [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling |
-| [Framer Motion](https://www.framer.com/motion/) | Declarative animations |
-| [React Router 7](https://reactrouter.com/) | Client-side routing |
+| [**React 19**](https://react.dev/) | UI library |
+| [**Vite 8**](https://vite.dev/) | Build tool & dev server (HMR) |
+| [**Tailwind CSS 3**](https://tailwindcss.com/) | Utility-first CSS framework |
+| [**Framer Motion 12**](https://www.framer.com/motion/) | Declarative animations & page transitions |
+| [**React Router 7**](https://reactrouter.com/) | Client-side routing (HashRouter for GitHub Pages) |
+| [**PostCSS**](https://postcss.org/) + **Autoprefixer** | CSS processing pipeline |
+| [**ESLint 10**](https://eslint.org/) | Code linting (flat config) |
+| [**gh-pages**](https://github.com/tschaub/gh-pages) | GitHub Pages deployment |
 
----
+### 🎨 Design System
 
-## UI & Design System
+A **neo-brutalist** aesthetic runs throughout:
 
-### Neo-Brutalist Approach
-
-Every visual decision reinforces the brutalist ethos:
-
-- **Typography** — Display headings use **TAN Buster** (loaded via `@font-face`), a chunky serif typeface. Body copy uses **Futura**, applied through the Tailwind font-family configuration.
-- **Thick black borders** (`border-[3px]`) on cards, buttons, sections, and media containers.
-- **Hard offset shadows** — `shadow-[4px_4px_0_0_#000]` and `shadow-[8px_8px_0_0_#000]` create a "stamped" physical feel. Available as utility classes `shadow-brutalist` and `shadow-brutalist-lg` in `index.css`, and as tokens `brutalist` / `brutalist-lg` in the Tailwind config.
-- **Rotated badges** (`rotate-[-2deg]`) that introduce deliberate imperfection.
-- **Noise texture overlays** — Applied via an SVG `feTurbulence` filter as a `background-image`, layered throughout the UI on hero sections, cards, and page headers.
-- **Uppercase, bold typography** across almost all visible text.
-- **Polaroid-style media** — Class video thumbnails and merch gallery items are rendered as polaroid cards with white borders, drop shadows, and occasional rotation offsets.
-
-### Colour Palette
+- **Typography** — Display headings in **TAN Buster** (chunky serif `@font-face`), body copy in **Futura**
+- **Thick black borders** (`border-[3px]`) on cards, buttons, sections, and media
+- **Hard offset shadows** — `shadow-brutalist` (4px) and `shadow-brutalist-lg` (8px) for a stamped, physical feel
+- **Rotated badges** (`rotate-[-2deg]`) adding deliberate imperfection
+- **Noise texture** — SVG `feTurbulence` filter layered as `bg-noise`
+- **Polaroid frames** — White-bordered media with drop shadow and rotation
+- **Colour palette**:
 
 | Token | Hex |
 | --- | --- |
@@ -80,15 +65,15 @@ Every visual decision reinforces the brutalist ethos:
 | `moast-purple` | `#7c3aed` |
 | `moast-black` | `#111111` |
 
-Colours, shadows, fonts, and the noise pattern are all defined in `tailwind.config.js` under `theme.extend`, making them available as utility classes throughout the project.
+All tokens, fonts, shadows, and the noise pattern are configured in `tailwind.config.js` under `theme.extend`.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js** >= 18 (tested on current LTS)
+- **Node.js** >= 18 (LTS recommended)
 - **npm** >= 9 (or your preferred package manager)
 
 ### Installation
@@ -105,77 +90,76 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser. The app will reload automatically when you make changes to source files.
+Open [http://localhost:5173](http://localhost:5173) — the app hot-reloads on source changes.
 
 ### Production Build
 
 ```bash
-npm run build     # outputs to ./dist
-npm run preview   # serve the production build locally
+npm run build      # outputs to ./dist
+npm run preview    # serve the production build locally
 ```
 
 ### Linting
 
 ```bash
-npm run lint
+npm run lint       # ESLint across all JS/JSX files
 ```
-
-Runs ESLint across all JavaScript and JSX files.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```bash
 moast-dance-school/
-├── index.html                    # Vite entry point (lang="pt")
-├── vite.config.js                # Vite configuration
-├── tailwind.config.js            # Theme: colours, fonts, shadows, noise
-├── postcss.config.js             # PostCSS with Autoprefixer
-├── eslint.config.js              # ESLint flat config
-├── public/                       # Static assets (served as-is)
+├── index.html                     # Vite entry point (lang="pt")
+├── vite.config.js                 # Vite config (base: /moast-dance-school)
+├── tailwind.config.js             # Theme: colours, fonts, shadows, noise
+├── postcss.config.js              # PostCSS + Autoprefixer
+├── eslint.config.js               # ESLint flat config
+├── public/                        # Static assets (favicon, icons)
 └── src/
-    ├── main.jsx                  # React root
-    ├── App.jsx                   # Router + animated routes
-    ├── index.css                 # Global styles & Tailwind layers
+    ├── main.jsx                   # React root
+    ├── App.jsx                    # HashRouter + animated routes
+    ├── index.css                  # Tailwind layers & global styles
     ├── assets/
-    │   ├── fonts/                # TAN-BUSTER-Regular.ttf
-    │   ├── images/               # Logos, cutouts, graffiti overlay
-    │   ├── videos/               # Hero, moast page & class videos
-    │   ├── classes/              # Per-class demonstration videos
-    │   ├── merch/                # Product photos & merch trailer
-    │   └── pdfs/                 # Season rules & calendar PDFs
+    │   ├── fonts/                 # TAN-BUSTER-Regular.ttf
+    │   ├── images/                # Logos, cutouts, graffiti overlay
+    │   ├── videos/                # Hero & promo videos
+    │   ├── classes/               # Per-class demo videos (20)
+    │   ├── merch/                 # Product photos & trailer
+    │   └── pdfs/                  # Season calendar & rules
     ├── components/
-    │   ├── LandingPage.jsx       # Home — Hero + ClassesToday + About
-    │   ├── Moast.jsx             # /moast — legacy placeholder (unused)
-    │   ├── MoastPage.jsx         # /moast — manifesto, pillars, video
-    │   ├── Classes.jsx           # /aulas — full class catalogue
-    │   ├── Teachers.jsx          # /professores — teacher profiles
-    │   ├── SchedulePage.jsx      # /horarios — weekly schedule grid
-    │   ├── PricingPage.jsx       # /precario — merch gallery + table
-    │   ├── ContactPage.jsx       # /contactos — info, maps, social
-    │   ├── RegistrationPage.jsx  # /inscricoes — Google Form cards
-    │   ├── NotFoundPage.jsx      # 404 page
-    │   ├── Navbar.jsx            # Sticky nav with mobile overlay
-    │   ├── Footer.jsx            # Site footer with PDF links
-    │   ├── PageHero.jsx          # Reusable page header
-    │   ├── Hero.jsx              # Landing hero (video bg)
-    │   ├── ClassesToday.jsx      # Today's classes section
-    │   ├── AboutMoast.jsx        # "MOAST?" landing section
-    │   ├── BrutalistCard.jsx     # Card, badge & button primitives
-    │   └── Icons.jsx             # Inline SVG icons
+    │   ├── pages/                 # Route-level page components
+    │   │   ├── LandingPage.jsx    # /
+    │   │   ├── MoastPage.jsx      # /moast
+    │   │   ├── Classes.jsx        # /aulas
+    │   │   ├── Teachers.jsx       # /professores
+    │   │   ├── SchedulePage.jsx   # /horarios
+    │   │   ├── PricingPage.jsx    # /precario
+    │   │   ├── RegistrationPage.jsx # /inscricoes
+    │   │   ├── ContactPage.jsx    # /contactos
+    │   │   └── NotFoundPage.jsx   # 404
+    │   └── ui/                    # Shared UI primitives
+    │       ├── Navbar.jsx         # Sticky nav + mobile overlay
+    │       ├── Footer.jsx         # Footer with PDF links
+    │       ├── Hero.jsx           # Landing hero section
+    │       ├── PageHero.jsx       # Reusable page header
+    │       ├── ClassesToday.jsx   # Today's classes
+    │       ├── AboutMoast.jsx     # "MOAST?" landing section
+    │       ├── BrutalistButton.jsx # Reusable button/link
+    │       └── Icons.jsx          # Inline SVG icons
     ├── constants/
-    │   ├── navigation.js         # Nav links & season labels
-    │   └── dates.js              # Date formatting helpers (PT)
+    │   ├── navigation.js          # Nav links & season labels
+    │   └── dates.js               # PT date formatting utilities
     └── data/
-        ├── classes.js            # Full class schedule dataset
-        ├── teachers.js           # Teacher profiles dataset
-        └── merch.js              # Merch items dataset
+        ├── classes.js             # 32+ weekly class entries
+        ├── teachers.js            # 13 teacher profiles
+        └── merch.js               # 9 merch items
 ```
 
 ---
 
-## Routes
+## 🗺️ Routes
 
 | Path | Page | Description |
 | --- | --- | --- |
@@ -189,14 +173,27 @@ moast-dance-school/
 | `/inscricoes` | RegistrationPage | Registration CTAs |
 | `*` | NotFoundPage | 404 fallback |
 
----
-
-## Localisation
-
-The **user-facing interface** is entirely in **European Portuguese** (`lang="pt"`). All visible text — headings, button labels, form links, descriptions, and alt tags — remains in Portuguese. The **internal code** (component names, variable names, file names, prop keys, data field names) follows **English** conventions for maximum accessibility to international developers.
+Page transitions use `AnimatePresence` with `LazyMotion` (Framer Motion) for smooth enter/exit animations.
 
 ---
 
-## License
+## 🌐 Localisation
+
+The **user-facing interface** is entirely in **European Portuguese** (`lang="pt"`). All visible text — headings, labels, descriptions, links, and alt tags — is in Portuguese. The **internal codebase** (component names, variables, filenames, props, data fields) follows **English** conventions for maximum developer accessibility.
+
+---
+
+## 📝 Academic Context
+
+This project was developed as part of an academic assignment for a **Web Development / Design** course.
+
+- **Student:** Bruna Rossa
+- **Course:** Degree in Informatics Engineering
+- **Institution:** Polytechnic Institute of Setúbal
+- **Year:** 2025/2026
+
+---
+
+## 📄 License
 
 All rights reserved. This project is the property of MOAST Dance School. Redistribution or commercial use without permission is not permitted.
