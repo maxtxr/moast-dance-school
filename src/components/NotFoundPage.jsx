@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
-import whiteNeg from '../assets/images/logo/mds_neg.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import whiteNeg from '../assets/images/logo/mds_neg.webp';
 
 const gridPatternStyle = {
     backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
@@ -38,7 +38,7 @@ const NotFoundPage = () => (
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                 >
-                    <h1 className="font-serif text-[5rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[18rem] font-black uppercase text-black leading-[1.0] tracking-wide">
+                    <h1 className="font-serif font-black uppercase text-black text-[clamp(4rem,20vw,18rem)] leading-[1.1]">
                         404
                     </h1>
                 </m.div>
@@ -54,7 +54,7 @@ const NotFoundPage = () => (
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.35 }}
-                    className="font-sans text-lg md:text-2xl text-black/80 max-w-md mx-auto mb-10"
+                    className="font-sans text-base md:text-2xl text-black/80 max-w-md mx-auto mb-8 md:mb-10"
                 >
                     Página não encontrada...
                 </m.p>

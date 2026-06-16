@@ -3,7 +3,7 @@ import { m } from 'framer-motion';
 import PageHero from './PageHero';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const CONTACTS = {
     phones: ['+351 927 360 732', '+351 968 863 157'],
@@ -110,7 +110,7 @@ const ContactPage = () => (
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col justify-center"
                     >
-                        <h2 className="font-serif text-3xl md:text-5xl font-black uppercase mb-8 tracking-tight leading-[0.85] text-black">
+                        <h2 className="font-serif text-display-section font-black uppercase mb-6 md:mb-8 text-black">
                             CONTACTOS
                         </h2>
 
@@ -151,7 +151,7 @@ const ContactPage = () => (
                         variants={cardVariants}
                         className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col"
                     >
-                        <h2 className="font-serif text-3xl md:text-5xl font-black uppercase mb-8 tracking-tight leading-[0.85] text-black">
+                        <h2 className="font-serif text-display-section font-black uppercase mb-6 md:mb-8 text-black">
                             SEGUE-NOS
                         </h2>
 
@@ -186,7 +186,7 @@ const ContactPage = () => (
                         >
                             {/* Location Info Box */}
                             <div className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8">
-                                <h3 className="font-serif text-2xl md:text-3xl font-black uppercase tracking-tight text-black leading-[0.85] mb-2">
+                                <h3 className="font-serif text-display-card font-black uppercase text-black mb-2">
                                     {location.title}
                                 </h3>
                                 <p className="font-sans text-lg md:text-xl font-bold uppercase tracking-wider text-moast-magenta mb-6">

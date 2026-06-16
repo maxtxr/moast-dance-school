@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import moastLogo from '../assets/images/logo/moast-logo.png';
+import moastLogo from '../assets/images/logo/moast-logo.webp';
 
 import { NAVIGATION_LINKS } from '../constants/navigation';
 import BrutalistButton from './BrutalistButton';
 
-const navLinkClasses = 'font-sans font-bold uppercase nav-link-underline';
+const navLinkClasses = 'font-sans font-bold uppercase nav-link-underline py-2';
 
 const mobileLinkVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -60,7 +60,7 @@ const Navbar = () => {
 
                 <button
                     type="button"
-                    className="md:hidden bg-black text-white font-sans font-bold uppercase px-4 py-2 border-[4px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all"
+                    className="md:hidden bg-black text-white font-sans font-bold uppercase text-sm px-5 py-3 border-[4px] border-black shadow-[5px_5px_0_0_#95D1D3] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all min-h-[44px]"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-label="Toggle mobile menu"
                 >
@@ -84,7 +84,7 @@ const Navbar = () => {
                         <m.div
                             initial="hidden"
                             animate="visible"
-                            className="flex flex-col p-6 gap-4"
+                            className="flex flex-col p-6 gap-3"
                         >
                             <NavigationLinks mobile onLinkClick={closeMobileMenu} />
                             <BrutalistButton

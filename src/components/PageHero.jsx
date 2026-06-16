@@ -1,4 +1,4 @@
-import whiteNeg from '../assets/images/logo/mds_neg.png';
+import whiteNeg from '../assets/images/logo/mds_neg.webp';
 
 import { m } from 'framer-motion';
 
@@ -38,7 +38,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
             >
                 <div className="w-24 h-1 bg-black/20 mx-auto mb-11"></div>
 
-                <h1 className={`font-serif text-4xl md:text-9xl lg:text-[7rem] font-black uppercase ${textColor} leading-none tracking-tighter`}>
+                <h1 className={`font-serif text-display-hero font-black uppercase ${textColor} max-w-full max-sm:text-[clamp(1.5rem,8vw,2.5rem)]`}>
                     {title}
                 </h1>
 

@@ -16,7 +16,7 @@ const Footer = () => {
             className="w-full bg-moast-black"
         >
             <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="font-serif font-bold text-xl">
+                <div className="font-serif font-bold text-[clamp(1rem,4vw,1.5rem)] tracking-normal">
                     <span className="text-moast-magenta">MOAST </span>
                     <span className="text-moast-pink">DANCE </span>
                     <span className="text-moast-teal"> SCHOOL</span>
@@ -34,7 +34,7 @@ const Footer = () => {
 
                     <a
                         href={Calendario}
-                        className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-teal transition-colors"
+                        className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-pink transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -42,7 +42,7 @@ const Footer = () => {
                     </a>
                     <Link
                         to="/contactos"
-                        className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-pink transition-colors"
+                        className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-teal transition-colors"
                     >
                         CONTACTOS
                     </Link>

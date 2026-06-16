@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import Navbar from './Navbar';
 import PageHero from './PageHero';
 import Footer from './Footer';
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const cards = [
     {
@@ -70,10 +70,10 @@ const RegistrationPage = () => (
                             <div className="absolute inset-0 bg-noise opacity-20 mix-blend-overlay pointer-events-none z-0" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <h3 className="font-serif font-black text-2xl md:text-4xl uppercase leading-tight">
+                                <h3 className="font-serif font-black text-display-card uppercase">
                                     {card.title}
                                 </h3>
-                                <p className="font-sans font-bold text-base md:text-lg mt-4 md:mt-6 max-w-xs">
+                                <p className="font-sans font-bold text-sm md:text-lg mt-3 md:mt-6 max-w-xs leading-relaxed">
                                     {card.description}
                                 </p>
                             </div>

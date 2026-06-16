@@ -1,23 +1,23 @@
-import profBibz from '../assets/images/cutout/bibz-cutout.png';
-import profBa from '../assets/images/cutout/ba-cutout.png';
-import profBia from '../assets/images/cutout/bia-cutout.png';
-import profJojo from '../assets/images/cutout/jojo-cutout.png';
-import profGoncalo from '../assets/images/cutout/goncalo-cutout.png';
-import profRicardo from '../assets/images/cutout/ricardo-cutout.png';
-import profMoikana from '../assets/images/cutout/moikana-cutout.png';
-import profLena from '../assets/images/cutout/lena-cutout.png';
-import profSofia from '../assets/images/cutout/sofia-cutout.png';
-import profAlexSofi from '../assets/images/cutout/alex-sofi-cutout.png';
-import profVera from '../assets/images/cutout/vera-cutout.png';
-import profTommy from '../assets/images/cutout/tommy-cutout.png';
-import profRuben from '../assets/images/cutout/ruben-cutout.png';
+import profBibz from '../assets/images/cutout/bibz-cutout.webp';
+import profBa from '../assets/images/cutout/ba-cutout.webp';
+import profBia from '../assets/images/cutout/bia-cutout.webp';
+import profJojo from '../assets/images/cutout/jojo-cutout.webp';
+import profGoncalo from '../assets/images/cutout/goncalo-cutout.webp';
+import profRicardo from '../assets/images/cutout/ricardo-cutout.webp';
+import profMoikana from '../assets/images/cutout/moikana-cutout.webp';
+import profLena from '../assets/images/cutout/lena-cutout.webp';
+import profSofia from '../assets/images/cutout/sofia-cutout.webp';
+import profAlexSofi from '../assets/images/cutout/alex-sofi-cutout.webp';
+import profVera from '../assets/images/cutout/vera-cutout.webp';
+import profTommy from '../assets/images/cutout/tommy-cutout.webp';
+import profRuben from '../assets/images/cutout/ruben-cutout.webp';
 
 export const teachersData = [
   {
     id: 'bibz',
     firstName: 'BEATRIZ MATOS',
     nickname: 'BIBZ',
-    description: 'Fundadora da MOAST e é apaixonada pela criação coreográfica e fusão de estilos, incentiva cada aluno a explorar e descobrir a sua própria identidade no movimento.',
+    description: 'Fundadora da MOAST, incentiva cada aluno a explorar e descobrir a sua própria identidade no movimento.',
     classes: ['BARRA DE CHÃO', 'FUSION', 'TURMAS DE FORMAÇÃO', 'CHOREOGRAPHY'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
@@ -43,7 +43,7 @@ export const teachersData = [
     id: 'bia',
     firstName: 'BEATRIZ OLIVEIRA',
     nickname: 'BIA',
-    description: 'Com uma energia contagiante, transforma as aulas dos mais novos num espaço de pura diversão, onde aprendem a dançar, ganham confiança e criam amizades para a vida.',
+    description: 'Com uma energia contagiante, transforma as aulas dos mais novos num espaço de pura diversão.',
     classes: ['HIP-HOP KIDS', 'TURMAS DE FORMAÇÃO'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
@@ -56,7 +56,7 @@ export const teachersData = [
     id: 'jojo',
     firstName: 'LEONOR JORGE',
     nickname: 'JOJO',
-    description: 'Especialista em primeira infância, cria um ambiente mágico, cheio de cor e música. Guia os mais pequenos nas suas primeiras descobertas com o corpo e o ritmo.',
+    description: 'Especialista em criar um ambiente mágico, cheio de cor e música. Guia os mais pequenos nas suas primeiras descobertas com o corpo e o ritmo.',
     classes: ['HIP-HOP BABIES'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
@@ -105,7 +105,7 @@ export const teachersData = [
     id: 'lena',
     firstName: 'HELENA COSTA',
     nickname: 'LENA',
-    description: 'Dedicada ao desenvolvimento contínuo dos alunos, vai muito além de ensinar passos. O seu foco é ajudá-los a ganhar confiança e a encontrarem a sua própria voz no movimento.',
+    description: 'Dedicada ao desenvolvimento contínuo dos alunos. O seu foco é ajudá-los a ganhar confiança e a encontrarem a sua própria voz no movimento.',
     classes: ['GRÉMIO TURMAS DE FORMAÇÃO'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',

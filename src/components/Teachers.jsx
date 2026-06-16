@@ -5,7 +5,7 @@ import PageHero from './PageHero';
 import Footer from './Footer';
 
 import { teachersData } from '../data/teachers';
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const Teachers = () => {
   return (
@@ -54,7 +54,7 @@ const Teachers = () => {
                     ))}
                   </div>
 
-                  <h2 className={`font-serif text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-black uppercase text-black leading-none drop-shadow-sm pt-2 flex flex-wrap gap-x-3 md:gap-x-4 gap-y-2 md:gap-y-5 ${teacher.imgPos === 'right' ? 'justify-start md:justify-end' : 'justify-start'}`}>                    {(() => {
+                  <h2 className={`font-serif text-[clamp(1.5rem,5vw,4rem)] font-black uppercase text-black leading-[1.1] drop-shadow-sm pt-2 flex flex-wrap gap-x-3 md:gap-x-4 gap-y-2 md:gap-y-5 ${teacher.imgPos === 'right' ? 'justify-start md:justify-end' : 'justify-start'}`}>                    {(() => {
                     if (teacher.nickname) {
                       return (
                         <>
@@ -95,7 +95,7 @@ const Teachers = () => {
                   })()}
                   </h2>
 
-                  <p className="font-sans text-sm md:text-base font-bold text-black/80 mt-6 md:mt-8 max-w-md">
+                  <p className="font-sans text-xs sm:text-sm md:text-base font-bold text-black/80 mt-4 md:mt-8 max-w-md leading-relaxed">
                     {teacher.description}
                   </p>
                 </div>

@@ -1,9 +1,9 @@
 import { m } from 'framer-motion';
 
-import motionImg from '../assets/images/mds/motion.jpg';
-import artImg from '../assets/images/mds/art.jpg';
-import styleImg from '../assets/images/mds/style.jpg';
-import tasteImg from '../assets/images/mds/taste.jpg';
+import motionImg from '../assets/images/mds/motion.webp';
+import artImg from '../assets/images/mds/art.webp';
+import styleImg from '../assets/images/mds/style.webp';
+import tasteImg from '../assets/images/mds/taste.webp';
 
 const moastImages = [
   { id: 'motion', src: motionImg, alt: 'Motion' },
@@ -26,7 +26,7 @@ const AboutMoast = () => {
       <div className="w-full relative flex flex-col items-center h-full">
         <div className="mb-16 z-10">
           <div className="bg-moast-black px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 shadow-[6px_6px_0_0_#CF8DBB]">
-            <span className="font-serif text-4xl md:text-6xl font-black uppercase text-moast-teal tracking-widest leading-[0.85] pt-1 md:pt-1.5">
+            <span className="font-serif text-display-section font-black uppercase text-moast-teal pt-1 md:pt-1.5">
               MOAST?
             </span>
           </div>

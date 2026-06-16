@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@400;700&family=Pacifico&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,16 +15,27 @@
 
 @layer base {
   body {
-    @apply bg-moast-off-white font-sans text-black;
+    @apply bg-moast-off-white font-sans text-black antialiased;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   @font-face {
-  font-family: 'TAN Buster';
-  src: url('./assets/fonts/TAN-BUSTER-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+    font-family: 'TAN Buster';
+    src: url('./assets/fonts/TAN-BUSTER-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+  }
 }
 
 @layer components {
@@ -40,6 +49,39 @@
 }
 
 @layer utilities {
+  .font-serif {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+    letter-spacing: 0.03em;
+  }
+
+  .text-display-hero {
+    font-size: clamp(2.5rem, 10vw, 7rem);
+    line-height: 1.1;
+  }
+
+  .text-display-section {
+    font-size: clamp(2rem, 8vw, 6rem);
+    line-height: 1.1;
+  }
+
+  .text-display-badge {
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .text-display-card {
+    font-size: clamp(1.125rem, 4vw, 2.25rem);
+    line-height: 1.1;
+  }
+
+  .text-display-name {
+    font-size: clamp(1.75rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+
   .nav-link-underline {
     position: relative;
   }

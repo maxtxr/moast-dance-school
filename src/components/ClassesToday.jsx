@@ -6,7 +6,7 @@ import { classes, getCategoryColor } from '../data/classes';
 import { ClockIcon, UserIcon } from './Icons';
 import { getTodayDay, getFormattedDate } from '../constants/dates';
 
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const ITEMS_PER_PAGE = 2;
 
@@ -37,12 +37,12 @@ const ClassesToday = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
                     <div className="flex flex-col">
                         <div className="flex items-center">
-                            <h2 className="font-serif text-4xl md:text-8xl font-black uppercase leading-[0.85] tracking-tight text-black">
+                            <h2 className="font-serif text-[clamp(2.5rem,6vw,4rem)] leading-[0.85] tracking-normal font-black uppercase text-black">
                                 AULAS
                             </h2>
 
                             <div className="bg-moast-pink px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
-                                <span className="font-serif text-2xl md:text-6xl font-black uppercase text-white leading-[0.85] pt-1 md:pt-1.5">
+                                <span className="font-serif text-[clamp(1.2rem,3vw,1.8rem)] leading-none font-black uppercase text-white pt-1 md:pt-1.5">
                                     HOJE
                                 </span>
                             </div>
@@ -68,10 +68,10 @@ const ClassesToday = () => {
                         </p>
 
                         <Link
-                            to="/horarios"
+                            to="/aulas"
                             className="bg-moast-magenta border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-white font-sans font-bold uppercase px-6 py-3.5 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all whitespace-nowrap text-sm"
                         >
-                            VER HORÁRIO COMPLETO
+                            VER TODAS AS AULAS
                         </Link>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const ClassesToday = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -30 }}
                                 transition={{ duration: 0.3 }}
-                                className={`${getCategoryColor(danceClass.category)} border-[3px] border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-6 md:p-8 relative flex flex-col min-h-[280px] w-full`}
+                                className={`${getCategoryColor(danceClass.category)} border-[3px] border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-5 md:p-6 relative flex flex-col min-h-[220px] w-full`}
                             >
                                 <div
                                     className="absolute inset-0 z-0 pointer-events-none bg-cover bg-center opacity-15 mix-blend-screen"
@@ -96,25 +96,25 @@ const ClassesToday = () => {
                                     {danceClass.level}
                                 </div>
 
-                                <h3 className="font-serif text-2xl md:text-4xl font-black uppercase mt-6 text-white z-10 w-full md:w-[70%] drop-shadow-md leading-[0.9]">
+                                <h3 className="font-serif text-[clamp(0.95rem,2.5vw,1.75rem)] leading-[1.1] tracking-wide font-black uppercase mt-4 md:mt-6 text-white z-10 w-full max-w-[65%] md:max-w-[70%]">
                                     {danceClass.title}
                                 </h3>
 
-                                {/* <p className="font-sans text-sm font-medium text-white/90 mt-2 z-10 w-full md:w-[70%]">
-                                    {danceClass.description || 'Descrição do estilo'}
+                                {/* <p className="font-sans text-xs sm:text-sm font-medium text-white/80 mt-2 z-10 w-full max-w-[65%] md:max-w-[70%] leading-relaxed line-clamp-2">
+                                    {danceClass.description}
                                 </p> */}
 
-                                <div className="flex gap-3 mt-auto pt-10 flex-wrap z-10">
-                                    <div className="bg-white px-4 py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-xs uppercase flex items-center h-10">
+                                <div className="flex gap-2 md:gap-3 mt-auto pt-4 md:pt-6 flex-wrap z-10 w-full max-w-[60%] md:max-w-[65%]">
+                                    <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center h-8 md:h-10">
                                         <ClockIcon /> {danceClass.time}, {danceClass.studio}
                                     </div>
-                                    <div className="bg-white px-4 py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-xs uppercase flex items-center h-10">
-                                        <UserIcon /> {danceClass.teacher}
+                                    <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center h-8 md:h-10">
+                                        <UserIcon /> {danceClass.teacher.split(' ')[0]}
                                     </div>
                                 </div>
 
                                 <div
-                                    className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 border-[8px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-28 md:w-48 aspect-[3/4] bg-white z-20"
+                                    className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 border-[6px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-28 sm:w-36 md:w-48 aspect-[3/4] bg-white z-20"
                                     style={{ transform: 'translateY(-50%) rotate(4deg)' }}
                                 >
                                     <video

@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 import { classes, getCategoryColor } from '../data/classes';
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const STUDIOS = ['ESTÚDIO 1', 'ESTÚDIO 2', 'GRÉMIO'];
 const DAY_ORDER = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
@@ -125,7 +125,7 @@ const SchedulePage = () => {
                                 type="button"
                                 key={studio}
                                 onClick={() => setActiveStudio(studio)}
-                                className={`font-serif font-black uppercase text-lg md:text-3xl leading-none px-6 md:px-8 py-3 border-[3px] border-black transition-all duration-200 ${activeStudio === studio
+                                className={`font-serif font-black uppercase text-display-badge px-4 md:px-8 py-3 border-[3px] border-black transition-all duration-200 ${activeStudio === studio
                                     ? 'bg-black text-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] rotate-[-2deg]'
                                     : 'bg-white text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px]'
                                     }`}
@@ -190,7 +190,7 @@ const SchedulePage = () => {
                                 ) : (
                                     Object.entries(mobileGrouped).map(([day, dayClasses]) => (
                                         <div key={day}>
-                                            <h3 className="font-serif font-black uppercase text-2xl leading-[0.85] bg-black text-white pt-1.5 pb-2.5 px-6 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mb-6 inline-block rotate-[-2deg]">
+                                            <h3 className="font-serif font-black uppercase text-[clamp(1.25rem,5vw,1.5rem)] bg-black text-white pt-1.5 pb-2.5 px-6 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] mb-6 inline-block rotate-[-2deg]">
                                                 {day}
                                             </h3>
                                             <div className="flex flex-col gap-5">

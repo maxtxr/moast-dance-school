@@ -6,14 +6,14 @@ import Footer from './Footer';
 
 import { merchItems } from '../data/merch';
 import merchTrailerVideo from '../assets/merch/merch.mp4';
-import merchGroup from '../assets/merch/merch.jpg';
-import hoodieImg from '../assets/merch/hoodie.jpg';
-import toteImg from '../assets/merch/tote.jpg';
-import tshirt1Img from '../assets/merch/tshirt1.jpg';
-import tshirt2Img from '../assets/merch/tshirt2.jpg';
-import topImg from '../assets/merch/top.jpg';
-import sockImg from '../assets/merch/sock.jpg';
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import merchGroup from '../assets/merch/merch.webp';
+import hoodieImg from '../assets/merch/hoodie.webp';
+import toteImg from '../assets/merch/tote.webp';
+import tshirt1Img from '../assets/merch/tshirt1.webp';
+import tshirt2Img from '../assets/merch/tshirt2.webp';
+import topImg from '../assets/merch/top.webp';
+import sockImg from '../assets/merch/sock.webp';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 import { SEASON_LABEL } from '../constants/navigation';
 
 const merchPhotos = [
@@ -109,12 +109,12 @@ const PricingPage = () => (
 
                     <div className="relative z-10 grid grid-cols-[2fr_1fr] md:grid-cols-[5fr_2fr] gap-3 md:gap-4">
                         <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                            <h2 className="font-serif text-xl md:text-3xl font-black text-white uppercase leading-none drop-shadow-sm">
+                            <h2 className="font-serif text-display-badge font-black text-white uppercase drop-shadow-sm">
                                 MERCH
                             </h2>
                         </div>
                         <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                            <h2 className="font-serif text-xl md:text-3xl font-black text-white uppercase leading-none drop-shadow-sm">
+                            <h2 className="font-serif text-display-badge font-black text-white uppercase drop-shadow-sm">
                                 VALOR
                             </h2>
                         </div>
@@ -133,7 +133,7 @@ const PricingPage = () => (
                                 </div>
 
                                 <div className="bg-white border-[3px] border-black flex items-center justify-center py-4 md:py-6 px-3 md:px-8 text-center text-moast-magenta shadow-[4px_4px_0_0_rgba(0,0,0,1)] cursor-default">
-                                    <span className="font-serif font-black text-xl md:text-3xl leading-none">
+                                    <span className="font-serif font-black text-display-badge">
                                         {item.price}
                                     </span>
                                 </div>

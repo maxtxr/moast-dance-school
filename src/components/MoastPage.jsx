@@ -4,7 +4,7 @@ import PageHero from './PageHero';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-import graffitiOverlay from '../assets/images/graffiti-overlay.png';
+import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 import moastVideo from '../assets/videos/moast-video2.mp4';
 
 const staggerContainer = {
@@ -63,12 +63,9 @@ const MoastPage = () => {
 
                         {/* Manifesto */}
                         <m.div variants={staggerItem} className="space-y-6">
-                            <h2 className="font-serif text-[2.5rem] md:text-7xl lg:text-[85px] xl:text-[95px] font-black uppercase text-black leading-[0.85] tracking-[-0.03em] flex flex-col pt-1 pb-3">
-                                {['MAIS QUE', 'DANÇA...', 'UMA', 'FAMÍLIA'].map((line, i) => (
-                                    <span key={i} className="whitespace-nowrap block">
-                                        {line}
-                                    </span>
-                                ))}
+                            <h2 className="font-serif text-display-hero font-black uppercase text-black flex flex-col pt-1 pb-3">
+                                <span className="block">MAIS QUE DANÇA...</span>
+                                <span className="block">UMA FAMÍLIA</span>
                             </h2>
 
                             <div className="w-24 h-1.5 bg-black" />
@@ -86,7 +83,7 @@ const MoastPage = () => {
                                     className={`${p.color} px-4 py-2 md:px-5 md:py-2.5 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:rotate-0 transition-transform duration-300 flex items-center`}
                                     style={{ transform: `rotate(${p.rotate})` }}
                                 >
-                                    <span className="font-serif text-3xl md:text-5xl font-black uppercase text-black leading-[0.85] tracking-tight drop-shadow-sm pt-1">
+                                    <span className="font-serif text-display-badge font-black uppercase text-black drop-shadow-sm pt-1">
                                         {p.label}
                                     </span>
                                 </div>
@@ -101,7 +98,7 @@ const MoastPage = () => {
                             <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
 
                             <div className="bg-black px-5 py-2.5 w-fit mb-12 -ml-2 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] relative z-10">
-                                <span className="font-serif text-lg md:text-3xl font-black uppercase text-moast-teal leading-[0.85] pt-1">
+                                <span className="font-serif text-display-badge font-black uppercase text-moast-teal pt-1">
                                     O NOSSO MÉTODO
                                 </span>
                             </div>
@@ -109,16 +106,16 @@ const MoastPage = () => {
                             <div className="flex flex-col gap-8 relative z-10">
                                 {methodSteps.map((m) => (
                                     <div key={m.step} className="flex gap-6 items-start">
-                                        <span className="font-serif text-2xl md:text-4xl font-black text-moast-magenta leading-none min-w-[40px] md:min-w-[50px] pt-1">
+                                        <span className="font-serif text-display-card font-black text-moast-magenta min-w-[32px] md:min-w-[50px] pt-1">
                                             {m.step}
                                         </span>
 
-                                        <div className="flex-1 space-y-2">
-                                            <h4 className="font-serif text-lg md:text-2xl font-black uppercase text-black leading-[0.85] pt-0.5 group-hover:underline">
+                                        <div className="flex-1 space-y-1 md:space-y-2">
+                                            <h4 className="font-serif text-[clamp(1rem,3vw,1.5rem)] font-black uppercase text-black leading-[1.1] pt-0.5 group-hover:underline">
                                                 {m.title}
                                             </h4>
 
-                                            <p className="font-sans font-medium text-base md:text-lg text-black/80 max-w-[90%]">
+                                            <p className="font-sans font-medium text-sm md:text-lg text-black/80 max-w-[90%]">
                                                 {m.desc}
                                             </p>
                                         </div>
