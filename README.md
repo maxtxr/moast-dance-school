@@ -1,6 +1,6 @@
-# 🏫 MOAST Dance School
+# MOAST Dance School 💜🩷🩵
 
-> **Motion of Art, Style & Taste** 🔥
+> **Motion of Art, Style & Taste**
 
 [**English**](README.md) | [**Português**](README.pt.md)
 
@@ -10,25 +10,25 @@ The UI speaks **European Portuguese** (`pt-PT`) to its users; the codebase stays
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 | --- | --- |
-| **🕺 Class Catalogue** | Full catalogue with looping video previews, category colour coding, and level badges |
-| **📅 Weekly Schedule** | Interactive grid filterable by studio (Estúdio 1, Estúdio 2, Grémio) with animated tab transitions |
-| **🔮 Today's Classes** | Dynamic homepage section showing the current day's schedule with pagination |
-| **👩‍🏫 Teacher Profiles** | Individual cards with cutout images, nickname badges, colour-coded class tags, and bios |
-| **🛍️ Merch & Pricing** | Horizontal-scroll polaroid gallery with embedded auto-play trailer + pricing table |
-| **📝 Registration Hub** | Google Form CTAs for trial classes and enrolment at both locations |
-| **📖 School Manifesto** | Full-screen philosophy page with pillar cards, method section, and polaroid video showcase |
-| **📍 Contact & Maps** | Phone, email, socials (Instagram/Facebook), and grayscale Google Maps embeds |
-| **🌀 Page Transitions** | Route-level enter/exit animations via Framer Motion `AnimatePresence` |
-| **📱 Mobile Menu** | Animated slide-down navigation overlay for small screens |
-| **🚫 Custom 404** | A not-found page that stays true to the brutalist language |
+| **Class Catalogue** | Full catalogue with looping video previews, category colour coding, and level badges |
+| **Weekly Schedule** | Interactive grid filterable by studio (Estúdio 1, Estúdio 2, Grémio) with animated tab transitions |
+| **Today's Classes** | Dynamic homepage section showing the current day's schedule with pagination |
+| **Teacher Profiles** | Individual cards with cutout images, nickname badges, colour-coded class tags, and bios |
+| **Merch & Pricing** | Horizontal-scroll polaroid gallery with embedded auto-play trailer + pricing table |
+| **Registration Hub** | Google Form CTAs for trial classes and enrolment at both locations |
+| **School Manifesto** | Full-screen philosophy page with pillar cards, method section, and polaroid video showcase |
+| **Contact & Maps** | Phone, email, socials (Instagram/Facebook), and grayscale Google Maps embeds |
+| **Page Transitions** | Route-level enter/exit animations via Framer Motion `AnimatePresence` |
+| **Mobile Menu** | Animated slide-down navigation overlay for small screens |
+| **Custom 404** | A not-found page that stays true to the brutalist language |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 | --- | --- |
@@ -41,7 +41,7 @@ The UI speaks **European Portuguese** (`pt-PT`) to its users; the codebase stays
 | [**ESLint 10**](https://eslint.org/) | Code linting (flat config) |
 | [**gh-pages**](https://github.com/tschaub/gh-pages) | GitHub Pages deployment |
 
-### 🎨 Design System
+### Design System
 
 A **neo-brutalist** aesthetic runs throughout:
 
@@ -59,17 +59,15 @@ A **neo-brutalist** aesthetic runs throughout:
 | `moast-magenta` | `#DA86D4` |
 | `moast-dark-magenta` | `#985A7C` |
 | `moast-pink` | `#FFBFD5` |
-| `moast-light-pink` | `#FEBFD4` |
 | `moast-dark-pink` | `#ff2a6d` |
 | `moast-teal` | `#70ECDF` |
-| `moast-purple` | `#7c3aed` |
 | `moast-black` | `#111111` |
 
 All tokens, fonts, shadows, and the noise pattern are configured in `tailwind.config.js` under `theme.extend`.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -107,7 +105,7 @@ npm run lint       # ESLint across all JS/JSX files
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 moast-dance-school/
@@ -159,7 +157,7 @@ moast-dance-school/
 
 ---
 
-## 🗺️ Routes
+## Routes
 
 | Path | Page | Description |
 | --- | --- | --- |
@@ -177,13 +175,13 @@ Page transitions use `AnimatePresence` with `LazyMotion` (Framer Motion) for smo
 
 ---
 
-## 🌐 Localisation
+## Localisation
 
 The **user-facing interface** is entirely in **European Portuguese** (`lang="pt"`). All visible text — headings, labels, descriptions, links, and alt tags — is in Portuguese. The **internal codebase** (component names, variables, filenames, props, data fields) follows **English** conventions for maximum developer accessibility.
 
 ---
 
-## 📝 Academic Context
+## Academic Context
 
 This project was developed as part of an academic assignment for a **Web Development / Design** course.
 
@@ -194,6 +192,6 @@ This project was developed as part of an academic assignment for a **Web Develop
 
 ---
 
-## 📄 License
+## License
 
 All rights reserved. This project is the property of MOAST Dance School. Redistribution or commercial use without permission is not permitted.

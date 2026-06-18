@@ -1,4 +1,5 @@
-import { m } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 import PageHero from './PageHero';
 import Navbar from './Navbar';
@@ -25,6 +26,68 @@ const merchPhotos = [
     { src: topImg, alt: 'Flow Fit' },
     { src: sockImg, alt: 'Rhythm Feet' },
 ];
+
+function findMerchItem(alt) {
+    const altLower = alt.toLowerCase();
+    return merchItems.find((item) => {
+        const itemLower = item.name.toLowerCase();
+        return itemLower.startsWith(altLower) || itemLower.includes(altLower);
+    });
+}
+
+const MerchPhotoCard = ({ photo, item, index }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const isTouchDevice = 'ontouchstart' in window;
+
+    return (
+        <m.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.06, type: 'spring', stiffness: 100, damping: 16 }}
+            className="flex-shrink-0 w-52 md:w-60"
+            onMouseEnter={() => !isTouchDevice && setIsOpen(true)}
+            onMouseLeave={() => !isTouchDevice && setIsOpen(false)}
+            onClick={() => isTouchDevice && setIsOpen((prev) => !prev)}
+        >
+            <div className="bg-white border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] p-1.5">
+                <div className="relative w-full aspect-[3/4] overflow-hidden border-[2px] border-black">
+                    <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="w-full h-full object-cover"
+                        draggable={false}
+                    />
+                    <AnimatePresence>
+                        {isOpen && item && (
+                            <m.div
+                                initial={{ opacity: 0, scale: 0.85, y: 5 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.85, y: 5 }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                                className="absolute inset-0 flex items-center justify-center bg-black/40"
+                            >
+                                <div className="bg-white border-[2px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] p-2.5 mx-3 text-center w-[85%]">
+                                    <span className="block font-sans font-black text-[10px] md:text-xs uppercase leading-tight">
+                                        {item.name}
+                                    </span>
+                                    <span className="block font-serif font-black text-xs md:text-sm text-moast-magenta mt-0.5 tracking-wide">
+                                        {item.price}
+                                    </span>
+                                </div>
+                            </m.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+                <div className="pt-1.5 pb-0.5 text-center">
+                    <span className="font-sans font-bold text-[10px] md:text-xs uppercase tracking-wider text-black opacity-70">
+                        {photo.alt}
+                    </span>
+                </div>
+            </div>
+        </m.div>
+    );
+};
 
 const PricingPage = () => (
     <div className="min-h-screen bg-moast-off-white flex flex-col">
@@ -71,30 +134,12 @@ const PricingPage = () => (
                         </m.div>
 
                         {merchPhotos.map((photo, index) => (
-                            <m.div
+                            <MerchPhotoCard
                                 key={photo.alt}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.06, type: 'spring', stiffness: 100, damping: 16 }}
-                                className="flex-shrink-0 w-52 md:w-60"
-                            >
-                                <div className="bg-white border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] p-1.5">
-                                    <div className="w-full aspect-[3/4] overflow-hidden border-[2px] border-black">
-                                        <img
-                                            src={photo.src}
-                                            alt={photo.alt}
-                                            className="w-full h-full object-cover"
-                                            draggable={false}
-                                        />
-                                    </div>
-                                    <div className="pt-1.5 pb-0.5 text-center">
-                                        <span className="font-sans font-bold text-[10px] md:text-xs uppercase tracking-wider text-black opacity-70">
-                                            {photo.alt}
-                                        </span>
-                                    </div>
-                                </div>
-                            </m.div>
+                                photo={photo}
+                                item={findMerchItem(photo.alt)}
+                                index={index}
+                            />
                         ))}
                     </div>
                 </div>

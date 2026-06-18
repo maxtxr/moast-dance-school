@@ -41,7 +41,7 @@ const ClassesToday = () => {
                                 AULAS
                             </h2>
 
-                            <div className="bg-moast-pink px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
+                            <div className="bg-moast-magenta px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
                                 <span className="font-serif text-[clamp(1.2rem,3vw,1.8rem)] leading-none font-black uppercase text-white pt-1 md:pt-1.5">
                                     HOJE
                                 </span>

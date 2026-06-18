@@ -70,7 +70,7 @@ const RegistrationPage = () => (
                             <div className="absolute inset-0 bg-noise opacity-20 mix-blend-overlay pointer-events-none z-0" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <h3 className="font-serif font-black text-display-card uppercase">
+                                <h3 className="font-serif font-black text-l md:text-xl lg:text-2xl uppercase leading-[1.1] tracking-wide break-words">
                                     {card.title}
                                 </h3>
                                 <p className="font-sans font-bold text-sm md:text-lg mt-3 md:mt-6 max-w-xs leading-relaxed">

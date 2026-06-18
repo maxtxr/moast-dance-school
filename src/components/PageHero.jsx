@@ -27,7 +27,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
             src={whiteNeg}
             alt="Decoração de Fundo"
             className="absolute -bottom-24 -right-24 w-[400px] md:w-[600px] lg:w-[800px] opacity-25 pointer-events-none z-0"
-        />  
+        />
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
             <m.div
@@ -51,7 +51,7 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.15 }}
-                    className="bg-moast-teal px-8 py-3 border-[3px] border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-sans font-black uppercase text-sm md:text-base text-black w-fit mt-8 rotate-[-1deg] hover:rotate-[0deg] transition-transform duration-300"
+                    className="bg-moast-teal px-6 py-2 md:px-8 md:py-2.5 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-black uppercase text-xs md:text-sm tracking-wider text-black w-fit mt-8 rotate-[-2deg] pointer-events-none select-none"
                 >
                     {badgeText}
                 </m.div>

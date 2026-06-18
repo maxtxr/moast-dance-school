@@ -30,10 +30,26 @@ const pillars = [
 ];
 
 const methodSteps = [
-    { step: '01', title: 'TÉCNICA', desc: 'Construção de bases sólidas em cada estilo, do chão à coreografia.' },
-    { step: '02', title: 'EXPRESSÃO', desc: 'Liberdade criativa e interpretação musical para encontrar a tua voz.' },
-    { step: '03', title: 'PERFORMANCE', desc: 'Presença de palco, confiança no movimento e entrega total.' },
-    { step: '04', title: 'COMUNIDADE', desc: 'Crescemos juntos dentro e fora do estúdio... uma verdadeira família.' },
+    {
+        step: '01',
+        title: 'MISSÃO',
+        desc: 'Expandir a dança como arte por todos, fomentando o movimento como ajuda à saúde. Focamo-nos em desenvolver capacidades técnicas e artísticas e contribuir para a formação em diversos estilos.'
+    },
+    {
+        step: '02',
+        title: 'VISÃO',
+        desc: 'Criar um espaço onde todos se permitam ser, evoluir, crescer e libertar. Mais do que ensinar, queremos ser uma escola de referência para toda a comunidade.'
+    },
+    {
+        step: '03',
+        title: 'ESSÊNCIA',
+        desc: 'A nossa essência reside na verdade e nas emoções. O principal é estimular que dancem com o coração e se expressem livremente, valorizando cada individualidade.'
+    },
+    {
+        step: '04',
+        title: 'VALORES',
+        desc: 'Os valores em que a nossa escola se alicerça diariamente são o respeito, a confiança, o amor, a união, a cooperação e a ética.'
+    },
 ];
 
 const MoastPage = () => {
@@ -63,7 +79,7 @@ const MoastPage = () => {
 
                         {/* Manifesto */}
                         <m.div variants={staggerItem} className="space-y-6">
-                            <h2 className="font-serif text-display-hero font-black uppercase text-black flex flex-col pt-1 pb-3">
+                            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-black uppercase text-black flex flex-col pt-1 pb-3 leading-[1.1] md:leading-[1.15] tracking-[0.01em] gap-1 md:gap-2">
                                 <span className="block">MAIS QUE DANÇA...</span>
                                 <span className="block">UMA FAMÍLIA</span>
                             </h2>
@@ -80,26 +96,26 @@ const MoastPage = () => {
                             {pillars.map((p) => (
                                 <div
                                     key={p.label}
-                                    className={`${p.color} px-4 py-2 md:px-5 md:py-2.5 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:rotate-0 transition-transform duration-300 flex items-center`}
+                                    className={`${p.color} px-4 py-2 md:px-5 md:py-2.5 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:rotate-0 transition-transform duration-300 flex items-center justify-center`}
                                     style={{ transform: `rotate(${p.rotate})` }}
                                 >
-                                    <span className="font-serif text-display-badge font-black uppercase text-black drop-shadow-sm pt-1">
+                                    <span className="font-serif text-3xl md:text-5xl font-black uppercase text-black drop-shadow-sm pt-1 tracking-wide">
                                         {p.label}
                                     </span>
                                 </div>
                             ))}
                         </m.div>
 
-                        {/* O Nosso Método */}
+
                         <m.div
                             variants={staggerItem}
                             className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-12 relative overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
 
-                            <div className="bg-black px-5 py-2.5 w-fit mb-12 -ml-2 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] relative z-10">
-                                <span className="font-serif text-display-badge font-black uppercase text-moast-teal pt-1">
-                                    O NOSSO MÉTODO
+                            <div className="bg-black px-6 py-3 md:px-8 md:py-4 w-fit mb-12 -ml-2 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] relative z-10 max-w-[95%]">
+                                <span className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-black uppercase text-moast-teal pt-1 tracking-[0.02em] block leading-[1.15]">
+                                    MISSÃO, VISÃO, ESSÊNCIA E VALORES
                                 </span>
                             </div>
 

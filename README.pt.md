@@ -1,6 +1,6 @@
-# 🏫 MOAST Dance School
+# MOAST Dance School 💜🩷🩵
 
-> **Motion of Art, Style & Taste** 🔥
+> **Motion of Art, Style & Taste**
 
 [**English**](README.md) | [**Português**](README.pt.md)
 
@@ -10,25 +10,25 @@ A interface fala **português europeu** (`pt-PT`) aos seus utilizadores; o códi
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 | Funcionalidade | Descrição |
 | --- | --- |
-| **🕺 Catálogo de Aulas** | Catálogo completo com pré-visualizações de vídeo em loop, código de cores por categoria e badges de nível |
-| **📅 Horário Semanal** | Grelha interativa filtrável por estúdio (Estúdio 1, Estúdio 2, Grémio) com transições animadas |
-| **🔮 Aulas Hoje** | Secção dinâmica na página inicial que mostra as aulas do dia atual com paginação |
-| **👩‍🏫 Professores** | Perfis individuais com imagens recortadas, badges de nickname, tags coloridas e biografias |
-| **🛍️ Merch & Preçário** | Galeria polaroid com scroll horizontal, trailer de vídeo integrado e tabela de preços |
-| **📝 Inscrições** | Cartões de ação com links para Google Forms para aulas experimentais e matrículas |
-| **📖 Manifesto MOAST** | Página de filosofia com cartões dos pilares, secção do método e showcase de vídeo polaroid |
-| **📍 Contactos** | Telefone, email, redes sociais (Instagram/Facebook) e mapas Google Maps incorporados a cinzento |
-| **🌀 Transições Animadas** | Animações de entrada/saída entre rotas via Framer Motion `AnimatePresence` |
-| **📱 Menu Mobile** | Overlay de navegação deslizante e animado para ecrãs pequenos |
-| **🚫 Página 404** | Página personalizada de não encontrado consistente com a linguagem brutalista |
+| **Catálogo de Aulas** | Catálogo completo com pré-visualizações de vídeo em loop, código de cores por categoria e badges de nível |
+| **Horário Semanal** | Grelha interativa filtrável por estúdio (Estúdio 1, Estúdio 2, Grémio) com transições animadas |
+| **Aulas Hoje** | Secção dinâmica na página inicial que mostra as aulas do dia atual com paginação |
+| **Professores** | Perfis individuais com imagens recortadas, badges de nickname, tags coloridas e biografias |
+| **Merch & Preçário** | Galeria polaroid com scroll horizontal, trailer de vídeo integrado e tabela de preços |
+| **Inscrições** | Cartões de ação com links para Google Forms para aulas experimentais e matrículas |
+| **Manifesto MOAST** | Página de filosofia com cartões dos pilares, secção do método e showcase de vídeo polaroid |
+| **Contactos** | Telefone, email, redes sociais (Instagram/Facebook) e mapas Google Maps incorporados a cinzento |
+| **Transições Animadas** | Animações de entrada/saída entre rotas via Framer Motion `AnimatePresence` |
+| **Menu Mobile** | Overlay de navegação deslizante e animado para ecrãs pequenos |
+| **Página 404** | Página personalizada de não encontrado consistente com a linguagem brutalista |
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 | Tecnologia | Propósito |
 | --- | --- |
@@ -41,7 +41,7 @@ A interface fala **português europeu** (`pt-PT`) aos seus utilizadores; o códi
 | [**ESLint 10**](https://eslint.org/) | Linting de código (flat config) |
 | [**gh-pages**](https://github.com/tschaub/gh-pages) | Publicação no GitHub Pages |
 
-### 🎨 Sistema de Design
+### Sistema de Design
 
 Uma estética **neo-brutalista** percorre todo o projeto:
 
@@ -59,17 +59,15 @@ Uma estética **neo-brutalista** percorre todo o projeto:
 | `moast-magenta` | `#DA86D4` |
 | `moast-dark-magenta` | `#985A7C` |
 | `moast-pink` | `#FFBFD5` |
-| `moast-light-pink` | `#FEBFD4` |
 | `moast-dark-pink` | `#ff2a6d` |
 | `moast-teal` | `#70ECDF` |
-| `moast-purple` | `#7c3aed` |
 | `moast-black` | `#111111` |
 
 Todos os tokens, fonts, sombras e o padrão de ruído estão configurados em `tailwind.config.js` sob `theme.extend`.
 
 ---
 
-## 🚀 Como Começar
+## Como Começar
 
 ### Pré-requisitos
 
@@ -107,7 +105,7 @@ npm run lint       # ESLint em todos os ficheiros JS/JSX
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```bash
 moast-dance-school/
@@ -159,7 +157,7 @@ moast-dance-school/
 
 ---
 
-## 🗺️ Rotas
+## Rotas
 
 | Caminho | Página | Descrição |
 | --- | --- | --- |
@@ -177,13 +175,13 @@ As transições de página usam `AnimatePresence` com `LazyMotion` (Framer Motio
 
 ---
 
-## 🌐 Localização
+## Localização
 
 A **interface visível ao utilizador** está completamente em **português europeu** (`lang="pt"`). Todo o texto visível — títulos, legendas, descrições, links e atributos alt — está em português. O **código interno** (nomes de componentes, variáveis, ficheiros, props, campos de dados) segue convenções em **inglês** para máxima acessibilidade a programadores internacionais.
 
 ---
 
-## 📝 Contexto Académico
+## Contexto Académico
 
 Este projeto foi desenvolvido no âmbito de um trabalho académico para uma unidade curricular de **Desenvolvimento / Design Web**.
 
@@ -194,6 +192,6 @@ Este projeto foi desenvolvido no âmbito de um trabalho académico para uma unid
 
 ---
 
-## 📄 Licença
+## Licença
 
 Todos os direitos reservados. Este projeto é propriedade da MOAST Dance School. A redistribuição ou uso comercial sem autorização não é permitido.

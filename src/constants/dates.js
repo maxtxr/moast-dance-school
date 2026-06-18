@@ -8,21 +8,3 @@ export const getFormattedDate = () => {
 };
 
 export const getTodayDay = () => DAYS[new Date().getDay()];
-
-const formatDayToPlural = (day) => {
-  const dayMap = {
-    'Segunda': 'SEGUNDAS',
-    'Terça': 'TERÇAS',
-    'Quarta': 'QUARTAS',
-    'Quinta': 'QUINTAS',
-    'Sexta': 'SEXTAS',
-    'Sábado': 'SÁBADOS',
-  };
-  return dayMap[day] || day.toUpperCase();
-};
-
-export const formatDaysList = (days) => {
-  const dayOrder = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-  const sortedDays = days.toSorted((a, b) => dayOrder.indexOf(a) - dayOrder.indexOf(b));
-  return sortedDays.map(formatDayToPlural).join(' / ');
-};

@@ -4,14 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'moast-off-white': '#f5f5f5',
+        'moast-off-white': '#F5F5F5',
         'moast-magenta': '#DA86D4',
         'moast-dark-magenta': '#985A7C',
         'moast-pink': '#FFBFD5',
-        'moast-light-pink': '#FEBFD4',
-        'moast-dark-pink': '#ff2a6d',
+        'moast-dark-pink': '#FF2A6D',
         'moast-teal': '#70ECDF',
-        'moast-purple': '#7c3aed',
         'moast-black': '#111111',
       },
       boxShadow: {

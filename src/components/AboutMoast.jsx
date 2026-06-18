@@ -19,7 +19,7 @@ const AboutMoast = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="w-full bg-moast-light-pink relative pt-20 pb-0 md:pt-28 md:pb-0 flex flex-col"
+      className="w-full bg-moast-pink relative pt-20 pb-0 md:pt-28 md:pb-0 flex flex-col"
     >
       <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
 

@@ -10,7 +10,6 @@ import Footer from './Footer';
 
 import { ClockIcon, UserIcon } from './Icons';
 import { classes, getCategoryColor } from '../data/classes';
-import { formatDaysList } from '../constants/dates';
 import { SEASON_LABEL } from '../constants/navigation';
 
 const useGroupedClasses = () =>
@@ -47,7 +46,7 @@ const Classes = () => {
                                     AULAS
                                 </h1>
 
-                                <div className="bg-moast-pink px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
+                                <div className="bg-moast-magenta px-4 pt-2 pb-1 md:px-6 md:pt-4 md:pb-3 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-1deg] ml-3 md:ml-6 mt-1 md:mt-2">
                                     <span className="font-serif text-[clamp(1.2rem,3vw,1.8rem)] leading-none font-black uppercase text-white pt-1 md:pt-1.5">
                                         TODAS
                                     </span>
@@ -55,7 +54,7 @@ const Classes = () => {
                             </div>
 
                             <p className="font-sans text-base md:text-xl font-medium mt-6 text-black max-w-2xl">
-                                Explora o nosso catálogo completo. De formação a coreografia, encontra o estilo que mais combina contigo e vem fazer uma{' '}
+                                Explora o nosso horário, descobre os estilos que mais combinam contigo e junta-te a nós numa {' '}
                                 <a
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSdpDb6w92iLZdmTs_ziQUpN15GgePl0cuaxlYDa12mRQlzTaA/viewform"
                                     target="_blank"
@@ -64,7 +63,7 @@ const Classes = () => {
                                 >
                                     aula experimental
                                 </a>{' '}
-                                :)
+                                !
                             </p>
                         </div>
 
@@ -92,7 +91,7 @@ const Classes = () => {
                                     {danceClass.level}
                                 </div>
 
-                                <h3 className="font-serif text-[clamp(0.95rem,2.5vw,1.75rem)] leading-[1.1] tracking-wide font-black uppercase mt-4 md:mt-6 text-white z-10 w-full max-w-[65%] md:max-w-[70%]">
+                                <h3 className="font-serif text-xl sm:text-2xl lg:text-[1.35rem] xl:text-2xl leading-[1.1] tracking-wide font-black uppercase mt-4 md:mt-6 text-white z-10 w-full max-w-[65%] md:max-w-[70%] break-words">
                                     {danceClass.title}
                                 </h3>
 

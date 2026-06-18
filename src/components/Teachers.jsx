@@ -14,7 +14,7 @@ const Teachers = () => {
 
       <PageHero
         title="PROFESSORES"
-        badgeText="LINDOS E MARAVILHOSOS :)"
+        badgeText="EQUIPA DE 2025/2026"
         overlayImage={graffitiOverlay}
       />
 
@@ -59,7 +59,7 @@ const Teachers = () => {
                       return (
                         <>
                           <span className="flex items-end pb-1 md:pb-2">
-                            {teacher.firstName} AKA
+                            {teacher.firstName}
                           </span>
                           <span className={`flex items-end ${teacher.nicknameColor} border-b-[4px] md:border-b-[6px] ${teacher.underlineColor} pb-1 md:pb-2 drop-shadow-md`}>
                             {teacher.nickname}

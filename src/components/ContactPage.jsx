@@ -68,7 +68,7 @@ const cardVariants = {
 };
 
 const MapEmbed = ({ src, title }) => (
-    <div className="border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] overflow-hidden w-full h-[300px] md:h-[400px]">
+    <div className="border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] overflow-hidden w-full h-[300px] md:h-[400px] shrink-0">
         <iframe
             src={src}
             title={title}
@@ -108,13 +108,13 @@ const ContactPage = () => (
                     {/* Contacts Card */}
                     <m.div
                         variants={cardVariants}
-                        className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col justify-center"
+                        className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col justify-center h-full"
                     >
-                        <h2 className="font-serif text-display-section font-black uppercase mb-6 md:mb-8 text-black">
+                        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-6 md:mb-8 text-black tracking-wide leading-tight break-words">
                             CONTACTOS
                         </h2>
 
-                        <div className="space-y-8">
+                        <div className="space-y-8 flex-1 flex flex-col justify-center">
                             <div>
                                 <p className="font-sans font-bold text-sm uppercase tracking-widest mb-3 text-black/70">
                                     TELEFONE
@@ -149,9 +149,9 @@ const ContactPage = () => (
                     {/* Socials Card */}
                     <m.div
                         variants={cardVariants}
-                        className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col"
+                        className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-12 flex flex-col h-full"
                     >
-                        <h2 className="font-serif text-display-section font-black uppercase mb-6 md:mb-8 text-black">
+                        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-6 md:mb-8 text-black tracking-wide leading-tight break-words">
                             SEGUE-NOS
                         </h2>
 
@@ -182,17 +182,16 @@ const ContactPage = () => (
                         <m.div
                             key={location.title}
                             variants={cardVariants}
-                            className="flex flex-col gap-6"
+                            className="flex flex-col gap-6 h-full"
                         >
-                            {/* Location Info Box */}
-                            <div className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8">
-                                <h3 className="font-serif text-display-card font-black uppercase text-black mb-2">
+                            <div className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8 flex-1 flex flex-col justify-center">
+                                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-black uppercase text-black mb-3 tracking-wide leading-[1.1]">
                                     {location.title}
                                 </h3>
                                 <p className="font-sans text-lg md:text-xl font-bold uppercase tracking-wider text-moast-magenta mb-6">
                                     {location.subtitle}
                                 </p>
-                                <p className="font-sans font-bold text-lg md:text-xl leading-snug text-black/90 whitespace-pre-line">
+                                <p className="font-sans font-bold text-lg md:text-xl leading-snug text-black/90 whitespace-pre-line mt-auto">
                                     {location.address}
                                 </p>
                             </div>
