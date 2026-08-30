@@ -86,8 +86,16 @@ const MoastPage = () => {
 
                             <div className="w-24 h-1.5 bg-black" />
 
-                            <p className="font-sans font-bold text-base md:text-xl text-black leading-relaxed max-w-lg">
-                                Na MOAST, a dança é mais do que movimento... é identidade, expressão e comunidade. Cada passo conta uma história, cada aula é uma celebração.
+                            <p className="font-sans text-base md:text-xl text-black leading-relaxed max-w-lg">
+                                A MOAST tem como missão expandir a dança como arte que é por todos, tomentando o movimento e o exercício físico como ajuda à saúde física e mental. Foca-se em diversas áreas para desenvolver capacidades técnicas e artísticas, numa vertente lúdica ou profissional.
+                                Ainda, contribuir para a formação de crianças, jovens e adultos, em diversos estilos.
+                            </p>
+                            <p className="font-sans text-base md:text-xl text-black leading-relaxed max-w-lg">
+                                A visão passa por criar um espaço onde todos se permitam ser, evoluir, crescer e libertar. Para além disso, ser uma escola de referência para toda a comunidade.
+                                A essência da MOAST reside na verdade e nas emoções. O principal é estimular que dancem com o coração e se expressem livremente. Valorizamos cada um pelas suas individualidades que o caraterizam.
+                            </p>
+                            <p className="font-sans text-base md:text-xl text-black leading-relaxed max-w-lg">
+                                Os valores em que a escola se alicerça são o respeito, a confiança, o amor, a união, a cooperação e a ética.
                             </p>
                         </m.div>
 

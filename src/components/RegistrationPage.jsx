@@ -6,19 +6,19 @@ import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const cards = [
     {
-        href: 'https://forms.gle/CLZvbazrQvWEdDNNA',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSdHQckhQQOBCV7jAc_WFhIeNQq37VrpYO1w7DLNo-xiQxFKJA/viewform',
         bg: 'bg-moast-magenta',
         title: 'AULA EXPERIMENTAL',
         description: 'Vem descobrir o teu estilo e sente a energia da nossa escola.',
     },
     {
-        href: 'https://docs.google.com/forms/d/e/1FAIpQLSfo1f4_lpYsblU6_67xLIAFjFafhnmjwJAL3RTUEykfE1NgNQ/viewform',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSdKb6wYK8ROeffEccyCLrE4JfwM8DgpIpc2eYavEUBivl2WPw/viewform',
         bg: 'bg-moast-pink',
         title: 'INSCRIÇÃO (QUINTA DO CONDE)',
         description: 'Garante a tua vaga para a nova época.',
     },
     {
-        href: 'https://docs.google.com/forms/d/e/1FAIpQLSct5gYxDHz1excuCoOOjFBshtGz2Ot8-WFmxskMvWADx290cg/viewform',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSe_vX5n38PrpCwl4FmelUugLCiLU3aHteImyXfikZUsvWVVeA/viewform',
         bg: 'bg-moast-teal',
         title: 'INSCRIÇÃO (GRÉMIO)',
         description: 'Junta-te às nossas turmas de formação no polo do Grémio.',

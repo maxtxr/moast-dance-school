@@ -1,16 +1,17 @@
-import profBibz from '../assets/images/cutout/bibz-cutout.webp';
-import profBa from '../assets/images/cutout/ba-cutout.webp';
-import profBia from '../assets/images/cutout/bia-cutout.webp';
-import profJojo from '../assets/images/cutout/jojo-cutout.webp';
-import profGoncalo from '../assets/images/cutout/goncalo-cutout.webp';
-import profRicardo from '../assets/images/cutout/ricardo-cutout.webp';
-import profMoikana from '../assets/images/cutout/moikana-cutout.webp';
-import profLena from '../assets/images/cutout/lena-cutout.webp';
-import profSofia from '../assets/images/cutout/sofia-cutout.webp';
-import profAlexSofi from '../assets/images/cutout/alex-sofi-cutout.webp';
-import profVera from '../assets/images/cutout/vera-cutout.webp';
-import profTommy from '../assets/images/cutout/tommy-cutout.webp';
-import profRuben from '../assets/images/cutout/ruben-cutout.webp';
+import profBibz from '../assets/images/cutout/bibz.webp';
+import profBa from '../assets/images/cutout/ba.webp';
+import profBia from '../assets/images/cutout/bia.webp';
+import profJojo from '../assets/images/cutout/jojo.webp';
+import profGoncalo from '../assets/images/cutout/goncalo.webp';
+import profRicardo from '../assets/images/cutout/ricardo.webp';
+import profLena from '../assets/images/cutout/lena.webp';
+import profSofia from '../assets/images/cutout/sofia.webp';
+import profVera from '../assets/images/cutout/vera.webp';
+import profDilson from '../assets/images/cutout/dilson.webp';
+import profJoaoLaranjo from '../assets/images/cutout/joao.webp'; // TODO: image not yet supplied
+import profMarta from '../assets/images/cutout/marta.webp';
+import profTosta from '../assets/images/cutout/tosta.webp';
+import profInes from '../assets/images/cutout/ines.webp'; // TODO: image not yet supplied
 
 export const teachersData = [
   {
@@ -18,7 +19,7 @@ export const teachersData = [
     firstName: 'BEATRIZ MATOS',
     nickname: 'BIBZ',
     description: 'Fundadora da MOAST, incentiva cada aluno a explorar e descobrir a sua própria identidade no movimento.',
-    classes: ['BARRA DE CHÃO', 'FUSION', 'TURMAS DE FORMAÇÃO', 'CHOREOGRAPHY'],
+    classes: ['BARRA DE CHÃO', 'FUSION', 'FIT LAB', 'TURMAS DE FORMAÇÃO', 'CHOREOGRAPHY'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'left',
@@ -31,7 +32,7 @@ export const teachersData = [
     firstName: 'BÁRBARA MATOS',
     nickname: 'BÁ',
     description: 'Fundadora da MOAST e o seu maior orgulho é guiar os alunos, acompanhando a sua superação a cada passo.',
-    classes: ['TURMAS DE FORMAÇÃO', 'TURMAS DE COMPETIÇÃO'],
+    classes: ['TURMAS DE FORMAÇÃO', 'OLD SCHOOL'],
     bgColor: 'bg-moast-pink',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
@@ -44,7 +45,7 @@ export const teachersData = [
     firstName: 'BEATRIZ OLIVEIRA',
     nickname: 'BIA',
     description: 'Com uma energia contagiante, transforma as aulas dos mais novos num espaço de pura diversão.',
-    classes: ['HIP-HOP KIDS', 'TURMAS DE FORMAÇÃO'],
+    classes: ['TURMAS DE FORMAÇÃO'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
     imgPos: 'left',
@@ -57,7 +58,7 @@ export const teachersData = [
     firstName: 'LEONOR JORGE',
     nickname: 'JOJO',
     description: 'Especialista em criar um ambiente mágico, cheio de cor e música. Guia os mais pequenos nas suas primeiras descobertas com o corpo e o ritmo.',
-    classes: ['HIP-HOP BABIES'],
+    classes: ['BABIES'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
@@ -69,7 +70,7 @@ export const teachersData = [
     id: 'goncalo',
     firstName: 'GONÇALO CABRAL',
     description: 'Vive e respira Hip Hop, transmitindo essa intensidade aos alunos. Focado na técnica e na atitude, o seu objetivo é treinar para a competição e ensinar para inspirar.',
-    classes: ['HIP-HOP I', 'HIP-HOP II'],
+    classes: ['HIP-HOP I + II'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
     imgPos: 'left',
@@ -81,7 +82,7 @@ export const teachersData = [
     id: 'ricardo',
     firstName: 'RICARDO COELHO',
     description: 'Professor de danças latinas com uma energia vibrante. Contagia qualquer turma com a sua paixão pela salsa, merengue e bachata, sempre com um grande sorriso.',
-    classes: ['LATINAS I', 'LATINAS II'],
+    classes: ['LATINAS'],
     bgColor: 'bg-moast-pink',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
@@ -90,14 +91,14 @@ export const teachersData = [
     underlineColor: 'border-moast-magenta',
   },
   {
-    id: 'moikana',
-    firstName: 'MOIKANA',
+    id: 'dilson',
+    firstName: 'DILSON MARAVILHA',
     description: 'Especialista em Afro House, traz para o estúdio a raiz e a força dos ritmos africanos. As suas aulas são uma verdadeira celebração cultural onde a energia mexe com a alma.',
     classes: ['AFRO HOUSE'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'left',
-    imgSrc: profMoikana,
+    imgSrc: profDilson,
     nicknameColor: 'text-moast-pink',
     underlineColor: 'border-moast-pink',
   },
@@ -106,7 +107,7 @@ export const teachersData = [
     firstName: 'HELENA COSTA',
     nickname: 'LENA',
     description: 'Dedicada ao desenvolvimento contínuo dos alunos. O seu foco é ajudá-los a ganhar confiança e a encontrarem a sua própria voz no movimento.',
-    classes: ['GRÉMIO - TURMAS DE FORMAÇÃO'],
+    classes: ['HIP-HOP KIDS'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
     imgPos: 'right',
@@ -127,14 +128,14 @@ export const teachersData = [
     underlineColor: 'border-moast-magenta',
   },
   {
-    id: 'alex-sofi',
-    firstName: 'ALEX & SOFI',
-    description: 'Uma dupla inseparável de Kizomba Fusion. Levam para as aulas a mesma química que partilham no palco, focando-se na conexão, na técnica e na entrega a dois.',
-    classes: ['KIZOMBA FUSION'],
+    id: 'joao-laranjo',
+    firstName: 'JOÃO LARANJO',
+    description: 'Traz para a Kizomba a mesma conexão e entrega que vive dentro e fora da pista, focando-se na técnica, na musicalidade e na cumplicidade a dois.',
+    classes: ['KIZOMBA'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
-    imgSrc: profAlexSofi,
+    imgSrc: profJoaoLaranjo,
     nicknameColor: 'text-moast-pink',
     underlineColor: 'border-moast-pink',
   },
@@ -151,27 +152,39 @@ export const teachersData = [
     underlineColor: 'border-moast-dark-magenta',
   },
   {
-    id: 'tommy',
-    firstName: 'TOMMY SANTOS',
-    description: 'Professor de House movido pelo groove e pelo flow. Cria um ambiente totalmente livre e descontraído, onde o mais importante é sentir a música e deixar o corpo fluir.',
-    classes: ['HOUSE'],
+    id: 'marta',
+    firstName: 'MARTA SSULL',
+    description: 'Dupla de professores dedicada à coreografia, que desafia os alunos a explorar musicalidade e expressão para criar peças com identidade própria.',
+    classes: ['CHOREOGRAPHY'],
     bgColor: 'bg-moast-pink',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
-    imgSrc: profTommy,
+    imgSrc: profMarta,
     nicknameColor: 'text-moast-magenta',
     underlineColor: 'border-moast-magenta',
   },
   {
-    id: 'ruben',
-    firstName: 'RUBEN HOOD',
-    description: 'Transmite o Breaking não apenas como uma dança, mas como uma cultura e atitude. Alia o rigor dos fundamentos físicos ao verdadeiro respeito pelas raízes do hip-hop.',
-    classes: ['BREAKING I', 'BREAKING II'],
+    id: 'tosta',
+    firstName: 'TOSTA',
+    description: 'Dupla de professores dedicada à coreografia, que desafia os alunos a explorar musicalidade e expressão para criar peças com identidade própria.',
+    classes: ['CHOREOGRAPHY'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'left',
-    imgSrc: profRuben,
+    imgSrc: profTosta,
     nicknameColor: 'text-moast-pink',
     underlineColor: 'border-moast-pink',
+  },
+  {
+    id: 'ines-cunha',
+    firstName: 'INÊS CUNHA',
+    description: 'Traz uma energia feminina e cheia de atitude para as suas aulas, incentivando os alunos a dançar com confiança e a explorar o seu lado mais expressivo.',
+    classes: ['GIRLIE'],
+    bgColor: 'bg-moast-teal',
+    imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
+    imgPos: 'right',
+    imgSrc: profInes,
+    nicknameColor: 'text-moast-dark-magenta',
+    underlineColor: 'border-moast-dark-magenta',
   },
 ];

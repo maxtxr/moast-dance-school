@@ -24,7 +24,7 @@ const Footer = () => {
 
                 <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                     <a
-                        href={Regulamento}
+                        href="https://drive.google.com/file/d/1JpHmnq_9wUFmePjU1gK2GtHlcZc35YYP/view?usp=sharing"
                         className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-magenta transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"

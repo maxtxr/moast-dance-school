@@ -9,7 +9,7 @@ import { classes, getCategoryColor } from '../data/classes';
 import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
 
 const STUDIOS = ['ESTÚDIO 1', 'ESTÚDIO 2', 'GRÉMIO'];
-const DAY_ORDER = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+const DAY_ORDER = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
 
 const parseTime = (t) => {
     if (t === 'MANHÃ') return 0;
@@ -57,10 +57,10 @@ const ClassCard = ({ cls }) => (
             {cls.title}
         </p>
         <p className="font-sans font-bold text-[11px] md:text-xs uppercase text-white/90">
-            {cls.teacher}
+            {cls.level}
         </p>
         <p className="font-sans font-bold text-[9px] md:text-[10px] uppercase text-white/80 mt-1">
-            {cls.level}
+            {cls.teacher}
         </p>
     </m.div>
 );
@@ -69,21 +69,7 @@ const SchedulePage = () => {
     const [activeStudio, setActiveStudio] = useState('ESTÚDIO 1');
 
     const filteredClasses = useMemo(() => {
-        const base = classes.filter((c) => c.studio === activeStudio && c.title !== 'COMPETIÇÃO');
-
-        if (activeStudio === 'ESTÚDIO 1') {
-            base.push({
-                id: 'class-comp',
-                level: 'COMPETIÇÃO',
-                title: 'COMPETIÇÃO',
-                time: '10H00',
-                studio: 'ESTÚDIO 1',
-                teacher: 'BÁ',
-                dayOfWeek: 'Sábado',
-                category: 'special'
-            });
-        }
-        return base;
+        return classes.filter((c) => c.studio === activeStudio);
     }, [activeStudio]);
 
     const timeSlots = useMemo(() => {
@@ -112,7 +98,7 @@ const SchedulePage = () => {
 
             <PageHero
                 title="HORÁRIOS"
-                badgeText="EM VIGOR NA ÉPOCA 25/26"
+                badgeText="EM VIGOR NA ÉPOCA 26/27"
                 overlayImage={graffitiOverlay}
             />
 
@@ -145,8 +131,7 @@ const SchedulePage = () => {
                         >
                             {/* Desktop Grid */}
                             <div className="hidden lg:block overflow-x-auto pb-12 px-2">
-                                {/* AUMENTÁMOS A LARGURA DA 1ª COLUNA de 140px para 180px */}
-                                <div className="grid gap-x-4 gap-y-6 min-w-[1150px]" style={{ gridTemplateColumns: `180px repeat(6, 1fr)` }}>
+                                <div className="grid gap-x-4 gap-y-6 min-w-[1000px]" style={{ gridTemplateColumns: `180px repeat(5, 1fr)` }}>
                                     <div />
                                     {DAY_ORDER.map((day) => (
                                         <div key={day} className="bg-white border-[3px] border-black py-3 flex items-center justify-center text-center shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
@@ -155,9 +140,8 @@ const SchedulePage = () => {
                                     ))}
 
                                     {timeSlots.map((time) => (
-                                        <div key={time} className="relative" style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: `180px repeat(6, 1fr)`, gap: '1rem' }}>
+                                        <div key={time} className="relative" style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: `180px repeat(5, 1fr)`, gap: '1rem' }}>
 
-                                            {/* AJUSTÁMOS A LINHA TRACEJADA para começar depois dos 180px (180 + gap de 16px = 196px) */}
                                             <div className="absolute left-[196px] right-0 top-1/2 -translate-y-1/2 border-t-[3px] border-dotted border-black/20 pointer-events-none z-0" />
 
                                             <div className="flex items-center justify-end pr-4 relative z-10">
@@ -199,8 +183,8 @@ const SchedulePage = () => {
                                                         <div className="flex justify-between items-start gap-4">
                                                             <div>
                                                                 <p className="font-sans font-black text-xl md:text-2xl uppercase text-white drop-shadow-sm leading-tight">{cls.title}</p>
-                                                                <p className="font-sans font-bold text-sm uppercase text-white/90 mt-1">{cls.teacher}</p>
                                                                 <p className="font-sans font-bold text-xs uppercase text-white/80 mt-1">{cls.level}</p>
+                                                                <p className="font-sans font-bold text-sm uppercase text-white/90 mt-1">{cls.teacher}</p>
                                                             </div>
                                                             <div className="bg-white border-[3px] border-black px-2 py-1 shadow-[2px_2px_0_0_rgba(0,0,0,1)] shrink-0 rotate-[2deg]">
                                                                 <span className="font-sans font-black text-[10px] md:text-xs uppercase text-black">

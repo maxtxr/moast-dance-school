@@ -14,7 +14,7 @@ const Teachers = () => {
 
       <PageHero
         title="PROFESSORES"
-        badgeText="EQUIPA DE 2025/2026"
+        badgeText="EQUIPA DE 2026/2027"
         overlayImage={graffitiOverlay}
       />
 
@@ -67,15 +67,6 @@ const Teachers = () => {
                         </>
                       );
                     }
-
-                    if (teacher.id === 'moikana' || teacher.id === 'alex-sofi') {
-                      return (
-                        <span className={`flex items-end ${teacher.nicknameColor} border-b-[4px] md:border-b-[6px] ${teacher.underlineColor} pb-1 md:pb-2 drop-shadow-md`}>
-                          {teacher.firstName}
-                        </span>
-                      );
-                    }
-
                     const nameParts = teacher.firstName.split(' ');
                     const firstWord = nameParts[0];
                     const restOfName = nameParts.slice(1).join(' ');
@@ -95,9 +86,9 @@ const Teachers = () => {
                   })()}
                   </h2>
 
-                  <p className="font-sans text-xs sm:text-sm md:text-base font-bold text-black/80 mt-4 md:mt-8 max-w-md leading-relaxed">
+                  {/* <p className="font-sans text-xs sm:text-sm md:text-base font-bold text-black/80 mt-4 md:mt-8 max-w-md leading-relaxed">
                     {teacher.description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </m.div>
