@@ -6,5 +6,5 @@ export const NAVIGATION_LINKS = [
   { path: '/precario', label: 'MERCH' },
 ];
 
-export const SEASON_LABEL = 'Época 25/26';
-export const SEASON_YEARS = '2025 - 2026';
+export const SEASON_LABEL = 'Época 26/27';
+export const SEASON_YEARS = '2026s - 2027';

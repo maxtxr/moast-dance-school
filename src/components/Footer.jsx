@@ -32,14 +32,14 @@ const Footer = () => {
                         REGULAMENTO
                     </a>
 
-                    <a
+                    {/* <a
                         href={Calendario}
                         className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-pink transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         CALENDÁRIO
-                    </a>
+                    </a> */}
                     <Link
                         to="/contactos"
                         className="font-sans font-bold uppercase text-sm tracking-widest text-white hover:text-moast-teal transition-colors"
@@ -51,7 +51,7 @@ const Footer = () => {
                 {/* COPYRIGHT */}
                 <div className="max-w-[320px]">
                     <p className="font-sans font-bold uppercase text-xs tracking-widest text-white text-center md:text-right leading-loose">
-                        ©{SEASON_YEARS || '2025 - 2026'} MOAST DANCE SCHOOL. TODOS OS DIREITOS RESERVADOS.
+                        ©{SEASON_YEARS || '2026 - 2027'} MOAST DANCE SCHOOL. TODOS OS DIREITOS RESERVADOS.
                     </p>
                 </div>
             </div>

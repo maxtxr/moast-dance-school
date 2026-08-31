@@ -1,17 +1,17 @@
-import profBibz from '../assets/images/cutout/bibz.webp';
-import profBa from '../assets/images/cutout/ba.webp';
-import profBia from '../assets/images/cutout/bia.webp';
-import profJojo from '../assets/images/cutout/jojo.webp';
-import profGoncalo from '../assets/images/cutout/goncalo.webp';
-import profRicardo from '../assets/images/cutout/ricardo.webp';
-import profLena from '../assets/images/cutout/lena.webp';
-import profSofia from '../assets/images/cutout/sofia.webp';
-import profVera from '../assets/images/cutout/vera.webp';
-import profDilson from '../assets/images/cutout/dilson.webp';
-import profJoaoLaranjo from '../assets/images/cutout/joao.webp'; // TODO: image not yet supplied
-import profMarta from '../assets/images/cutout/marta.webp';
-import profTosta from '../assets/images/cutout/tosta.webp';
-import profInes from '../assets/images/cutout/ines.webp'; // TODO: image not yet supplied
+import profBibz from '../assets/images/teachers/bibz.webp';
+import profBa from '../assets/images/teachers/ba.webp';
+import profBia from '../assets/images/teachers/bia.webp';
+import profJojo from '../assets/images/teachers/jojo.webp';
+import profGoncalo from '../assets/images/teachers/goncalo.webp';
+import profRicardo from '../assets/images/teachers/ricardo.webp';
+import profLena from '../assets/images/teachers/lena.webp';
+import profSofia from '../assets/images/teachers/sofia.webp';
+import profVera from '../assets/images/teachers/vera.webp';
+import profDilson from '../assets/images/teachers/dilson.webp';
+import profJoaoLaranjo from '../assets/images/teachers/joao.webp';
+import profMarta from '../assets/images/teachers/marta.webp';
+import profTosta from '../assets/images/teachers/tosta.webp';
+import profInes from '../assets/images/teachers/ines.webp'; // TODO: image not yet supplied
 
 export const teachersData = [
   {

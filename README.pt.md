@@ -4,104 +4,99 @@
 
 [**English**](README.md) | [**Português**](README.pt.md)
 
-Um website neo-brutalista para a **MOAST Dance School** — uma academia de dança portuguesa que oferece de Hip-Hop e Breaking a Contemporâneo, Kizomba e programas de formação especializados. Construído com **React 19**, **Vite**, **Tailwind CSS** e **Framer Motion**.
+Repositório oficial da plataforma web da **MOAST Dance School** — academia de dança de referência em Portugal especializada em Hip-Hop, Breaking, Contemporâneo, Kizomba e programas avançados de formação artística.
 
-A interface fala **português europeu** (`pt-PT`) aos seus utilizadores; o código mantém convenções em **inglês** para acessibilidade global a programadores.
+A aplicação adota uma identidade visual **neo-brutalista**, combinando estética moderna com alto desempenho técnico via **React 19**, **Vite**, **Tailwind CSS** e **Framer Motion**. A interface foi desenvolvida nativamente em **Português Europeu** (`pt-PT`), mantendo a arquitetura de código em **Inglês** para alinhamento com padrões internacionais de engenharia de software.
 
 ---
 
-## Funcionalidades
+## Funcionalidades da Plataforma
 
 | Funcionalidade | Descrição |
 | --- | --- |
-| **Catálogo de Aulas** | Catálogo completo com pré-visualizações de vídeo em loop, código de cores por categoria e badges de nível |
-| **Horário Semanal** | Grelha interativa filtrável por estúdio (Estúdio 1, Estúdio 2, Grémio) com transições animadas |
-| **Aulas Hoje** | Secção dinâmica na página inicial que mostra as aulas do dia atual com paginação |
-| **Professores** | Perfis individuais com imagens recortadas, badges de nickname, tags coloridas e biografias |
-| **Merch & Preçário** | Galeria polaroid com scroll horizontal, trailer de vídeo integrado e tabela de preços |
-| **Inscrições** | Cartões de ação com links para Google Forms para aulas experimentais e matrículas |
-| **Manifesto MOAST** | Página de filosofia com cartões dos pilares, secção do método e showcase de vídeo polaroid |
-| **Contactos** | Telefone, email, redes sociais (Instagram/Facebook) e mapas Google Maps incorporados a cinzento |
-| **Transições Animadas** | Animações de entrada/saída entre rotas via Framer Motion `AnimatePresence` |
-| **Menu Mobile** | Overlay de navegação deslizante e animado para ecrãs pequenos |
-| **Página 404** | Página personalizada de não encontrado consistente com a linguagem brutalista |
+| **Catálogo de Modalidades** | Listagem dinâmica com pré-visualizações em vídeo contínuo, segmentação por cores e badges de nível técnico |
+| **Grelha de Horários Interativa** | Sistema de filtragem em tempo real por estúdio (Estúdio 1, Estúdio 2, Grémio) com transições suaves |
+| **Gestão de Aulas do Dia** | Módulo na página inicial com sincronização horária e paginação automática do dia em curso |
+| **Diretório do Corpo Docente** | Perfis individuais com grafismo em recorte, badges de identificação, tags de modalidade e biografias |
+| **Montra de Merchandising & Preçário** | Galeria polaroid em scroll horizontal, integração de trailer promocional e tabela de modalidades/mensalidades |
+| **Central de Inscrições** | Fluxos de conversão integrados para aulas experimentais e novas matrículas por localização |
+| **Manifesto Institucional** | Espaço dedicado à metodologia, valores fundamentais e história da escola |
+| **Contactos & Geolocalização** | Informações operacionais, canais diretos (Telefone, E-mail, Redes Sociais) e mapas interativos |
+| **Navegação Fluida** | Transições de rota orquestradas com `AnimatePresence` do Framer Motion |
+| **Design Totalmente Responsivo** | Otimização multiplataforma com menu de navegação mobile dedicado |
+| **Tratamento de Erros (404)** | Página de rota não encontrada alinhada com a identidade visual da marca |
 
 ---
 
-## Tecnologias
+## Stack Tecnológica
 
-| Tecnologia | Propósito |
-| --- | --- |
-| [**React 19**](https://react.dev/) | Biblioteca de UI |
-| [**Vite 8**](https://vite.dev/) | Ferramenta de build e servidor de desenvolvimento (HMR) |
-| [**Tailwind CSS 3**](https://tailwindcss.com/) | Framework de estilização utility-first |
-| [**Framer Motion 12**](https://www.framer.com/motion/) | Animações declarativas e transições de página |
-| [**React Router 7**](https://reactrouter.com/) | Roteamento client-side (HashRouter para GitHub Pages) |
-| [**PostCSS**](https://postcss.org/) + **Autoprefixer** | Pipeline de processamento CSS |
-| [**ESLint 10**](https://eslint.org/) | Linting de código (flat config) |
-| [**gh-pages**](https://github.com/tschaub/gh-pages) | Publicação no GitHub Pages |
-
-### Sistema de Design
-
-Uma estética **neo-brutalista** percorre todo o projeto:
-
-- **Tipografia** — Títulos em **TAN Buster** (serif robusta carregada via `@font-face`), corpo em **Futura**
-- **Bordas pretas grossas** (`border-[3px]`) em cartões, botões, secções e media
-- **Sombras duras** — `shadow-brutalist` (4px) e `shadow-brutalist-lg` (8px) para um toque físico de "carimbo"
-- **Badges rodadas** (`rotate-[-2deg]`) com imperfeição deliberada
-- **Textura de ruído** — Filtro SVG `feTurbulence` aplicado como `bg-noise`
-- **Molduras polaroid** — Media com bordas brancas, sombra e rotação
-- **Paleta de cores**:
-
-| Token | Hex |
-| --- | --- |
-| `moast-off-white` | `#f5f5f5` |
-| `moast-magenta` | `#DA86D4` |
-| `moast-dark-magenta` | `#985A7C` |
-| `moast-pink` | `#FFBFD5` |
-| `moast-dark-pink` | `#ff2a6d` |
-| `moast-teal` | `#70ECDF` |
-| `moast-black` | `#111111` |
-
-Todos os tokens, fonts, sombras e o padrão de ruído estão configurados em `tailwind.config.js` sob `theme.extend`.
+| Componente | Tecnologia | Finalidade |
+| --- | --- | --- |
+| **Core UI** | [React 19](https://react.dev/) | Biblioteca principal de componentes de interface |
+| **Build & Tooling** | [Vite 8](https://vite.dev/) | Ferramenta de build de alta performance e servidor local HMR |
+| **Estilização** | [Tailwind CSS 3](https://tailwindcss.com/) | Framework CSS utilitário |
+| **Animações** | [Framer Motion 12](https://www.framer.com/motion/) | Transições declarativas e animações de estado |
+| **Roteamento** | [React Router 7](https://reactrouter.com/) | Gestão de rotas client-side (`HashRouter`) |
+| **Processamento CSS** | [PostCSS](https://postcss.org/) + [Autoprefixer](https://github.com/postcss/autoprefixer) | Compatibilidade cross-browser |
+| **Qualidade de Código** | [ESLint 10](https://eslint.org/) | Validação estática de padrões de código (Flat Config) |
+| **Deploy** | [gh-pages](https://github.com/tschaub/gh-pages) | Pipeline de publicação contínua |
 
 ---
 
-## Como Começar
+## Sistema de Design (Neo-Brutalismo)
+
+A identidade visual da MOAST assenta em princípios de design arrojados e contrastantes:
+
+* **Tipografia:** Títulos institucionais em **TAN Buster** (`@font-face` display serif robusta); texto corrido em **Futura** para máxima legibilidade.
+* **Bordas Estruturadas:** Destaques visuais consistentes com `border-[3px] border-moast-black`.
+* **Sombras Sólidas (Hard Offset):** Camadas com `shadow-brutalist` (4px) e `shadow-brutalist-lg` (8px).
+* **Texturas Dinâmicas:** Ruído visual via filtro SVG `feTurbulence` (`bg-noise`).
+* **Elementos em Destaque:** Badges e molduras polaroid com rotações estratégicas (`rotate-[-2deg]`).
+
+**Paleta de Cores Institucional:**
+
+| Token | Valor Hex | Utilização Principal |
+| --- | --- | --- |
+| `moast-off-white` | `#f5f5f5` | Fundos de página e contrastes neutros |
+| `moast-magenta` | `#DA86D4` | Cor de destaque primária / Acentos |
+| `moast-dark-magenta` | `#985A7C` | Elementos de profundidade e contraste |
+| `moast-pink` | `#FFBFD5` | Fundos secundários e tags |
+| `moast-dark-pink` | `#ff2a6d` | CTAs, alertas e badges de urgência |
+| `moast-teal` | `#70ECDF` | Cor de destaque secundária / Tags de nível |
+| `moast-black` | `#111111` | Tipografia principal, bordas e sombras |
+
+---
+
+## Desenvolvimento & Configuração
 
 ### Pré-requisitos
 
-- **Node.js** >= 18 (LTS recomendado)
-- **npm** >= 9 (ou o gestor de pacotes da sua preferência)
+* **Node.js** >= 18 (recomendada versão LTS)
+* **npm** >= 9 (ou gestor de pacotes equivalente)
 
 ### Instalação
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/your-username/moast-dance-school.git
+git clone [https://github.com/moast-dance-school/moast-dance-school.git](https://github.com/moast-dance-school/moast-dance-school.git)
 cd moast-dance-school
 
-# 2. Instalar dependências
+# 2. Instalar dependências de produção e desenvolvimento
 npm install
 
-# 3. Iniciar o servidor de desenvolvimento
+# 3. Executar o servidor de desenvolvimento
 npm run dev
 ```
 
-Abra [http://localhost:5173](http://localhost:5173) — a aplicação recarrega automaticamente com as alterações.
+Aceda [http://localhost:5173](http://localhost:5173) para visualizar a aplicação localmente.
 
-### Build de Produção
+### Scripts Disponíveis
 
-```bash
-npm run build      # saída para ./dist
-npm run preview    # serve a build de produção localmente
-```
-
-### Linting
-
-```bash
-npm run lint       # ESLint em todos os ficheiros JS/JSX
-```
+* `npm run dev` — Inicia o servidor local com Hot Module Replacement (HMR).
+* `npm run build` — Compila os ficheiros para produção na diretoria ./dist.
+* `npm run preview` — Pré-visualiza localmente a build de produção.
+* `npm run lint` — Executa a análise estática com ESLint em todos os ficheiros .js e .jsx.
+* `npm run deploy` — Executa a build e publica a versão mais recente no GitHub Pages.
 
 ---
 
@@ -109,89 +104,91 @@ npm run lint       # ESLint em todos os ficheiros JS/JSX
 
 ```bash
 moast-dance-school/
-├── index.html                     # Entry point do Vite (lang="pt")
-├── vite.config.js                 # Config Vite (base: /moast-dance-school)
-├── tailwind.config.js             # Tema: cores, fonts, sombras, ruído
-├── postcss.config.js              # PostCSS + Autoprefixer
-├── eslint.config.js               # ESLint flat config
-├── public/                        # Assets estáticos (favicon, icons)
+├── index.html                     # Entry point da aplicação (lang="pt")
+├── vite.config.js                 # Configurações do Vite
+├── tailwind.config.js             # Design tokens: cores, fontes, sombras e ruído
+├── postcss.config.js              # Configuração do pipeline CSS
+├── eslint.config.js               # Regras e padrões de código ESLint
+├── public/                        # Ativos estáticos públicos (favicons, manifest)
 └── src/
-    ├── main.jsx                   # Root do React
-    ├── App.jsx                    # HashRouter + rotas animadas
-    ├── index.css                  # Layers Tailwind & estilos globais
+    ├── main.jsx                   # Ponto de montagem React
+    ├── App.jsx                    # Configuração de rotas e providers globais
+    ├── index.css                  # Folha de estilos global e layers Tailwind
     ├── assets/
-    │   ├── fonts/                 # TAN-BUSTER-Regular.ttf
-    │   ├── images/                # Logos, recortes, graffiti overlay
-    │   ├── videos/                # Vídeos hero e promocionais
-    │   ├── classes/               # Vídeos de demonstração (20)
-    │   ├── merch/                 # Fotos de produtos e trailer
-    │   └── pdfs/                  # Calendário e regulamento
+    │   ├── fonts/                 # Ficheiros tipográficos locais
+    │   ├── images/                # Identidade corporativa, recortes e grafismos
+    │   ├── videos/                # Vídeos promocionais e trailers
+    │   ├── classes/               # Vídeos de demonstração das modalidades
+    │   ├── merch/                 # Fotografias de artigos de vestuário
+    │   └── pdfs/                  # Documentação legal, regulamento e calendário
     ├── components/
-    │   ├── pages/                 # Componentes de página (rotas)
-    │   │   ├── LandingPage.jsx    # /
-    │   │   ├── MoastPage.jsx      # /moast
-    │   │   ├── Classes.jsx        # /aulas
-    │   │   ├── Teachers.jsx       # /professores
-    │   │   ├── SchedulePage.jsx   # /horarios
-    │   │   ├── PricingPage.jsx    # /precario
-    │   │   ├── RegistrationPage.jsx # /inscricoes
-    │   │   ├── ContactPage.jsx    # /contactos
-    │   │   └── NotFoundPage.jsx   # 404
-    │   └── ui/                    # Primitivas UI partilhadas
-    │       ├── Navbar.jsx         # Nav fixa + overlay mobile
-    │       ├── Footer.jsx         # Rodapé com links PDF
-    │       ├── Hero.jsx           # Secção hero da landing
-    │       ├── PageHero.jsx       # Cabeçalho de página reutilizável
-    │       ├── ClassesToday.jsx   # Aulas de hoje
-    │       ├── AboutMoast.jsx     # Secção "MOAST?" da landing
-    │       ├── BrutalistButton.jsx # Botão/link reutilizável
-    │       └── Icons.jsx          # Ícones SVG inline
+    │   ├── pages/                 # Controladores de página / Vistas
+    │   │   ├── LandingPage.jsx    # Página inicial
+    │   │   ├── MoastPage.jsx      # Visão institucional e método
+    │   │   ├── Classes.jsx        # Catálogo de modalidades
+    │   │   ├── Teachers.jsx       # Diretório de professores
+    │   │   ├── SchedulePage.jsx   # Mapa e filtros de horários
+    │   │   ├── PricingPage.jsx    # Tabela de preços e merchandising
+    │   │   ├── RegistrationPage.jsx # Portal de admissão e inscrições
+    │   │   ├── ContactPage.jsx    # Formulários de contacto e localizações
+    │   │   └── NotFoundPage.jsx   # Página de erro 404
+    │   └── ui/                    # Componentes modulares e reutilizáveis
+    │       ├── Navbar.jsx         # Cabeçalho global fixo com menu mobile
+    │       ├── Footer.jsx         # Rodapé com mapa do site e ligações legais
+    │       ├── Hero.jsx           # Secções principais de impacto
+    │       ├── PageHero.jsx       # Cabeçalho padrão de páginas internas
+    │       ├── ClassesToday.jsx   # Listagem de aulas ativas
+    │       ├── AboutMoast.jsx     # Secção de introdução institucional
+    │       ├── BrutalistButton.jsx # Botão padronizado com ações customizadas
+    │       └── Icons.jsx          # Biblioteca interna de ícones SVG
     ├── constants/
-    │   ├── navigation.js          # Links de navegação e épocas
-    │   └── dates.js               # Utilitários de data (PT)
+    │   ├── navigation.js          # Estrutura de links e parâmetros globais
+    │   └── dates.js               # Formatadores e utilitários de calendário
     └── data/
-        ├── classes.js             # 32+ entradas de aulas
-        ├── teachers.js            # 13 perfis de professores
-        └── merch.js               # 9 artigos de merch
+        ├── classes.js             # Fonte de dados de turmas e modalidades
+        ├── teachers.js            # Base de dados do corpo docente
+        └── merch.js               # Catálogo de produtos oficiais
 ```
 
 ---
 
-## Rotas
+## Mapeamento de Rotas
 
-| Caminho | Página | Descrição |
+| Rota | Componente | Finalidade |
 | --- | --- | --- |
-| `/` | LandingPage | Hero, Aulas Hoje, Sobre |
-| `/moast` | MoastPage | Filosofia e método da escola |
-| `/aulas` | Classes | Catálogo completo de aulas |
-| `/professores` | Teachers | Perfis dos professores |
-| `/horarios` | SchedulePage | Horário semanal por estúdio |
-| `/precario` | PricingPage | Galeria merch e tabela de preços |
-| `/contactos` | ContactPage | Contactos e mapas |
-| `/inscricoes` | RegistrationPage | CTAs de inscrição |
-| `*` | NotFoundPage | 404 fallback |
-
-As transições de página usam `AnimatePresence` com `LazyMotion` (Framer Motion) para animações suaves de entrada/saída.
+| `/` | LandingPage | Apresentação institucional, aulas do dia e resumo da escola |
+| `/moast` | MoastPage | Filosofia da marca, pilares e metodologia de ensino |
+| `/aulas` | Classes | Catálogo geral de turmas, níveis e faixas etárias |
+| `/professores` | Teachers | Biografias e credenciais dos instrutores |
+| `/horarios` | SchedulePage | Planeamento semanal filtrável por estúdio |
+| `/precario` | PricingPage | Preçário em vigor da linha de vestuário oficial |
+| `/contactos` | ContactPage | Canais de suporte, formulário e coordenadas geográficas |
+| `/inscricoes` | RegistrationPage | Formulários oficiais de matrícula e aulas de captação |
+| `*` | NotFoundPage | Tratamento de rotas inexistentes |
 
 ---
 
-## Localização
+## Manutenção & Atualização de Conteúdo
 
-A **interface visível ao utilizador** está completamente em **português europeu** (`lang="pt"`). Todo o texto visível — títulos, legendas, descrições, links e atributos alt — está em português. O **código interno** (nomes de componentes, variáveis, ficheiros, props, campos de dados) segue convenções em **inglês** para máxima acessibilidade a programadores internacionais.
+Para atualizar os dados operacionais da escola sem alterar componentes de interface, modifique diretamente os ficheiros em src/data/:
+
+* **Adicionar/Editar Modalidades:** Altere o array de objetos em `src/data/classes.js`.
+* **Atualizar Docentes:** Modifique as entradas em `src/data/teachers.js`.
+* **Gerir Catálogo de Produtos:** Adicione itens e preços em `src/data/merch.js`.
+* **Documentos Oficiais:** Substitua os ficheiros em `src/assets/pdfs/` mantendo as referências nominais em `src/components/ui/Footer.jsx`.
+
+## Suporte & Contactos
+
+Para questões técnicas relativas à infraestrutura digital ou assuntos institucionais da escola:
+
+* Email: <geral@moastdanceschool.pt>
+* Website: TBA
+* Instagram: [@_moastdanceschool](https://www.instagram.com/_moastdanceschool/)
+
+## Propriedade Intelectual & Termos
+
+© MOAST Dance School. Todos os direitos reservados.
+
+O código-fonte, elementos de design, marcas registadas, conteúdos multimédia e materiais associados presentes neste repositório são propriedade exclusiva da MOAST Dance School. É expressamente proibida a cópia, reprodução, redistribuição ou exploração comercial deste projeto sem autorização prévia por escrito da entidade detentora.
 
 ---
-
-## Contexto Académico
-
-Este projeto foi desenvolvido no âmbito de um trabalho académico para uma unidade curricular de **Desenvolvimento / Design Web**.
-
-- **Aluna:** Bruna Rossa
-- **Curso:** Licenciatura em Engenharia Informática
-- **Instituição:** Instituto Politécnico de Setúbal
-- **Ano letivo:** 2025/2026
-
----
-
-## Licença
-
-Todos os direitos reservados. Este projeto é propriedade da MOAST Dance School. A redistribuição ou uso comercial sem autorização não é permitido.
