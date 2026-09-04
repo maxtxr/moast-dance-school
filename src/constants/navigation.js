@@ -7,4 +7,4 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const SEASON_LABEL = 'Época 26/27';
-export const SEASON_YEARS = '2026s - 2027';
+export const SEASON_YEARS = '2026 - 2027';
