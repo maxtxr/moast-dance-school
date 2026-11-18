@@ -1,17 +1,17 @@
-import profBibz from '../assets/images/teachers/bibz.webp';
-import profBa from '../assets/images/teachers/ba.webp';
-import profBia from '../assets/images/teachers/bia.webp';
-import profJojo from '../assets/images/teachers/jojo.webp';
-import profGoncalo from '../assets/images/teachers/goncalo.webp';
-import profRicardo from '../assets/images/teachers/ricardo.webp';
-import profLena from '../assets/images/teachers/lena.webp';
-import profSofia from '../assets/images/teachers/sofia.webp';
-import profVera from '../assets/images/teachers/vera.webp';
-import profDilson from '../assets/images/teachers/dilson.webp';
-import profJoaoLaranjo from '../assets/images/teachers/joao.webp';
-import profMarta from '../assets/images/teachers/marta.webp';
-import profTosta from '../assets/images/teachers/tosta.webp';
-import profInes from '../assets/images/teachers/ines.webp'; // TODO: image not yet supplied
+import profBibz from '../assets/optimized/images/teachers/bibz.webp';
+import profBa from '../assets/optimized/images/teachers/ba.webp';
+import profBia from '../assets/optimized/images/teachers/bia.webp';
+import profJojo from '../assets/optimized/images/teachers/jojo.webp';
+import profGoncalo from '../assets/optimized/images/teachers/goncalo.webp';
+import profRicardo from '../assets/optimized/images/teachers/ricardo.webp';
+import profLena from '../assets/optimized/images/teachers/lena.webp';
+import profSofia from '../assets/optimized/images/teachers/sofia.webp';
+import profVera from '../assets/optimized/images/teachers/vera.webp';
+import profDilson from '../assets/optimized/images/teachers/dilson.webp';
+import profJoaoLaranjo from '../assets/optimized/images/teachers/joao.webp';
+import profMarta from '../assets/optimized/images/teachers/marta.webp';
+import profTosta from '../assets/optimized/images/teachers/tosta.webp';
+import profInes from '../assets/optimized/images/teachers/ines.webp'; // TODO: image not yet supplied
 
 export const teachersData = [
   {
@@ -32,7 +32,7 @@ export const teachersData = [
     firstName: 'BÁRBARA MATOS',
     nickname: 'BÁ',
     description: 'Fundadora da MOAST e o seu maior orgulho é guiar os alunos, acompanhando a sua superação a cada passo.',
-    classes: ['TURMAS DE FORMAÇÃO', 'OLD SCHOOL'],
+    classes: ['TURMAS DE FORMAÇÃO'],
     bgColor: 'bg-moast-pink',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
@@ -58,7 +58,7 @@ export const teachersData = [
     firstName: 'LEONOR JORGE',
     nickname: 'JOJO',
     description: 'Especialista em criar um ambiente mágico, cheio de cor e música. Guia os mais pequenos nas suas primeiras descobertas com o corpo e o ritmo.',
-    classes: ['BABIES'],
+    classes: ['HIP-HOP BABIES'],
     bgColor: 'bg-moast-dark-magenta',
     imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
     imgPos: 'right',
@@ -70,7 +70,7 @@ export const teachersData = [
     id: 'goncalo',
     firstName: 'GONÇALO CABRAL',
     description: 'Vive e respira Hip Hop, transmitindo essa intensidade aos alunos. Focado na técnica e na atitude, o seu objetivo é treinar para a competição e ensinar para inspirar.',
-    classes: ['HIP-HOP I + II'],
+    classes: ['HIP-HOP'],
     bgColor: 'bg-moast-teal',
     imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
     imgPos: 'left',

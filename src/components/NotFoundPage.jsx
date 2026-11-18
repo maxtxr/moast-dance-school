@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
-import whiteNeg from '../assets/images/logo/mds_neg.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
+import whiteNeg from '../assets/optimized/images/logo/mds_neg.webp';
 
 const gridPatternStyle = {
     backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
@@ -28,8 +28,13 @@ const NotFoundPage = () => (
 
             <img
                 src={whiteNeg}
-                alt="Decoração de Fundo"
+                alt=""
+                aria-hidden="true"
                 className="absolute -bottom-24 -right-24 w-[400px] md:w-[600px] lg:w-[800px] opacity-25 pointer-events-none z-0"
+                width={800}
+                height={818}
+                loading="eager"
+                decoding="async"
             />
 
             <div className="relative z-10 text-center px-6">

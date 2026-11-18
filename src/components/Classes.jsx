@@ -1,8 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { m, AnimatePresence } from 'framer-motion';
+import { m } from 'framer-motion';
 
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 
 import PageHero from './PageHero';
 import Navbar from './Navbar';
@@ -11,26 +11,24 @@ import Footer from './Footer';
 import { ClockIcon, UserIcon } from './Icons';
 import { classes, getCategoryColor } from '../data/classes';
 import { SEASON_LABEL } from '../constants/navigation';
+import { getTeacherFirstNames } from '../utils/teachers';
 
-const useGroupedClasses = () =>
+
+const DAY_ORDER = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
+
+const useClassesByDay = () =>
     useMemo(() => {
-        const classGroups = {};
-
-        classes.forEach(cls => {
-            const key = `${cls.title}-${cls.level}`;
-            if (!classGroups[key]) {
-                classGroups[key] = { ...cls, days: [cls.dayOfWeek] };
-            } else if (!classGroups[key].days.includes(cls.dayOfWeek)) {
-                classGroups[key].days.push(cls.dayOfWeek);
-            }
+        const groups = {};
+        DAY_ORDER.forEach(day => {
+            const dayClasses = classes.filter(cls => cls.dayOfWeek === day);
+            if (dayClasses.length) groups[day] = dayClasses;
         });
 
-        return Object.values(classGroups);
+        return Object.entries(groups);
     }, []);
 
 const Classes = () => {
-    const allClasses = useGroupedClasses();
-    const [selectedVideoClass, setSelectedVideoClass] = useState(null);
+    const dayGroups = useClassesByDay();
 
     return (
         <div className="min-h-screen bg-moast-off-white flex flex-col">
@@ -78,121 +76,74 @@ const Classes = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16 lg:gap-y-24 items-stretch pr-0 md:pr-16 lg:pr-24">
-                        {allClasses.map((danceClass, index) => (
-                            <m.div
-                                key={danceClass.id || index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: '-50px' }}
-                                transition={{ duration: 0.4, delay: (index % 2) * 0.1 }}
-                                onClick={() => setSelectedVideoClass(danceClass)}
-                                className={`${getCategoryColor(danceClass.category)} border-[3px] border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-5 md:p-6 relative flex flex-col min-h-[220px] w-full cursor-pointer group hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-all duration-200`}
-                            >
-                                <div className="flex items-center justify-between w-full max-w-[65%] md:max-w-[70%] z-10">
-                                    <div className="bg-white px-4 py-1.5 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-xs md:text-sm uppercase w-fit">
-                                        {danceClass.level}
-                                    </div>
-                                    <span className="bg-black text-white text-[10px] md:text-xs font-sans font-black uppercase px-2.5 py-1 border-[2px] border-white shadow-[2px_2px_0_0_rgba(0,0,0,1)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                        VER VÍDEO ▶
-                                    </span>
-                                </div>
-
-                                <h3 className="font-serif text-xl sm:text-2xl lg:text-[1.35rem] xl:text-2xl leading-[1.1] tracking-wide font-black uppercase mt-4 md:mt-6 text-white z-10 w-full max-w-[65%] md:max-w-[70%] break-words">
-                                    {danceClass.title}
-                                </h3>
-
-                                <div className="flex gap-2 md:gap-3 mt-auto pt-4 md:pt-6 flex-wrap z-10 w-full max-w-[60%] md:max-w-[65%]">
-                                    <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center h-8 md:h-10">
-                                        <ClockIcon /> {danceClass.time}, {danceClass.studio}
-                                    </div>
-                                    <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center h-8 md:h-10">
-                                        <UserIcon /> {danceClass.teacher.split(' ')[0]}
-                                    </div>
-                                </div>
-
-                                <div
-                                    className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 border-[6px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-28 sm:w-36 md:w-48 aspect-[3/4] bg-white z-20 group-hover:rotate-0 group-hover:scale-105 transition-all duration-300"
-                                    style={{ transform: 'translateY(-50%) rotate(4deg)' }}
+                    {dayGroups.map(([day, dayClasses]) => (
+                        <div key={day} className="mb-16 lg:mb-24 last:mb-0">
+                            <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-10">
+                                <m.h2
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: '-50px' }}
+                                    transition={{ duration: 0.4 }}
+                                    className="bg-black text-white font-serif font-black uppercase text-[clamp(1.1rem,3vw,1.5rem)] leading-none pt-2 pb-3 px-5 md:px-7 border-[3px] border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] rotate-[-2deg] whitespace-nowrap"
                                 >
-                                    <img
-                                        src={danceClass.img || danceClass.poster || graffitiOverlay}
-                                        alt={danceClass.title}
-                                        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
-                                        loading="lazy"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
-                                        <div className="w-9 h-9 md:w-12 md:h-12 bg-moast-magenta border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] flex items-center justify-center text-white text-sm md:text-lg pl-0.5">
-                                            ▶
+                                    {day}
+                                </m.h2>
+
+                                <div className="flex-1 border-t-[3px] border-dotted border-black/30" />
+
+                                <span className="bg-white border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] px-3 py-1.5 font-sans font-bold text-[10px] md:text-xs uppercase text-black whitespace-nowrap">
+                                    {dayClasses.length} {dayClasses.length === 1 ? 'aula' : 'aulas'}
+                                </span>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16 lg:gap-y-24 items-stretch pr-0 md:pr-16 lg:pr-24">
+                                {dayClasses.map((danceClass, index) => (
+                                    <m.div
+                                        key={danceClass.id || index}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true, margin: '-50px' }}
+                                        transition={{ duration: 0.4, delay: (index % 2) * 0.1 }}
+                                        className={`${getCategoryColor(danceClass.category)} border-[3px] border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-5 pr-[6.5rem] sm:pr-[8.5rem] md:p-6 relative flex flex-col min-h-[220px] w-full group hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-all duration-200`}
+                                    >
+                                        <div className="flex items-center justify-between w-full md:max-w-[70%] z-10">
+                                            <div className="bg-white px-4 py-1.5 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-xs md:text-sm uppercase w-fit">
+                                                {danceClass.level}
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </m.div>
-                        ))}
-                    </div>
+
+                                        <h3 className="font-serif text-[clamp(0.85rem,4.2vw,1.5rem)] sm:text-2xl lg:text-[1.35rem] xl:text-2xl leading-[1.1] tracking-wide font-black uppercase mt-4 md:mt-6 text-white z-10 w-full md:max-w-[70%] break-words">
+                                            {danceClass.title}
+                                        </h3>
+
+                                        <div className="flex flex-wrap md:flex-nowrap gap-2 md:gap-3 mt-auto pt-4 md:pt-6 z-10 w-full md:max-w-[65%]">
+                                            <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center min-h-8 md:min-h-10 leading-tight whitespace-nowrap">
+                                                <ClockIcon /> {danceClass.time}, {danceClass.studio}
+                                            </div>
+                                            <div className="bg-white px-3 py-1.5 md:px-4 md:py-2 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center min-h-8 md:min-h-10 leading-tight whitespace-nowrap">
+                                                <UserIcon /> {getTeacherFirstNames(danceClass.teacher)}
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 border-[6px] md:border-[10px] border-white shadow-[6px_6px_0_0_rgba(0,0,0,1)] w-28 sm:w-36 md:w-48 aspect-[3/4] bg-white z-20 group-hover:rotate-0 group-hover:scale-105 transition-all duration-300"
+                                            style={{ transform: 'translateY(-50%) rotate(4deg)' }}
+                                        >
+                                            <img
+                                                src={danceClass.img || graffitiOverlay}
+                                                alt={danceClass.title}
+                                                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        </div>
+                                    </m.div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
-
-            <AnimatePresence>
-                {selectedVideoClass && (
-                    <m.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedVideoClass(null)}
-                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
-                    >
-                        <m.div
-                            initial={{ scale: 0.9, y: 20 }}
-                            animate={{ scale: 1, y: 0 }}
-                            exit={{ scale: 0.9, y: 20 }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="relative w-full max-w-2xl bg-white border-[4px] border-black shadow-[10px_10px_0_0_rgba(0,0,0,1)] p-4 md:p-6"
-                        >
-                            {/* Header do Popover */}
-                            <div className="flex justify-between items-start mb-4 gap-4">
-                                <div>
-                                    <span className="bg-moast-magenta text-white px-3 py-1 border-[2px] border-black text-xs font-sans font-black uppercase shadow-[2px_2px_0_0_rgba(0,0,0,1)] inline-block mb-1">
-                                        {selectedVideoClass.level}
-                                    </span>
-                                    <h3 className="font-serif font-black text-xl md:text-2xl uppercase text-black leading-tight">
-                                        {selectedVideoClass.title}
-                                    </h3>
-                                    <p className="font-sans font-bold text-xs md:text-sm text-black/70 mt-0.5">
-                                        Professor: {selectedVideoClass.teacher} | {selectedVideoClass.studio}
-                                    </p>
-                                </div>
-
-                                <button
-                                    type="button"
-                                    onClick={() => setSelectedVideoClass(null)}
-                                    className="bg-moast-dark-pink text-white font-sans font-black text-sm px-3 py-1.5 border-[3px] border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition-all"
-                                >
-                                    ✕ FECHAR
-                                </button>
-                            </div>
-
-                            {/* Conteúdo do Vídeo */}
-                            <div className="w-full aspect-video bg-black border-[3px] border-black overflow-hidden relative">
-                                {selectedVideoClass.video ? (
-                                    <video
-                                        src={selectedVideoClass.video}
-                                        className="w-full h-full object-cover"
-                                        controls
-                                        autoPlay
-                                        loop
-                                        playsInline
-                                    />
-                                ) : (
-                                    <div className="w-full h-full flex flex-col items-center justify-center text-white font-sans text-sm p-4 text-center">
-                                        <p className="font-bold">Vídeo de demonstração indisponível para esta modalidade.</p>
-                                    </div>
-                                )}
-                            </div>
-                        </m.div>
-                    </m.div>
-                )}
-            </AnimatePresence>
 
             <Footer />
         </div>

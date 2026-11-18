@@ -5,7 +5,7 @@ import PageHero from './PageHero';
 import Footer from './Footer';
 
 import { teachersData } from '../data/teachers';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 
 const Teachers = () => {
   return (
@@ -39,6 +39,8 @@ const Teachers = () => {
                     src={teacher.imgSrc}
                     alt={`Professor ${teacher.nickname || teacher.firstName}`}
                     className={`object-contain w-auto h-[115%] md:h-[125%] absolute top-1/2 -translate-y-1/2 ${teacher.imgShadow} z-20`}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

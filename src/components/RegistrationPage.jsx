@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import Navbar from './Navbar';
 import PageHero from './PageHero';
 import Footer from './Footer';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 
 const cards = [
     {
@@ -65,20 +65,20 @@ const RegistrationPage = () => (
                             target="_blank"
                             rel="noopener noreferrer"
                             variants={cardVariants}
-                            className={`${card.bg} relative flex flex-col border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8 md:p-10 min-h-[320px] md:min-h-[380px] transition-all duration-200 group cursor-pointer hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)]`}
+                            className={`${card.bg} relative flex flex-col border-[3px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8 transition-all duration-200 group cursor-pointer hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)]`}
                         >
                             <div className="absolute inset-0 bg-noise opacity-20 mix-blend-overlay pointer-events-none z-0" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <h3 className="font-serif font-black text-l md:text-xl lg:text-2xl uppercase leading-[1.1] tracking-wide break-words">
+                                <h3 className="font-serif font-black text-lg md:text-xl lg:text-2xl uppercase leading-[1.1] tracking-wide break-words pr-8">
                                     {card.title}
                                 </h3>
-                                <p className="font-sans font-bold text-sm md:text-lg mt-3 md:mt-6 max-w-xs leading-relaxed">
+                                <p className="font-sans font-bold text-sm md:text-lg mt-3 md:mt-5 max-w-xs leading-relaxed">
                                     {card.description}
                                 </p>
                             </div>
 
-                            <div className="absolute top-6 right-6 md:top-8 md:right-8 z-10">
+                            <div className="absolute top-5 right-5 md:top-6 md:right-6 z-10">
                                 <svg
                                     width="28"
                                     height="28"

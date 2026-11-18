@@ -3,7 +3,7 @@ import { m } from 'framer-motion';
 import PageHero from './PageHero';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 
 const CONTACTS = {
     phones: ['+351 927 360 732', '+351 968 863 157'],

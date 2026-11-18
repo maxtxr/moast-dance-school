@@ -1,7 +1,8 @@
 import moastVideo from '../assets/videos/moast-video1.mp4';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
-import whiteLetters from '../assets/images/logo/white_letters.webp';
-import whiteNeg from '../assets/images/logo/mds_neg.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
+import whiteLetters from '../assets/optimized/images/logo/white_letters.webp';
+import whiteNeg from '../assets/optimized/images/logo/mds_neg.webp';
+import videoPoster from '../assets/optimized/classes/photos/artstyletaste.webp';
 
 import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -23,8 +24,14 @@ const Hero = () => (
 
         <img
             src={whiteNeg}
-            alt="Decoração de Fundo"
+            alt=""
+            aria-hidden="true"
             className="absolute -bottom-24 -right-24 w-[400px] md:w-[600px] lg:w-[800px] opacity-25 pointer-events-none z-0"
+            width={800}
+            height={818}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
         />
 
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
@@ -42,6 +49,9 @@ const Hero = () => (
                         animate={{ rotate: 360 }}
                         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
                         className="absolute inset-0 w-full h-full object-contain drop-shadow-sm"
+                        width={400}
+                        height={402}
+                        decoding="async"
                     >
                     </m.img>
                 </div>
@@ -86,6 +96,8 @@ const Hero = () => (
             >
                 <video
                     src={moastVideo}
+                    poster={videoPoster}
+                    preload="metadata"
                     aria-label="Dance crew performing"
                     className="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
                     autoPlay

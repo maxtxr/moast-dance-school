@@ -1,9 +1,9 @@
 import { m } from 'framer-motion';
 
-import motionImg from '../assets/images/mds/motion.webp';
-import artImg from '../assets/images/mds/art.webp';
-import styleImg from '../assets/images/mds/style.webp';
-import tasteImg from '../assets/images/mds/taste.webp';
+import motionImg from '../assets/optimized/images/mds/motion.webp';
+import artImg from '../assets/optimized/images/mds/art.webp';
+import styleImg from '../assets/optimized/images/mds/style.webp';
+import tasteImg from '../assets/optimized/images/mds/taste.webp';
 
 const moastImages = [
   { id: 'motion', src: motionImg, alt: 'Motion' },
@@ -45,6 +45,10 @@ const AboutMoast = () => {
                 src={img.src}
                 alt={img.alt}
                 className="w-full h-auto object-cover block"
+                width={900}
+                height={1600}
+                loading="lazy"
+                decoding="async"
               />
             </m.div>
           ))}

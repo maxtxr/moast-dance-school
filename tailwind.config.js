@@ -18,7 +18,7 @@ export default {
       },
       fontFamily: {
         'serif': ['"TAN Buster"', 'Georgia', 'serif'],
-        'sans': ['"Futura"', '"Trebuchet MS"', 'sans-serif'],
+        'sans': ['"Futura"', '"Jost"', '"Trebuchet MS"', 'sans-serif'],
       },
       fontSize: {
         'display-hero': ['clamp(2.5rem, 10vw, 7rem)', { lineHeight: '1.1', letterSpacing: '0.02em' }],

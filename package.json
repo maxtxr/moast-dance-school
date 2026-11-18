@@ -7,6 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "npm run optimize:images",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:images:check": "node scripts/optimize-images.mjs --check",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -31,6 +34,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "postcss": "^8.5.15",
+    "sharp": "0.35.4",
     "vite": "^8.0.10"
   }
 }

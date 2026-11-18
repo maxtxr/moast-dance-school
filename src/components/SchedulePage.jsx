@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 import { classes, getCategoryColor } from '../data/classes';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 
 const STUDIOS = ['ESTÚDIO 1', 'ESTÚDIO 2', 'GRÉMIO'];
 const DAY_ORDER = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
@@ -180,13 +180,13 @@ const SchedulePage = () => {
                                             <div className="flex flex-col gap-5">
                                                 {dayClasses.map((cls) => (
                                                     <div key={cls.id} className={`${getCategoryColor(cls.category)} border-[3px] border-black p-5 shadow-[4px_4px_0_0_rgba(0,0,0,1)]`}>
-                                                        <div className="flex justify-between items-start gap-4">
+                                                        <div className="flex justify-between items-center gap-4">
                                                             <div>
                                                                 <p className="font-sans font-black text-xl md:text-2xl uppercase text-white drop-shadow-sm leading-tight">{cls.title}</p>
                                                                 <p className="font-sans font-bold text-xs uppercase text-white/80 mt-1">{cls.level}</p>
                                                                 <p className="font-sans font-bold text-sm uppercase text-white/90 mt-1">{cls.teacher}</p>
                                                             </div>
-                                                            <div className="bg-white border-[3px] border-black px-2 py-1 shadow-[2px_2px_0_0_rgba(0,0,0,1)] shrink-0 rotate-[2deg]">
+                                                            <div className="bg-white border-[3px] border-black px-2 py-1 shadow-[2px_2px_0_0_rgba(0,0,0,1)] shrink-0 rotate-[2deg] self-center">
                                                                 <span className="font-sans font-black text-[10px] md:text-xs uppercase text-black">
                                                                     {formatTimeRange(cls.time, cls.studio)}
                                                                 </span>

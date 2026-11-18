@@ -1,4 +1,4 @@
-import whiteNeg from '../assets/images/logo/mds_neg.webp';
+import whiteNeg from '../assets/optimized/images/logo/mds_neg.webp';
 
 import { m } from 'framer-motion';
 
@@ -17,16 +17,26 @@ const PageHero = ({ title, badgeText, bgColor = 'bg-moast-magenta', textColor = 
             <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-multiply">
                 <img
                     src={overlayImage}
-                    alt="Graffiti overlay"
+                    alt=""
+                    aria-hidden="true"
                     className="w-full h-full object-cover mix-blend-multiply opacity-70"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    decoding="async"
                 />
             </div>
         )}
 
         <img
             src={whiteNeg}
-            alt="Decoração de Fundo"
+            alt=""
+            aria-hidden="true"
             className="absolute -bottom-24 -right-24 w-[400px] md:w-[600px] lg:w-[800px] opacity-25 pointer-events-none z-0"
+            width={800}
+            height={818}
+            loading="eager"
+            decoding="async"
         />
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">

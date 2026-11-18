@@ -7,14 +7,14 @@ import Footer from './Footer';
 
 import { merchItems } from '../data/merch';
 import merchTrailerVideo from '../assets/merch/merch.mp4';
-import merchGroup from '../assets/merch/merch.webp';
-import hoodieImg from '../assets/merch/hoodie.webp';
-import toteImg from '../assets/merch/tote.webp';
-import tshirt1Img from '../assets/merch/tshirt1.webp';
-import tshirt2Img from '../assets/merch/tshirt2.webp';
-import topImg from '../assets/merch/top.webp';
-import sockImg from '../assets/merch/sock.webp';
-import graffitiOverlay from '../assets/images/graffiti-overlay.webp';
+import merchGroup from '../assets/optimized/merch/merch.webp';
+import hoodieImg from '../assets/optimized/merch/hoodie.webp';
+import toteImg from '../assets/optimized/merch/tote.webp';
+import tshirt1Img from '../assets/optimized/merch/tshirt1.webp';
+import tshirt2Img from '../assets/optimized/merch/tshirt2.webp';
+import topImg from '../assets/optimized/merch/top.webp';
+import sockImg from '../assets/optimized/merch/sock.webp';
+import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 import { SEASON_LABEL } from '../constants/navigation';
 
 const merchPhotos = [
@@ -57,6 +57,10 @@ const MerchPhotoCard = ({ photo, item, index }) => {
                         alt={photo.alt}
                         className="w-full h-full object-cover"
                         draggable={false}
+                        width={900}
+                        height={1125}
+                        loading="lazy"
+                        decoding="async"
                     />
                     <AnimatePresence>
                         {isOpen && item && (
@@ -119,6 +123,8 @@ const PricingPage = () => (
                                         loop
                                         muted
                                         playsInline
+                                        poster={merchGroup}
+                                        preload="metadata"
                                         className="absolute inset-0 w-full h-full object-cover"
                                         aria-label="MOAST Merch collection trailer"
                                     >
@@ -148,37 +154,37 @@ const PricingPage = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-moast-magenta border-[4px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-4 md:p-6 relative overflow-hidden"
+                    className="bg-moast-magenta border-[4px] border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-3 md:p-6 relative overflow-hidden"
                 >
                     <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay pointer-events-none z-0" />
 
-                    <div className="relative z-10 grid grid-cols-[2fr_1fr] md:grid-cols-[5fr_2fr] gap-3 md:gap-4">
-                        <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                            <h2 className="font-serif text-display-badge font-black text-white uppercase drop-shadow-sm">
+                    <div className="relative z-10 grid grid-cols-[1.5fr_1fr] md:grid-cols-[5fr_2fr] gap-2 md:gap-4">
+                        <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-2.5 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                            <h2 className="font-serif text-lg sm:text-2xl md:text-display-badge font-black text-white uppercase drop-shadow-sm">
                                 MERCH
                             </h2>
                         </div>
-                        <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-3 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                            <h2 className="font-serif text-display-badge font-black text-white uppercase drop-shadow-sm">
+                        <div className="bg-moast-teal border-[3px] border-black flex items-center justify-center py-2.5 md:py-4 px-2 text-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                            <h2 className="font-serif text-lg sm:text-2xl md:text-display-badge font-black text-white uppercase drop-shadow-sm">
                                 VALOR
                             </h2>
                         </div>
 
                         {merchItems.map((item) => (
                             <div key={item.name} className="contents">
-                                <div className="bg-white border-[3px] border-black flex flex-col items-center justify-center py-5 md:py-6 px-4 md:px-8 text-center text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] cursor-default">
-                                    <span className="font-sans font-black text-lg md:text-xl uppercase leading-tight">
+                                <div className="bg-white border-[3px] border-black flex flex-col items-center justify-center py-3 md:py-6 px-2.5 md:px-8 text-center text-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] cursor-default">
+                                    <span className="font-sans font-black text-sm sm:text-base md:text-xl uppercase leading-tight">
                                         {item.name}
                                     </span>
                                     {item.details && (
-                                        <span className="font-sans font-bold text-xs md:text-sm mt-1.5 whitespace-pre-line leading-snug opacity-70 uppercase">
+                                        <span className="font-sans font-bold text-[10px] md:text-sm mt-1 md:mt-1.5 whitespace-pre-line leading-snug opacity-70 uppercase">
                                             {item.details}
                                         </span>
                                     )}
                                 </div>
 
-                                <div className="bg-white border-[3px] border-black flex items-center justify-center py-4 md:py-6 px-3 md:px-8 text-center text-moast-magenta shadow-[4px_4px_0_0_rgba(0,0,0,1)] cursor-default">
-                                    <span className="font-serif font-black text-display-badge">
+                                <div className="bg-white border-[3px] border-black flex items-center justify-center py-3 md:py-6 px-2 md:px-8 text-center text-moast-magenta shadow-[4px_4px_0_0_rgba(0,0,0,1)] cursor-default">
+                                    <span className="font-serif font-black text-xl sm:text-2xl md:text-display-badge">
                                         {item.price}
                                     </span>
                                 </div>

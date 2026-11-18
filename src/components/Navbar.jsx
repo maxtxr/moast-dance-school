@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import moastLogo from '../assets/images/logo/moast-logo.webp';
+import moastLogo from '../assets/optimized/images/logo/moast-logo.webp';
 
 import { NAVIGATION_LINKS } from '../constants/navigation';
 import BrutalistButton from './BrutalistButton';
@@ -51,6 +51,9 @@ const Navbar = () => {
                         src={moastLogo}
                         alt="MOAST Dance School Logo"
                         className="w-full h-full object-cover"
+                        width={320}
+                        height={322}
+                        decoding="async"
                     />
                 </Link>
 
