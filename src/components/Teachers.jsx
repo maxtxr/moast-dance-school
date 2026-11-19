@@ -6,6 +6,64 @@ import Footer from './Footer';
 
 import { teachersData } from '../data/teachers';
 import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
+import { InstagramIcon } from './Icons';
+
+const instagramBadgeClasses = 'bg-white px-3 py-1.5 border-[2px] border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] font-sans font-bold text-[10px] md:text-xs uppercase flex items-center mt-5 md:mt-6';
+
+const TeacherInstagram = ({ teacher }) => {
+  if (!teacher.instagramHandle) return null;
+
+  const content = (
+    <>
+      <InstagramIcon />
+      {teacher.instagramHandle}
+    </>
+  );
+
+  if (teacher.instagramUrl) {
+    return (
+      <a
+        href={teacher.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${instagramBadgeClasses} hover:bg-moast-pink transition-colors`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <span className={instagramBadgeClasses}>{content}</span>;
+};
+
+const teacherPalettes = [
+  {
+    bgColor: 'bg-moast-dark-magenta',
+    imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
+    nicknameColor: 'text-moast-pink',
+    underlineColor: 'border-moast-pink',
+  },
+  {
+    bgColor: 'bg-moast-pink',
+    imgShadow: 'drop-shadow-[6px_6px_0px_#95D1D3]',
+    nicknameColor: 'text-moast-magenta',
+    underlineColor: 'border-moast-magenta',
+  },
+  {
+    bgColor: 'bg-moast-teal',
+    imgShadow: 'drop-shadow-[6px_6px_0px_#CF8DBB]',
+    nicknameColor: 'text-moast-dark-magenta',
+    underlineColor: 'border-moast-dark-magenta',
+  },
+];
+
+const sortedTeachers = [...teachersData]
+  .sort((a, b) => a.firstName.localeCompare(b.firstName, 'pt'))
+  .map((teacher, index) => ({
+    ...teacher,
+    ...teacherPalettes[index % teacherPalettes.length],
+    imgPos: index % 2 === 0 ? 'left' : 'right',
+  }));
 
 const Teachers = () => {
   return (
@@ -20,7 +78,7 @@ const Teachers = () => {
 
       <section className="w-full bg-moast-off-white px-4 pb-24 md:pb-32 pt-16 flex-grow">
         <div className="max-w-[1232px] mx-auto flex flex-col gap-16 md:gap-20">
-          {teachersData.map((teacher, index) => (
+          {sortedTeachers.map((teacher, index) => (
             <m.div
               key={teacher.id}
               initial={{ opacity: 0, y: 30 }}
@@ -87,6 +145,8 @@ const Teachers = () => {
                     );
                   })()}
                   </h2>
+
+                  <TeacherInstagram teacher={teacher} />
 
                   {/* <p className="font-sans text-xs sm:text-sm md:text-base font-bold text-black/80 mt-4 md:mt-8 max-w-md leading-relaxed">
                     {teacher.description}

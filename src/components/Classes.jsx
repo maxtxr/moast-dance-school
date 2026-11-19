@@ -7,6 +7,7 @@ import graffitiOverlay from '../assets/optimized/images/graffiti-overlay.webp';
 import PageHero from './PageHero';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SpecialClassesSection from './SpecialClassesSection';
 
 import { ClockIcon, UserIcon } from './Icons';
 import { classes, getCategoryColor } from '../data/classes';
@@ -75,6 +76,8 @@ const Classes = () => {
                             </Link>
                         </div>
                     </div>
+
+                    <SpecialClassesSection />
 
                     {dayGroups.map(([day, dayClasses]) => (
                         <div key={day} className="mb-16 lg:mb-24 last:mb-0">
